@@ -1,0 +1,13 @@
+schema: '2.0'
+stages:
+  ml-10M100K:
+    cmd: python ../unpack-data.py ml-10m.zip
+    deps:
+    - path: ml-10m.zip
+      md5: ce571fd55effeba0271552578f2648bd
+      size: 65566137
+    outs:
+    - path: ml-10M100K
+      md5: 0ff97e7caebfc577216e762ec5266cfd.dir
+      size: 269225571
+      nfiles: 6
