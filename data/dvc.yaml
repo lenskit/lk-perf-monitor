@@ -1,0 +1,51 @@
+steps:
+  bx:
+    cmd: python unpack-data.py data/BX-CSV-Dump.zip data/bx
+    wdir: ..
+    deps:
+    - data/BX-CSV-Dump.zip
+    - unpack-data.py
+    outs:
+    - data/bx
+
+  ml-100k:
+    cmd: python ../unpack-data.py ml-100k.zip
+    deps:
+    - ml-100k.zip
+    outs:
+    - ml-100k
+
+  ml-1m:
+    cmd: python ../unpack-data.py ml-1m.zip
+    deps:
+    - ml-1m.zip
+    outs:
+    - ml-1m
+
+  ml-10M100K:
+    cmd: python ../unpack-data.py ml-10m.zip
+    deps:
+    - ml-10m.zip
+    outs:
+    - ml-10M100K
+
+  ml-20m:
+    cmd: python ../unpack-data.py ml-20m.zip
+    deps:
+    - ml-20m.zip
+    outs:
+    - ml-20m
+
+  ml-25m:
+    cmd: python ../unpack-data.py ml-25m.zip
+    deps:
+    - ml-25m.zip
+    outs:
+    - ml-25m
+  
+  ml-latest-small:
+    cmd: python ../unpack-data.py ml-latest-small.zip
+    deps:
+    - ml-latest-small.zip
+    outs:
+    - ml-latest-small
