@@ -22,7 +22,7 @@ from docopt import docopt
 from pathlib import Path
 from lenskit.algorithms import Recommender, Predictor
 from lenskit.topn import RecListAnalysis, ndcg
-from lenskit.metrics import rmse
+from lenskit.metrics.predict import rmse
 from lenskit import batch, util
 from lkdemo import log, datasets
 

@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  als@ml10m:
+    cmd: python run-algo.py --splits data-split/ml10m -o runs/ml10m-ALS -M runs/ml10m-ALS.json
+      ALS
+    deps:
+    - path: data-split/ml10m
+      md5: c34b2d5f1205163a0a9edf9129474b63.dir
+      size: 4007786
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 382
+    - path: run-algo.py
+      md5: ee47ce6d7cf04ec46150477ceb2444d9
+      size: 4262
+    outs:
+    - path: runs/ml10m-ALS
+      md5: 95af09841a2ae3a4f7c6552d791a4609.dir
+      size: 98280162
+      nfiles: 10
+    - path: runs/ml10m-ALS.json
+      md5: b6086650d5d43a9ee082df1e82b2853a
+      size: 59
