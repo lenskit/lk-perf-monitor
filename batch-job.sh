@@ -31,6 +31,7 @@ if [ -n "$cpus" ]; then
 fi
 
 export MKL_THREADING_LAYER=tbb
+export MKL_NUM_THREADS=1
 
 # Finally run the code
 exec "$@"
