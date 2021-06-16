@@ -1,6 +1,7 @@
 stages:
   als:
     foreach:
+    - ml1m
     - ml10m
     do:
       cmd: python run-algo.py --splits data-split/${item} -o runs/${item}-ALS -M runs/${item}-ALS.json ALS

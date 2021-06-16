@@ -1,4 +1,13 @@
 stages:
+  ml1m:
+    cmd: python split-data.py ml1m -o data-split/ml1m
+    wdir: ..
+    deps:
+    - split-data.py
+    - data/ml-1m
+    outs:
+    - data-split/ml1m
+
   ml10m:
     cmd: python split-data.py ml10m -o data-split/ml10m
     wdir: ..
