@@ -1,0 +1,11 @@
+deps:
+- etag: '"bd7f3fe-598cfd87ca0d4"'
+  path: http://files.grouplens.org/datasets/movielens/ml-20m.zip
+md5: d044d1291158b4b745dba976c0439233
+outs:
+- cache: true
+  md5: cd245b17a1ae2cc31bb14903e1204af3
+  metric: false
+  path: ml-20m.zip
+  persist: false
+wdir: .

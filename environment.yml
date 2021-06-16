@@ -1,0 +1,28 @@
+name: lk-demo
+channels:
+- lenskit
+- defaults
+- conda-forge
+dependencies:
+- python=3.7
+- lenskit>=0.10
+- pip
+- psutil
+- pandas
+- scipy
+- numba
+- cffi
+- pyarrow
+- tbb
+- notebook
+- seaborn
+- ipython
+- ipywidgets
+- tqdm
+- implicit
+- statsmodels
+- docopt
+- dvc
+- boto3
+- papermill
+- tensorflow >=2.1
