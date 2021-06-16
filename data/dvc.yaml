@@ -1,4 +1,4 @@
-steps:
+stages:
   bx:
     cmd: python unpack-data.py data/BX-CSV-Dump.zip data/bx
     wdir: ..
