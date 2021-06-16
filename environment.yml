@@ -5,9 +5,10 @@ dependencies:
 - python=3.8
 - pip
 - psutil
-- pandas<1.0
+- pandas
+- libblas=*=*mkl
 - scipy
-- numba=<0.50
+- numba
 - cffi
 - pyarrow
 - tbb
