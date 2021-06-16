@@ -78,11 +78,7 @@ def main(args):
             continue
 
         _log.info('[%s] Fitting the model', timer)
-        # We train isolated to manage resource use
-        if hasattr(batch, 'train_isolated'):
-            model = batch.train_isolated(algo, train)
-        else:
-            model = algo.fit(train)
+        model = algo.fit(train)
         try:
             _log.info('[%s] generating recommendations for unique users', timer)
             users = test.user.unique()
