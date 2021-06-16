@@ -17,8 +17,6 @@ dependencies:
 - notebook
 - jupytext
 - ipython
-- ipywidgets
-- tqdm
 - statsmodels
 - docopt
 - dvc>=2.3
