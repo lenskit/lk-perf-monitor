@@ -1,0 +1,17 @@
+schema: '2.0'
+stages:
+  ml10m:
+    cmd: python split-data.py ml10m -o data-split/ml10m
+    deps:
+    - path: data/ml-10M100K
+      md5: 0ff97e7caebfc577216e762ec5266cfd.dir
+      size: 269225571
+      nfiles: 6
+    - path: split-data.py
+      md5: 1d60e01caee7282327d4d9a941757857
+      size: 1291
+    outs:
+    - path: data-split/ml10m
+      md5: c34b2d5f1205163a0a9edf9129474b63.dir
+      size: 4007786
+      nfiles: 5

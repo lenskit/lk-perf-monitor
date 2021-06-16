@@ -1,0 +1,9 @@
+stages:
+  ml10m:
+    cmd: python split-data.py ml10m -o data-split/ml10m
+    wdir: ..
+    deps:
+    - split-data.py
+    - data/ml-10M100K
+    outs:
+    - data-split/ml10m
