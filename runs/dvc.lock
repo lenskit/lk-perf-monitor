@@ -10,15 +10,15 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 382
+      size: 368
     - path: run-algo.py
-      md5: ee47ce6d7cf04ec46150477ceb2444d9
-      size: 4262
+      md5: b78f79d2b8a32ef6b3241bcbc122059f
+      size: 3971
     outs:
     - path: runs/ml10m-ALS
-      md5: 95af09841a2ae3a4f7c6552d791a4609.dir
-      size: 98280162
+      md5: 60d811ee820f7fd4d5a285e1188c7cfb.dir
+      size: 98603132
       nfiles: 10
     - path: runs/ml10m-ALS.json
-      md5: b6086650d5d43a9ee082df1e82b2853a
+      md5: 6c6ee2598cfcb62f041b936c17de6a37
       size: 59
