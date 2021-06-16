@@ -1,0 +1,12 @@
+stages:
+  als:
+    foreach:
+    - ml10m
+  cmd: python run-algo.py --splits data-split/${item} -o runs/${item}-ALS ALS
+  wdir: ..
+  deps:
+  - run-algo.py
+  - lkdemo/algorithms.py
+  - data-split/${item}
+  outs:
+  - runs/${item}-ALS
