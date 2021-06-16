@@ -22,4 +22,5 @@ dependencies:
 - dvc>=2.3
 - dvc-s3>=2.3
 - papermill
-- lenskit
+- pip:
+  - lenskit@git+https://github.com/lenskit/lkpy
