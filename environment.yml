@@ -22,5 +22,4 @@ dependencies:
 - dvc>=2.3
 - dvc-s3>=2.3
 - papermill
-- pip:
-  - lenskit==0.9.0
+- lenskit
