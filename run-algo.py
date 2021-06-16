@@ -10,6 +10,7 @@ Options:
     -o output       destination directory [default: output]
     -n N            number of recommendations for a unique user [default: 100]
     -m MODULE       import algorithms from MODULE [default: lkdemo.algorithms]
+    -M FILE         write metrics to FILE
     --no-predict    turn off rating prediction
     --log-file FILE write logs to FILE
     ALGO            name of algorithm to load 
@@ -20,12 +21,14 @@ import multiprocessing
 from docopt import docopt
 from pathlib import Path
 from lenskit.algorithms import Recommender, Predictor
+from lenskit.topn import RecListAnalysis, ndcg
+from lenskit.metrics import rmse
 from lenskit import batch, util
 from lkdemo import log, datasets
 
+import json
 import importlib
 import pandas as pd
-
 
 def main(args):
     mod_name = args.get('-m')
@@ -45,6 +48,11 @@ def main(args):
     dest.mkdir(exist_ok=True , parents=True)
 
     ds_def = getattr(datasets, path.name, None)
+
+    metric_file = args.get('-M')
+
+    all_topnm = []
+    all_preds = []
 
     for file in path.glob("test-*"):
         test = pd.read_csv(file, sep=',')
@@ -71,20 +79,42 @@ def main(args):
 
         _log.info('[%s] Fitting the model', timer)
         # We train isolated to manage resource use
-        model = batch.train_isolated(algo, train)
+        if hasattr(batch, 'train_isolated'):
+            model = batch.train_isolated(algo, train)
+        else:
+            model = algo.fit(train)
         try:
             _log.info('[%s] generating recommendations for unique users', timer)
             users = test.user.unique()
             recs = batch.recommend(model, users, n_recs)
             _log.info('[%s] writing recommendations to %s', timer, dest)
             recs.to_csv(dest / f'recs-{suffix}', index=False)
+
+            if metric_file:
+                rla = RecListAnalysis()
+                rla.add_metric(ndcg)
+                um = rla.compute(recs, test, include_missing=True)
+                all_topnm.append(um)
             
             if isinstance(algo, Predictor) and not args['--no-predict']:
                 _log.info('[%s] generating predictions for user-item', timer)
                 preds = batch.predict(model, test)
                 preds.to_csv(dest / f'pred-{suffix}', index=False)
+
+                if metric_file:
+                    all_preds.append(preds)
         finally:
-            model.close()
+            if hasattr(model, 'close'):
+                model.close()
+
+    if metric_file:
+        topn_m = pd.concat(all_topnm, ignore_index=True)
+        preds = pd.concat(all_preds, ignore_index=True)
+        metrics = {
+            'nDCG': topn_m['ndcg'].mean(),
+            'GRMSE': rmse(preds['prediction'], preds['rating'])
+        }
+        Path(metric_file).write_text(json.dumps(metrics))
 
 
 if __name__ == '__main__':
