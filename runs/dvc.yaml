@@ -15,6 +15,8 @@ stages:
       - runs/${item}-ALS
       metrics:
       - runs/${item}-ALS.json
+      params:
+      - lenskit.version
 
   item-item:
     foreach:
@@ -32,3 +34,5 @@ stages:
       - runs/${item}-II
       metrics:
       - runs/${item}-II.json
+      params:
+      - lenskit.version
