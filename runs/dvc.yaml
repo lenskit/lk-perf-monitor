@@ -3,6 +3,7 @@ stages:
     foreach:
     - ml1m
     - ml10m
+    - ml20m
     do:
       cmd: python run-algo.py --splits data-split/${item} -o runs/${item}-ALS -M runs/${item}-ALS.json ALS
       wdir: ..
@@ -14,3 +15,20 @@ stages:
       - runs/${item}-ALS
       metrics:
       - runs/${item}-ALS.json
+
+  item-item:
+    foreach:
+    - ml1m
+    - ml10m
+    - ml20m
+    do:
+      cmd: python run-algo.py --splits data-split/${item} -o runs/${item}-II -M runs/${item}-II.json II
+      wdir: ..
+      deps:
+      - run-algo.py
+      - lkdemo/algorithms.py
+      - data-split/${item}
+      outs:
+      - runs/${item}-II
+      metrics:
+      - runs/${item}-II.json
