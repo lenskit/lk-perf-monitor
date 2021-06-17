@@ -1,6 +1,7 @@
 stages:
   als:
     foreach:
+    - ml100k
     - ml1m
     - ml10m
     - ml20m
@@ -20,6 +21,7 @@ stages:
 
   item-item:
     foreach:
+    - ml100k
     - ml1m
     - ml10m
     - ml20m
@@ -34,5 +36,24 @@ stages:
       - runs/${item}-II
       metrics:
       - runs/${item}-II.json
+      params:
+      - lenskit.version
+
+  user-user:
+    foreach:
+    - ml100k
+    - ml1m
+    - ml10m
+    do:
+      cmd: python run-algo.py --splits data-split/${item} -o runs/${item}-UU -M runs/${item}-UU.json UU
+      wdir: ..
+      deps:
+      - run-algo.py
+      - lkdemo/algorithms.py
+      - data-split/${item}
+      outs:
+      - runs/${item}-UU
+      metrics:
+      - runs/${item}-UU.json
       params:
       - lenskit.version
