@@ -16,3 +16,12 @@ stages:
     - data/ml-10M100K
     outs:
     - data-split/ml10m
+
+  ml20m:
+    cmd: python split-data.py ml20m -o data-split/ml20m
+    wdir: ..
+    deps:
+    - split-data.py
+    - data/ml-20m
+    outs:
+    - data-split/ml20m

@@ -12,16 +12,16 @@ stages:
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
       size: 368
     - path: run-algo.py
-      md5: b78f79d2b8a32ef6b3241bcbc122059f
-      size: 3971
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
     outs:
     - path: runs/ml10m-ALS
-      md5: 60d811ee820f7fd4d5a285e1188c7cfb.dir
-      size: 98603132
+      md5: ec2bfc066344308b479a0e4198a16be3.dir
+      size: 97295068
       nfiles: 10
     - path: runs/ml10m-ALS.json
-      md5: 6c6ee2598cfcb62f041b936c17de6a37
-      size: 59
+      md5: e50c24a914b7c3cb8fac95e3c6e68c55
+      size: 58
   als@ml1m:
     cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-ALS -M runs/ml1m-ALS.json
       ALS
@@ -44,3 +44,91 @@ stages:
     - path: runs/ml1m-ALS.json
       md5: 7abe4bfddcec1168bd05073881cea81d
       size: 58
+  als@ml20m:
+    cmd: python run-algo.py --splits data-split/ml20m -o runs/ml20m-ALS -M runs/ml20m-ALS.json
+      ALS
+    deps:
+    - path: data-split/ml20m
+      md5: f0de883fb28d3ed31f0eef0a30a90ae6.dir
+      size: 8145464
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    outs:
+    - path: runs/ml20m-ALS
+      md5: 252c1bd864fd6dafe72688533edfea0f.dir
+      size: 198810430
+      nfiles: 10
+    - path: runs/ml20m-ALS.json
+      md5: 916d75030f615919220b9bce0f702aaf
+      size: 59
+  item-item@ml20m:
+    cmd: python run-algo.py --splits data-split/ml20m -o runs/ml20m-II -M runs/ml20m-II.json
+      II
+    deps:
+    - path: data-split/ml20m
+      md5: f0de883fb28d3ed31f0eef0a30a90ae6.dir
+      size: 8145464
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    outs:
+    - path: runs/ml20m-II
+      md5: 92f50c42c77c40780b100e9cce00cdf2.dir
+      size: 196470993
+      nfiles: 10
+    - path: runs/ml20m-II.json
+      md5: 5e3e5f4c540ac79d7bc6a6ccc3ba1f78
+      size: 60
+  item-item@ml10m:
+    cmd: python run-algo.py --splits data-split/ml10m -o runs/ml10m-II -M runs/ml10m-II.json
+      II
+    deps:
+    - path: data-split/ml10m
+      md5: c34b2d5f1205163a0a9edf9129474b63.dir
+      size: 4007786
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    outs:
+    - path: runs/ml10m-II
+      md5: 239b2aaa970de398785fe07970c5e4f1.dir
+      size: 99795580
+      nfiles: 10
+    - path: runs/ml10m-II.json
+      md5: 91c45ac729a8601635873b043f6cbb7c
+      size: 59
+  item-item@ml1m:
+    cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-II -M runs/ml1m-II.json
+      II
+    deps:
+    - path: data-split/ml1m
+      md5: 135569a042bfa77c65a89f102a0bae1a.dir
+      size: 328728
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    outs:
+    - path: runs/ml1m-II
+      md5: 3208f7903d74ef1c593c94ecf43997ce.dir
+      size: 8318967
+      nfiles: 10
+    - path: runs/ml1m-II.json
+      md5: 1bc9b27d1a5ac9ca83e0ca7d34f19e1c
+      size: 59
