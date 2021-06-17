@@ -11,8 +11,8 @@ dependencies:
 - numba
 - cffi
 - pyarrow
-- tbb=2021
-- mkl=2021
+- tbb=2020
+- mkl=2020
 - seaborn
 - notebook
 - jupytext
