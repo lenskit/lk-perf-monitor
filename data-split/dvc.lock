@@ -15,3 +15,18 @@ stages:
       md5: c34b2d5f1205163a0a9edf9129474b63.dir
       size: 4007786
       nfiles: 5
+  ml1m:
+    cmd: python split-data.py ml1m -o data-split/ml1m
+    deps:
+    - path: data/ml-1m
+      md5: 82cb2289085c2178418e006f69afc645.dir
+      size: 24905384
+      nfiles: 4
+    - path: split-data.py
+      md5: 1d60e01caee7282327d4d9a941757857
+      size: 1245
+    outs:
+    - path: data-split/ml1m
+      md5: 135569a042bfa77c65a89f102a0bae1a.dir
+      size: 328728
+      nfiles: 5
