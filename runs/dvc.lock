@@ -14,13 +14,16 @@ stages:
     - path: run-algo.py
       md5: b7f345f78132c380934801bd6accf4f2
       size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
     outs:
     - path: runs/ml10m-ALS
-      md5: ec2bfc066344308b479a0e4198a16be3.dir
-      size: 97295068
+      md5: cdf774670e150d4a3c1377e03d540ece.dir
+      size: 98602926
       nfiles: 10
     - path: runs/ml10m-ALS.json
-      md5: e50c24a914b7c3cb8fac95e3c6e68c55
+      md5: 91339dbeacbb6487850e32e8bec57abf
       size: 58
   als@ml1m:
     cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-ALS -M runs/ml1m-ALS.json
@@ -36,14 +39,17 @@ stages:
     - path: run-algo.py
       md5: b7f345f78132c380934801bd6accf4f2
       size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
     outs:
     - path: runs/ml1m-ALS
-      md5: d588dc9a0622fb93ec4efb30406b9ea9.dir
-      size: 8337744
+      md5: 92e874a1a4e3e4347735d1e67b483981.dir
+      size: 8339082
       nfiles: 10
     - path: runs/ml1m-ALS.json
-      md5: 7abe4bfddcec1168bd05073881cea81d
-      size: 58
+      md5: 344986e0956755abdd1aa0870c0f1e1f
+      size: 57
   als@ml20m:
     cmd: python run-algo.py --splits data-split/ml20m -o runs/ml20m-ALS -M runs/ml20m-ALS.json
       ALS
@@ -58,13 +64,16 @@ stages:
     - path: run-algo.py
       md5: b7f345f78132c380934801bd6accf4f2
       size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
     outs:
     - path: runs/ml20m-ALS
-      md5: 252c1bd864fd6dafe72688533edfea0f.dir
-      size: 198810430
+      md5: 0135cfd33dec13b83a21228f37e292e9.dir
+      size: 198811534
       nfiles: 10
     - path: runs/ml20m-ALS.json
-      md5: 916d75030f615919220b9bce0f702aaf
+      md5: 79e1cd4836c1d6a343557976613ea8b8
       size: 59
   item-item@ml20m:
     cmd: python run-algo.py --splits data-split/ml20m -o runs/ml20m-II -M runs/ml20m-II.json
@@ -80,13 +89,16 @@ stages:
     - path: run-algo.py
       md5: b7f345f78132c380934801bd6accf4f2
       size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
     outs:
     - path: runs/ml20m-II
-      md5: 92f50c42c77c40780b100e9cce00cdf2.dir
+      md5: 19bd630064ce2f46886677b3fca9a8f7.dir
       size: 196470993
       nfiles: 10
     - path: runs/ml20m-II.json
-      md5: 5e3e5f4c540ac79d7bc6a6ccc3ba1f78
+      md5: 3a1a3747ebe4a160a97792d641dd1856
       size: 60
   item-item@ml10m:
     cmd: python run-algo.py --splits data-split/ml10m -o runs/ml10m-II -M runs/ml10m-II.json
@@ -102,13 +114,16 @@ stages:
     - path: run-algo.py
       md5: b7f345f78132c380934801bd6accf4f2
       size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
     outs:
     - path: runs/ml10m-II
-      md5: 239b2aaa970de398785fe07970c5e4f1.dir
+      md5: 15fd5ed9c61e08c4ac1246c3a7b47979.dir
       size: 99795580
       nfiles: 10
     - path: runs/ml10m-II.json
-      md5: 91c45ac729a8601635873b043f6cbb7c
+      md5: 21e915a9177becce2de3cb3742d48839
       size: 59
   item-item@ml1m:
     cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-II -M runs/ml1m-II.json
@@ -124,9 +139,12 @@ stages:
     - path: run-algo.py
       md5: b7f345f78132c380934801bd6accf4f2
       size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
     outs:
     - path: runs/ml1m-II
-      md5: 3208f7903d74ef1c593c94ecf43997ce.dir
+      md5: a3cb7b40c69dd7853ec83858c5981d3e.dir
       size: 8318967
       nfiles: 10
     - path: runs/ml1m-II.json
