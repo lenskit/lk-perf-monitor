@@ -22,3 +22,25 @@ stages:
     - path: runs/ml10m-ALS.json
       md5: 6c6ee2598cfcb62f041b936c17de6a37
       size: 59
+  als@ml1m:
+    cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-ALS -M runs/ml1m-ALS.json
+      ALS
+    deps:
+    - path: data-split/ml1m
+      md5: 135569a042bfa77c65a89f102a0bae1a.dir
+      size: 328728
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    outs:
+    - path: runs/ml1m-ALS
+      md5: d588dc9a0622fb93ec4efb30406b9ea9.dir
+      size: 8337744
+      nfiles: 10
+    - path: runs/ml1m-ALS.json
+      md5: 7abe4bfddcec1168bd05073881cea81d
+      size: 58
