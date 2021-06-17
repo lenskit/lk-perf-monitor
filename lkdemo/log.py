@@ -26,7 +26,6 @@ def setup(debug=False, log_file=None):
 
     logging.getLogger('dvc').setLevel(logging.ERROR)
     logging.getLogger('lenskit').setLevel(logging.DEBUG)
-    logging.getLogger('bookgender').setLevel(logging.DEBUG)
     root.debug('log system configured')
 
 
