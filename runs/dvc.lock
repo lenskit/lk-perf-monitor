@@ -19,11 +19,11 @@ stages:
         lenskit.version: main
     outs:
     - path: runs/ml10m-ALS
-      md5: cdf774670e150d4a3c1377e03d540ece.dir
-      size: 98602926
+      md5: f6700d25912a492fd8c883fd688bc854.dir
+      size: 97301465
       nfiles: 10
     - path: runs/ml10m-ALS.json
-      md5: 91339dbeacbb6487850e32e8bec57abf
+      md5: db200dd04f04295eda7702c4981f3a84
       size: 58
   als@ml1m:
     cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-ALS -M runs/ml1m-ALS.json
