@@ -45,3 +45,18 @@ stages:
       md5: f0de883fb28d3ed31f0eef0a30a90ae6.dir
       size: 8145464
       nfiles: 5
+  ml100k:
+    cmd: python split-data.py ml100k -o data-split/ml100k
+    deps:
+    - path: data/ml-100k
+      md5: 33e3b98f41ab1289116f74de90b95a24.dir
+      size: 16100896
+      nfiles: 23
+    - path: split-data.py
+      md5: 1d60e01caee7282327d4d9a941757857
+      size: 1245
+    outs:
+    - path: data-split/ml100k
+      md5: c15c2e96b18c0c398ba4cf0919983d50.dir
+      size: 52880
+      nfiles: 5

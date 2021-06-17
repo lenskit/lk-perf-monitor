@@ -150,3 +150,53 @@ stages:
     - path: runs/ml1m-II.json
       md5: 1bc9b27d1a5ac9ca83e0ca7d34f19e1c
       size: 59
+  als@ml100k:
+    cmd: python run-algo.py --splits data-split/ml100k -o runs/ml100k-ALS -M runs/ml100k-ALS.json
+      ALS
+    deps:
+    - path: data-split/ml100k
+      md5: c15c2e96b18c0c398ba4cf0919983d50.dir
+      size: 52880
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
+    outs:
+    - path: runs/ml100k-ALS
+      md5: 814ff58517b5e6528dc556995867ad81.dir
+      size: 1282735
+      nfiles: 10
+    - path: runs/ml100k-ALS.json
+      md5: 0f6a0e97bbbaac8750be4921838808af
+      size: 57
+  item-item@ml100k:
+    cmd: python run-algo.py --splits data-split/ml100k -o runs/ml100k-II -M runs/ml100k-II.json
+      II
+    deps:
+    - path: data-split/ml100k
+      md5: c15c2e96b18c0c398ba4cf0919983d50.dir
+      size: 52880
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
+    outs:
+    - path: runs/ml100k-II
+      md5: 85ff43e96b91b49abb184c640493a03b.dir
+      size: 1283851
+      nfiles: 10
+    - path: runs/ml100k-II.json
+      md5: 6adf748b573d61eb8a46c2fde3127069
+      size: 59
