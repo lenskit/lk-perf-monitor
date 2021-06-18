@@ -102,4 +102,16 @@ sns.lineplot(x='version', y='GRMSE', hue='data', data=ii_exp)
 ii_exp = mdf[mdf['algo'] == 'II']
 sns.lineplot(x='version', y='nDCG', hue='data', data=ii_exp)
 
+# %% [markdown]
+# ## User-User Results
+#
+
+# %%
+uu_exp = mdf[mdf['algo'] == 'UU']
+sns.lineplot(x='version', y='GRMSE', hue='data', data=uu_exp)
+
+# %%
+uu_exp = mdf[mdf['algo'] == 'UU']
+sns.lineplot(x='version', y='nDCG', hue='data', data=uu_exp)
+
 # %%
