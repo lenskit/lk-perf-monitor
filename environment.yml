@@ -8,7 +8,7 @@ dependencies:
 - pandas
 - libblas=*=*mkl
 - scipy
-- numba=0.53
+- numba
 - cffi>=1.12
 - pyarrow=4
 - tbb=2020
