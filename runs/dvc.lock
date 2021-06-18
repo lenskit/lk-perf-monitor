@@ -200,3 +200,78 @@ stages:
     - path: runs/ml100k-II.json
       md5: 6adf748b573d61eb8a46c2fde3127069
       size: 59
+  user-user@ml100k:
+    cmd: python run-algo.py --splits data-split/ml100k -o runs/ml100k-UU -M runs/ml100k-UU.json
+      UU
+    deps:
+    - path: data-split/ml100k
+      md5: c15c2e96b18c0c398ba4cf0919983d50.dir
+      size: 52880
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
+    outs:
+    - path: runs/ml100k-UU
+      md5: f1abc16cf3ae159a5456d51e8a8f4f4e.dir
+      size: 1237465
+      nfiles: 10
+    - path: runs/ml100k-UU.json
+      md5: 0b16d30b0f4e16e1124267bd9d799949
+      size: 59
+  user-user@ml10m:
+    cmd: python run-algo.py --splits data-split/ml10m -o runs/ml10m-UU -M runs/ml10m-UU.json
+      UU
+    deps:
+    - path: data-split/ml10m
+      md5: c34b2d5f1205163a0a9edf9129474b63.dir
+      size: 4007786
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
+    outs:
+    - path: runs/ml10m-UU
+      md5: c7cb0b3c7ac7f3c5d8c01c65e9484c59.dir
+      size: 95335381
+      nfiles: 10
+    - path: runs/ml10m-UU.json
+      md5: a8900d8f57f7632378ed2e5d2e2eacc0
+      size: 59
+  user-user@ml1m:
+    cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-UU -M runs/ml1m-UU.json
+      UU
+    deps:
+    - path: data-split/ml1m
+      md5: 135569a042bfa77c65a89f102a0bae1a.dir
+      size: 328728
+      nfiles: 5
+    - path: lkdemo/algorithms.py
+      md5: 87fdd8ec19bfebb834b248cbbc0d8904
+      size: 368
+    - path: run-algo.py
+      md5: b7f345f78132c380934801bd6accf4f2
+      size: 4116
+    params:
+      params.yaml:
+        lenskit.version: main
+    outs:
+    - path: runs/ml1m-UU
+      md5: 690c32d6ab511116ad09ef284aca98e2.dir
+      size: 8236614
+      nfiles: 10
+    - path: runs/ml1m-UU.json
+      md5: 7ba247851d106f8d9d9f24feb057ff7c
+      size: 57
