@@ -219,8 +219,8 @@ stages:
         lenskit.version: main
     outs:
     - path: runs/ml100k-UU
-      md5: f1abc16cf3ae159a5456d51e8a8f4f4e.dir
-      size: 1237465
+      md5: 79a5b9bd78af2100e5af9d842f12f779.dir
+      size: 1237355
       nfiles: 10
     - path: runs/ml100k-UU.json
       md5: 0b16d30b0f4e16e1124267bd9d799949
@@ -244,12 +244,12 @@ stages:
         lenskit.version: main
     outs:
     - path: runs/ml10m-UU
-      md5: c7cb0b3c7ac7f3c5d8c01c65e9484c59.dir
-      size: 95335381
+      md5: 8c9d3cad2e77849ce1fae35908fb6ad2.dir
+      size: 95336712
       nfiles: 10
     - path: runs/ml10m-UU.json
-      md5: a8900d8f57f7632378ed2e5d2e2eacc0
-      size: 59
+      md5: c886c3b45129b69036c65e02059c2938
+      size: 58
   user-user@ml1m:
     cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-UU -M runs/ml1m-UU.json
       UU
@@ -269,8 +269,8 @@ stages:
         lenskit.version: main
     outs:
     - path: runs/ml1m-UU
-      md5: 690c32d6ab511116ad09ef284aca98e2.dir
-      size: 8236614
+      md5: 42a523bc88c8ad7a87f8a5697747c659.dir
+      size: 8236533
       nfiles: 10
     - path: runs/ml1m-UU.json
       md5: 7ba247851d106f8d9d9f24feb057ff7c
