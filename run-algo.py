@@ -29,6 +29,7 @@ from lkdemo import log, datasets
 import json
 import importlib
 import pandas as pd
+import numpy as np
 
 def main(args):
     mod_name = args.get('-m')
@@ -53,6 +54,7 @@ def main(args):
 
     all_topnm = []
     all_preds = []
+    all_times = []
 
     for file in path.glob("test-*"):
         test = pd.read_csv(file, sep=',')
@@ -78,7 +80,9 @@ def main(args):
             continue
 
         _log.info('[%s] Fitting the model', timer)
+        tr_time = util.Stopwatch()
         model = algo.fit(train)
+        all_times.append(tr_time.elapsed())
         try:
             _log.info('[%s] generating recommendations for unique users', timer)
             users = test.user.unique()
@@ -109,7 +113,9 @@ def main(args):
         preds = pd.concat(all_preds, ignore_index=True)
         metrics = {
             'nDCG': topn_m['ndcg'].mean(),
-            'GRMSE': rmse(preds['prediction'], preds['rating'])
+            'GRMSE': rmse(preds['prediction'], preds['rating']),
+            'TrainTime': np.median(all_times),
+            'train_times': all_times,
         }
         _log.info('nDCG: %.3f', metrics['nDCG'])
         _log.info('Global RMSE: %.3f', metrics['GRMSE'])
