@@ -135,21 +135,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml1m-II
-      md5: a3cb7b40c69dd7853ec83858c5981d3e.dir
-      size: 8318967
+      md5: ac88cc2206964302b882769ed872628e.dir
+      size: 8411278
       nfiles: 10
     - path: runs/ml1m-II.json
-      md5: 1bc9b27d1a5ac9ca83e0ca7d34f19e1c
-      size: 59
+      md5: 94219e0d6d1647e22c04ae14095ed36e
+      size: 204
   als@ml100k:
     cmd: python run-algo.py --splits data-split/ml100k -o runs/ml100k-ALS -M runs/ml100k-ALS.json
       ALS
