@@ -10,21 +10,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml10m-ALS
-      md5: f6700d25912a492fd8c883fd688bc854.dir
-      size: 97301465
+      md5: 44aa6646c7e976ed2f6a7e3bb13b4f8b.dir
+      size: 98279255
       nfiles: 10
     - path: runs/ml10m-ALS.json
-      md5: db200dd04f04295eda7702c4981f3a84
-      size: 58
+      md5: 65b153fddc1c13198f18ff102c98297c
+      size: 198
   als@ml1m:
     cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-ALS -M runs/ml1m-ALS.json
       ALS
@@ -37,19 +37,19 @@ stages:
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
       size: 382
     - path: run-algo.py
-      md5: d82cb02b2b4e68cc10a3769e0ad2f61c
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
       size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml1m-ALS
-      md5: 522fda284a3e425cde57a8d7d3d33b04.dir
-      size: 8349849
+      md5: b5dbb36ecbb4016d5e2e591f590c7faa.dir
+      size: 8352023
       nfiles: 10
     - path: runs/ml1m-ALS.json
-      md5: f9b1f463d347b5c4e66782ae72ea84c3
-      size: 196
+      md5: 0c8f9a5f198ab20d46008a3bcd7202b0
+      size: 206
   als@ml20m:
     cmd: python run-algo.py --splits data-split/ml20m -o runs/ml20m-ALS -M runs/ml20m-ALS.json
       ALS
@@ -60,21 +60,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml20m-ALS
-      md5: 71a9d70dcc70a401e851b669003fa3fb.dir
-      size: 197549018
+      md5: a795a8592fc72ec97250930fb0cb4bb7.dir
+      size: 198895940
       nfiles: 10
     - path: runs/ml20m-ALS.json
-      md5: 0ef763f1590f49c04dafd14ca1eb9041
-      size: 58
+      md5: 8f07531ed54c3a2102bc8112ee9ba339
+      size: 193
   item-item@ml20m:
     cmd: python run-algo.py --splits data-split/ml20m -o runs/ml20m-II -M runs/ml20m-II.json
       II
@@ -85,21 +85,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml20m-II
-      md5: 19bd630064ce2f46886677b3fca9a8f7.dir
-      size: 196470993
+      md5: dcd3716fc55207913ef3a125be238de1.dir
+      size: 197753802
       nfiles: 10
     - path: runs/ml20m-II.json
-      md5: 3a1a3747ebe4a160a97792d641dd1856
-      size: 60
+      md5: c9254e44357ebf80eb5176fbbca5bfc8
+      size: 195
   item-item@ml10m:
     cmd: python run-algo.py --splits data-split/ml10m -o runs/ml10m-II -M runs/ml10m-II.json
       II
@@ -110,21 +110,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml10m-II
-      md5: 15fd5ed9c61e08c4ac1246c3a7b47979.dir
-      size: 99795580
+      md5: 8bde62fc3fbf8718f7d4490453ce7b51.dir
+      size: 100686201
       nfiles: 10
     - path: runs/ml10m-II.json
-      md5: 21e915a9177becce2de3cb3742d48839
-      size: 59
+      md5: 2041027473643787f1179d46c2d499a9
+      size: 197
   item-item@ml1m:
     cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-II -M runs/ml1m-II.json
       II
@@ -160,21 +160,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml100k-ALS
-      md5: 814ff58517b5e6528dc556995867ad81.dir
-      size: 1282735
+      md5: bf095f3d24816cf4bb4c9928643905a9.dir
+      size: 1294207
       nfiles: 10
     - path: runs/ml100k-ALS.json
-      md5: 0f6a0e97bbbaac8750be4921838808af
-      size: 57
+      md5: 82df44cc7a66b2a02ae408fd644236a9
+      size: 210
   item-item@ml100k:
     cmd: python run-algo.py --splits data-split/ml100k -o runs/ml100k-II -M runs/ml100k-II.json
       II
@@ -185,21 +185,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml100k-II
-      md5: 85ff43e96b91b49abb184c640493a03b.dir
-      size: 1283851
+      md5: beaf55081a2a349a8733f1fb79bdd9d5.dir
+      size: 1295130
       nfiles: 10
     - path: runs/ml100k-II.json
-      md5: 6adf748b573d61eb8a46c2fde3127069
-      size: 59
+      md5: 5c1ff270c3a944cc4de02b3ecf9a2473
+      size: 208
   user-user@ml100k:
     cmd: python run-algo.py --splits data-split/ml100k -o runs/ml100k-UU -M runs/ml100k-UU.json
       UU
@@ -210,21 +210,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml100k-UU
-      md5: 79a5b9bd78af2100e5af9d842f12f779.dir
-      size: 1237355
+      md5: 45d9e06555819874d851038d5f362dbe.dir
+      size: 1246949
       nfiles: 10
     - path: runs/ml100k-UU.json
-      md5: 0b16d30b0f4e16e1124267bd9d799949
-      size: 59
+      md5: 51f91fb2444f2412933888ce473853f2
+      size: 203
   user-user@ml10m:
     cmd: python run-algo.py --splits data-split/ml10m -o runs/ml10m-UU -M runs/ml10m-UU.json
       UU
@@ -235,21 +235,21 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml10m-UU
-      md5: 8c9d3cad2e77849ce1fae35908fb6ad2.dir
-      size: 95336712
+      md5: 43705275bdc54adee5ecfb35efe01d5e.dir
+      size: 96184065
       nfiles: 10
     - path: runs/ml10m-UU.json
-      md5: c886c3b45129b69036c65e02059c2938
-      size: 58
+      md5: bb28b14ca6d1922b756b08de57bdd5b9
+      size: 209
   user-user@ml1m:
     cmd: python run-algo.py --splits data-split/ml1m -o runs/ml1m-UU -M runs/ml1m-UU.json
       UU
@@ -260,18 +260,18 @@ stages:
       nfiles: 5
     - path: lkdemo/algorithms.py
       md5: 87fdd8ec19bfebb834b248cbbc0d8904
-      size: 368
+      size: 382
     - path: run-algo.py
-      md5: b7f345f78132c380934801bd6accf4f2
-      size: 4116
+      md5: bf0864c330ff4d98a9cdd359b2e6b4af
+      size: 4447
     params:
       params.yaml:
         lenskit.version: main
     outs:
     - path: runs/ml1m-UU
-      md5: 42a523bc88c8ad7a87f8a5697747c659.dir
-      size: 8236533
+      md5: 7836c6fc96faff0d203a2c9a2e59a311.dir
+      size: 8325656
       nfiles: 10
     - path: runs/ml1m-UU.json
-      md5: 7ba247851d106f8d9d9f24feb057ff7c
-      size: 57
+      md5: f6e849ea7a0f77ea57240b41a3a6068d
+      size: 212
