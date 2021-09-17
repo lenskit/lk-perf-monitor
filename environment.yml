@@ -18,8 +18,8 @@ dependencies:
 - jupytext
 - ipython
 - docopt
-- dvc>=2.3
-- dvc-s3>=2.3
+- dvc>=2.6
+- dvc-s3>=2.6
 - python-gist
 - pip:
   - lenskit@git+https://github.com/lenskit/lkpy
