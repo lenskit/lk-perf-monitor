@@ -6,9 +6,9 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.11.3
+#       jupytext_version: 1.12.0
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 # ---
@@ -50,9 +50,9 @@ versions
 # %%
 _mfn_re = re.compile(r'^runs/(\w+)-(.*)\.json$')
 def metric_rows(metrics):
-    for v, files in metrics.items():
+    for v, data in metrics.items():
         v = v.replace('versions/', '')
-        for fn, vals in files.items():
+        for fn, vals in data['data'].items():
             fn = fn.replace('\\', '/')
             m = _mfn_re.match(fn)
             if m:
@@ -63,7 +63,7 @@ def metric_rows(metrics):
                     'algo': algo,
                     'data': data,
                 }
-                row.update(vals)
+                row.update(vals['data'])
                 yield row
 
 
@@ -73,7 +73,7 @@ def metric_rows(metrics):
 # %%
 mdf = pd.DataFrame.from_records(metric_rows(metrics))
 mdf = mdf.astype({'version': 'category'})
-mdf['version'].cat.reorder_categories(versions, inplace=True)
+mdf['version'] = mdf['version'].cat.reorder_categories(versions)
 mdf
 
 # %% [markdown]
