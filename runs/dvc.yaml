@@ -57,3 +57,23 @@ stages:
       - runs/${item}-UU.json
       params:
       - lenskit.version
+
+  ials:
+    foreach:
+    - ml100k
+    - ml1m
+    - ml10m
+    - ml20m
+    do:
+      cmd: python run-algo.py --splits data-split/${item} -o runs/${item}-IALS -M runs/${item}-IALS.json IALS
+      wdir: ..
+      deps:
+      - run-algo.py
+      - lkdemo/algorithms.py
+      - data-split/${item}
+      outs:
+      - runs/${item}-IALS
+      metrics:
+      - runs/${item}-IALS.json
+      params:
+      - lenskit.version
