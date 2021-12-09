@@ -114,4 +114,21 @@ sns.lineplot(x='version', y='GRMSE', hue='data', data=uu_exp)
 uu_exp = mdf[mdf['algo'] == 'UU']
 sns.lineplot(x='version', y='nDCG', hue='data', data=uu_exp)
 
+# %% [markdown]
+# ## IALS Results
+#
+# Let's first look at biased MF from Implicit ALS:
+
+# %%
+als = mdf[mdf['algo'] == 'IALS']
+sns.lineplot(x='version', y='nDCG', hue='data', data=als)
+
+# %% [markdown]
+# ## Combined Algorithm Results
+#
+# Let's look at all the algorithms together as a bar plot:
+
+# %%
+sns.catplot(x='version', y='nDCG', hue='data', col='algo', data=mdf, kind='bar')
+
 # %%
