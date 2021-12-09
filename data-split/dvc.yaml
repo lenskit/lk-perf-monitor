@@ -7,6 +7,8 @@ stages:
     - data/ml-100k
     outs:
     - data-split/ml100k
+    params:
+      - random.seed
   
   ml1m:
     cmd: python split-data.py ml1m -o data-split/ml1m
@@ -16,6 +18,8 @@ stages:
     - data/ml-1m
     outs:
     - data-split/ml1m
+    params:
+      - random.seed
 
   ml10m:
     cmd: python split-data.py ml10m -o data-split/ml10m
@@ -25,6 +29,8 @@ stages:
     - data/ml-10M100K
     outs:
     - data-split/ml10m
+    params:
+      - random.seed
 
   ml20m:
     cmd: python split-data.py ml20m -o data-split/ml20m
@@ -34,3 +40,5 @@ stages:
     - data/ml-20m
     outs:
     - data-split/ml20m
+    params:
+      - random.seed

@@ -15,6 +15,7 @@ from lkdemo import datasets, log
 from pathlib import Path
 
 import lenskit.crossfold as xf
+from seedbank import init_file
 
 def main(args):
     dsname = args.get('DATASET')
@@ -23,6 +24,8 @@ def main(args):
 
     _log.info('locating data set %s', dsname)
     data = getattr(datasets, dsname)
+
+    init_file('params.yaml', 'split', dsname)
 
     _log.info('loading ratings')
     ratings = data.ratings
