@@ -7,15 +7,13 @@ dependencies:
 - psutil
 - pandas
 - scipy
-- numba
 - cffi>=1.12
 - pyarrow=4
 - libblas=*=*mkl
 - tbb=2021
 - mkl=2021
 - docopt
-- csr
 - binpickle
-- seedbank
+- seedbank>=0.1.2
 - pip:
   - lenskit@git+https://github.com/lenskit/lkpy
