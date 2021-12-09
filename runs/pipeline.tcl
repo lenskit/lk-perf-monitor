@@ -65,7 +65,7 @@ foreach v $versions {
                 puts "writing $v: $d-$a"
                 lappend outs "$d-$a"
                 puts $fp "  $d-$a:"
-                puts $fp "    cmd: python envtool.py --run run-algo.py --splits data-split/$d -o runs/$v/$d-$a -M runs/$v/$d-$a.json $a"
+                puts $fp "    cmd: python envtool.py --run $v run-algo.py --splits data-split/$d -o runs/$v/$d-$a -M runs/$v/$d-$a.json $a"
                 puts $fp "    wdir: ../.."
                 puts $fp "    deps:"
                 puts $fp "    - data-split/$d"
