@@ -1,0 +1,20 @@
+stages:
+  measure:
+    cmd: jupytext --sync --exec AlgoPerf.py
+    deps:
+    - AlgoPerf.py
+    - runs/0.9/metrics.csv
+    - runs/0.10/metrics.csv
+    - runs/0.11/metrics.csv
+    - runs/0.12/metrics.csv
+    - runs/0.13/metrics.csv
+    - runs/main/metrics.csv
+    outs:
+    - AlgoPerf.ipynb
+
+  render:
+    cmd: jupyter nbconvert --to html AlgoPerf.ipynb
+    deps:
+    - AlgoPerf.ipynb
+    outs:
+    - AlgoPerf.html
