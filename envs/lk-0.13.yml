@@ -1,0 +1,12 @@
+name: lkpm-0.13
+channels:
+- conda-forge
+dependencies:
+- python=3.8
+- pip
+- pyarrow=4
+- libblas=*=*mkl
+- tbb=2020
+- mkl=2020
+- docopt
+- lenskit=0.13

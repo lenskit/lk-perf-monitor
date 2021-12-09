@@ -1,18 +1,14 @@
+# Define root environment for managing LensKit
 name: lkpm
 channels:
 - conda-forge
 dependencies:
 - python=3.9
 - pip
-- psutil
+- mamba
 - pandas
-- libblas=*=*mkl
 - scipy
 - numba
-- cffi>=1.12
-- pyarrow=4
-- tbb=2020
-- mkl=2020
 - seaborn
 - notebook
 - jupytext
@@ -21,5 +17,4 @@ dependencies:
 - dvc>=2.6
 - dvc-s3>=2.6
 - python-gist
-- pip:
-  - lenskit@git+https://github.com/lenskit/lkpy
+- lenskit>=0.13

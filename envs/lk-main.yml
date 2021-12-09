@@ -1,0 +1,21 @@
+name: lkpm-main
+channels:
+- conda-forge
+dependencies:
+- python=3.9
+- pip
+- psutil
+- pandas
+- scipy
+- numba
+- cffi>=1.12
+- pyarrow=4
+- libblas=*=*mkl
+- tbb=2021
+- mkl=2021
+- docopt
+- csr
+- binpickle
+- seedbank
+- pip:
+  - lenskit@git+https://github.com/lenskit/lkpy
