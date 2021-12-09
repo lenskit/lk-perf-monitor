@@ -6,8 +6,13 @@ import sys
 import os
 import logging
 import pathlib
+try:
+    import lenskit
+except ImportError:
+    pass
 
 _simple_format = logging.Formatter('{levelname} {asctime} {name} {message}', style='{')
+
 
 def setup(debug=False, log_file=None):
     ch = logging.StreamHandler(sys.stderr)
@@ -45,4 +50,13 @@ def script(file, **kwargs):
         logger.info('starting script on %s', os.uname().nodename)
     except AttributeError:
         logger.info('starting script')
+
+    logger.info("Python version: %s", sys.version)
+    try:
+        logger.info("LensKit version: %s", lenskit.__version__)
+    except NameError:
+        logger.warn("LensKit not installed")
+    except ImportError:
+        logger.warn("LensKit version unavailable")
+
     return logger
