@@ -3,7 +3,6 @@ channels:
 - conda-forge
 dependencies:
 - python=3.9
-- conda-lock>=0.13.2
 - pip
 - psutil
 - pandas
