@@ -1,8 +1,8 @@
 deps:
-- etag: '"3e875b9-598cfd2c58a4b"'
-  path: http://files.grouplens.org/datasets/movielens/ml-10m.zip
+- path: http://files.grouplens.org/datasets/movielens/ml-10m.zip
   size: 65566137
-md5: fb3567bf831b1dbb496d1727a15eeef3
+  checksum: '"3e875b9-598cfd2c58a4b"'
+md5: 116e385c5e841935d321a9f6637a7b1a
 outs:
 - md5: ce571fd55effeba0271552578f2648bd
   path: ml-10m.zip

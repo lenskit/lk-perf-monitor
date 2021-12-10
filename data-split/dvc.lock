@@ -8,12 +8,15 @@ stages:
       size: 269225571
       nfiles: 6
     - path: split-data.py
-      md5: 1d60e01caee7282327d4d9a941757857
-      size: 1291
+      md5: 8a4649ac00c7ae732df01403dde4de23
+      size: 1372
+    params:
+      params.yaml:
+        random.seed: 20211209
     outs:
     - path: data-split/ml10m
-      md5: c34b2d5f1205163a0a9edf9129474b63.dir
-      size: 4007786
+      md5: 758eb106e9d2b2ebbceefe702f058bff.dir
+      size: 4010002
       nfiles: 5
   ml1m:
     cmd: python split-data.py ml1m -o data-split/ml1m
@@ -23,12 +26,15 @@ stages:
       size: 24905384
       nfiles: 4
     - path: split-data.py
-      md5: 1d60e01caee7282327d4d9a941757857
-      size: 1245
+      md5: 8a4649ac00c7ae732df01403dde4de23
+      size: 1372
+    params:
+      params.yaml:
+        random.seed: 20211209
     outs:
     - path: data-split/ml1m
-      md5: 135569a042bfa77c65a89f102a0bae1a.dir
-      size: 328728
+      md5: c738f2f559e657427fb304b1a3a2e007.dir
+      size: 333412
       nfiles: 5
   ml20m:
     cmd: python split-data.py ml20m -o data-split/ml20m
@@ -38,12 +44,15 @@ stages:
       size: 875588784
       nfiles: 7
     - path: split-data.py
-      md5: 1d60e01caee7282327d4d9a941757857
-      size: 1245
+      md5: 8a4649ac00c7ae732df01403dde4de23
+      size: 1372
+    params:
+      params.yaml:
+        random.seed: 20211209
     outs:
     - path: data-split/ml20m
-      md5: f0de883fb28d3ed31f0eef0a30a90ae6.dir
-      size: 8145464
+      md5: a48b901f072fa0b345277bf0b5a9f124.dir
+      size: 8146133
       nfiles: 5
   ml100k:
     cmd: python split-data.py ml100k -o data-split/ml100k
@@ -53,10 +62,13 @@ stages:
       size: 16100896
       nfiles: 23
     - path: split-data.py
-      md5: 1d60e01caee7282327d4d9a941757857
-      size: 1245
+      md5: 8a4649ac00c7ae732df01403dde4de23
+      size: 1372
+    params:
+      params.yaml:
+        random.seed: 20211209
     outs:
     - path: data-split/ml100k
-      md5: c15c2e96b18c0c398ba4cf0919983d50.dir
-      size: 52880
+      md5: 42424a2a8d9ae27cdcccb48e6dc2ace2.dir
+      size: 53351
       nfiles: 5

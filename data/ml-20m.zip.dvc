@@ -1,8 +1,8 @@
 deps:
-- etag: '"bd7f3fe-598cfd87ca0d4"'
-  path: http://files.grouplens.org/datasets/movielens/ml-20m.zip
+- path: http://files.grouplens.org/datasets/movielens/ml-20m.zip
   size: 198702078
-md5: e834b700921903efe83ed4be832847da
+  checksum: '"bd7f3fe-598cfd87ca0d4"'
+md5: 1f6c8e1f84be45f26661a16bb6414be9
 outs:
 - md5: cd245b17a1ae2cc31bb14903e1204af3
   path: ml-20m.zip

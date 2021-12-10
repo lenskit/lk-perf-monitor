@@ -15,19 +15,19 @@ from lkdemo import log
 
 
 def main(args):
-    out_file = Path(args['-o'])
+    out_file = Path(args['OUT'])
     dir = Path(args['DIR'])
 
     metrics = []
     for jsf in dir.glob('*.json'):
         _log.info("reading %s", jsf)
         with jsf.open('r') as f:
-            obj = json.load(jsf)
+            obj = json.load(f)
             metrics.append(obj)
 
     df = pd.DataFrame.from_records(metrics)
     _log.info('writing to %s', out_file)
-    pd.to_csv(out_file, index=False)
+    df.to_csv(out_file, index=False)
 
 
 if __name__ == '__main__':

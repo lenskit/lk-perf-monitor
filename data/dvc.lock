@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   ml-10M100K:
-    cmd: python ../unpack-data.py ml-10m.zip
+    cmd: python -m zipfile -e ml-10m.zip .
     deps:
     - path: ml-10m.zip
       md5: ce571fd55effeba0271552578f2648bd
@@ -12,7 +12,7 @@ stages:
       size: 269225571
       nfiles: 6
   ml-1m:
-    cmd: python ../unpack-data.py ml-1m.zip
+    cmd: python -m zipfile -e ml-1m.zip .
     deps:
     - path: ml-1m.zip
       md5: c4d9eecfca2ab87c1945afe126590906
@@ -23,7 +23,7 @@ stages:
       size: 24905384
       nfiles: 4
   ml-100k:
-    cmd: python ../unpack-data.py ml-100k.zip
+    cmd: python -m zipfile -e ml-100k.zip .
     deps:
     - path: ml-100k.zip
       md5: 0e33842e24a9c977be4e0107933c0723
@@ -45,7 +45,7 @@ stages:
       size: 3303135
       nfiles: 5
   ml-20m:
-    cmd: python ../unpack-data.py ml-20m.zip
+    cmd: python -m zipfile -e ml-20m.zip .
     deps:
     - path: ml-20m.zip
       md5: cd245b17a1ae2cc31bb14903e1204af3
