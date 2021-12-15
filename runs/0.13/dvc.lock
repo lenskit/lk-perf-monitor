@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  ml20m-ALS:
+    cmd: python envtool.py --run 0.13 run-algo.py --splits data-split/ml20m -o runs/0.13/ml20m-ALS
+      -M runs/0.13/ml20m-ALS.json ALS
+    deps:
+    - path: data-split/ml20m
+      md5: a48b901f072fa0b345277bf0b5a9f124.dir
+      size: 8146133
+      nfiles: 5
+    outs:
+    - path: runs/0.13/ml20m-ALS
+      md5: 73fc64e7bf65349ede70946f64f2171d.dir
+      size: 197585882
+      nfiles: 10
+    - path: runs/0.13/ml20m-ALS.json
+      md5: d3934e76f4f31e3c84679d6b2685ad4f
+      size: 207
