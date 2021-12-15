@@ -16,3 +16,35 @@ stages:
     - path: runs/0.13/ml20m-ALS.json
       md5: d3934e76f4f31e3c84679d6b2685ad4f
       size: 207
+  ml1m-UU:
+    cmd: python envtool.py --run 0.13 run-algo.py --splits data-split/ml1m -o runs/0.13/ml1m-UU
+      -M runs/0.13/ml1m-UU.json UU
+    deps:
+    - path: data-split/ml1m
+      md5: c738f2f559e657427fb304b1a3a2e007.dir
+      size: 333412
+      nfiles: 5
+    outs:
+    - path: runs/0.13/ml1m-UU
+      md5: 1bf9fb9b535d04bf2fa765316e9fcdb8.dir
+      size: 8237479
+      nfiles: 10
+    - path: runs/0.13/ml1m-UU.json
+      md5: 81e20f0736cb6f1d6c2bc7be500db2ed
+      size: 213
+  ml100k-II:
+    cmd: python envtool.py --run 0.13 run-algo.py --splits data-split/ml100k -o runs/0.13/ml100k-II
+      -M runs/0.13/ml100k-II.json II
+    deps:
+    - path: data-split/ml100k
+      md5: 42424a2a8d9ae27cdcccb48e6dc2ace2.dir
+      size: 53351
+      nfiles: 5
+    outs:
+    - path: runs/0.13/ml100k-II
+      md5: 2b7a15df5ce53bc40b55547803fa0a1e.dir
+      size: 1283896
+      nfiles: 10
+    - path: runs/0.13/ml100k-II.json
+      md5: 20287316fedd7f1575930d4464f2fd23
+      size: 208
