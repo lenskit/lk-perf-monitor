@@ -56,7 +56,7 @@ def script(file, **kwargs):
         logger.info("LensKit version: %s", lenskit.__version__)
     except NameError:
         logger.warn("LensKit not installed")
-    except ImportError:
+    except AttributeError:
         logger.warn("LensKit version unavailable")
 
     return logger
