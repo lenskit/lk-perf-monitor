@@ -1,0 +1,130 @@
+schema: '2.0'
+stages:
+  ml10m-IALS:
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml10m -o runs/0.9/ml10m-IALS
+      -M runs/0.9/ml10m-IALS.json IALS
+    deps:
+    - path: data-split/ml10m
+      md5: 758eb106e9d2b2ebbceefe702f058bff.dir
+      size: 4010002
+      nfiles: 5
+    outs:
+    - path: runs/0.9/ml10m-IALS
+      md5: f42c772d95ca7ea6eb395b66c76205a5.dir
+      size: 100627591
+      nfiles: 10
+    - path: runs/0.9/ml10m-IALS.json
+      md5: 97d042996beddbd65ab226776d9032fa
+      size: 200
+  ml10m-ALS:
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml10m -o runs/0.9/ml10m-ALS
+      -M runs/0.9/ml10m-ALS.json ALS
+    deps:
+    - path: data-split/ml10m
+      md5: 758eb106e9d2b2ebbceefe702f058bff.dir
+      size: 4010002
+      nfiles: 5
+    outs:
+    - path: runs/0.9/ml10m-ALS
+      md5: 33de0b28bae429b50e66888c2a2f8df8.dir
+      size: 97300430
+      nfiles: 10
+    - path: runs/0.9/ml10m-ALS.json
+      md5: 4fe95fa3745591804b7d7bc06029791d
+      size: 203
+  ml20m-ALS:
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml20m -o runs/0.9/ml20m-ALS
+      -M runs/0.9/ml20m-ALS.json ALS
+    deps:
+    - path: data-split/ml20m
+      md5: a48b901f072fa0b345277bf0b5a9f124.dir
+      size: 8146133
+      nfiles: 5
+    outs:
+    - path: runs/0.9/ml20m-ALS
+      md5: 523fd02cfe77811e6b75508478273a02.dir
+      size: 197616561
+      nfiles: 10
+    - path: runs/0.9/ml20m-ALS.json
+      md5: f7d6d6ef58a81ab09bdea1eca4f2b79f
+      size: 207
+  ml1m-UU:
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml1m -o runs/0.9/ml1m-UU
+      -M runs/0.9/ml1m-UU.json UU
+    deps:
+    - path: data-split/ml1m
+      md5: c738f2f559e657427fb304b1a3a2e007.dir
+      size: 333412
+      nfiles: 5
+    outs:
+    - path: runs/0.9/ml1m-UU
+      md5: 48558ae99bb754151f863692a5e1cc76.dir
+      size: 8237081
+      nfiles: 10
+    - path: runs/0.9/ml1m-UU.json
+      md5: b56fac05a9cbdebec6f006bcce1af5be
+      size: 213
+  ml1m-ALS:
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml1m -o runs/0.9/ml1m-ALS
+      -M runs/0.9/ml1m-ALS.json ALS
+    deps:
+    - path: data-split/ml1m
+      md5: c738f2f559e657427fb304b1a3a2e007.dir
+      size: 333412
+      nfiles: 5
+    outs:
+    - path: runs/0.9/ml1m-ALS
+      md5: 99fc5db04ed105f925e49bca53591209.dir
+      size: 8259003
+      nfiles: 10
+    - path: runs/0.9/ml1m-ALS.json
+      md5: 9b06828c5528c697a7746bf9530e1e48
+      size: 206
+  ml100k-II:
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml100k -o runs/0.9/ml100k-II
+      -M runs/0.9/ml100k-II.json II
+    deps:
+    - path: data-split/ml100k
+      md5: 42424a2a8d9ae27cdcccb48e6dc2ace2.dir
+      size: 53351
+      nfiles: 5
+    outs:
+    - path: runs/0.9/ml100k-II
+      md5: 4d8893f83affc1d467131fa1d02799fc.dir
+      size: 1283856
+      nfiles: 10
+    - path: runs/0.9/ml100k-II.json
+      md5: 0a44c8c3ef0599402f3a3db4a3b8b5bf
+      size: 205
+  ml20m-IALS:
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml20m -o runs/0.9/ml20m-IALS
+      -M runs/0.9/ml20m-IALS.json IALS
+    deps:
+    - path: data-split/ml20m
+      md5: a48b901f072fa0b345277bf0b5a9f124.dir
+      size: 8146133
+      nfiles: 5
+    outs:
+    - path: runs/0.9/ml20m-IALS
+      md5: 284bf1475c563466a4a9759e4801ccc0.dir
+      size: 201297298
+      nfiles: 10
+    - path: runs/0.9/ml20m-IALS.json
+      md5: 7064bcd5f421cdc9866779f1224d615f
+      size: 200
+  ml100k-UU:
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml100k -o runs/0.9/ml100k-UU
+      -M runs/0.9/ml100k-UU.json UU
+    deps:
+    - path: data-split/ml100k
+      md5: 42424a2a8d9ae27cdcccb48e6dc2ace2.dir
+      size: 53351
+      nfiles: 5
+    outs:
+    - path: runs/0.9/ml100k-UU
+      md5: bfb5cf0fe3220f458d6957214f2058c5.dir
+      size: 1236884
+      nfiles: 10
+    - path: runs/0.9/ml100k-UU.json
+      md5: ffe5e0208bd90374b70eaa64fc94b2de
+      size: 213
