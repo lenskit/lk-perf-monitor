@@ -1,0 +1,40 @@
+schema: '2.0'
+stages:
+  measure:
+    cmd: jupytext --sync --exec AlgoMetrics.py
+    deps:
+    - path: AlgoMetrics.py
+      md5: d63823d5488a4407a2e747bf459af42e
+      size: 2741
+    - path: runs/0.10/metrics.csv
+      md5: 747580273b8ba6fd2c829bca07b692fb
+      size: 2581
+    - path: runs/0.11/metrics.csv
+      md5: 52d8383001a5bba9c8d858bb30bc1b4e
+      size: 2580
+    - path: runs/0.12/metrics.csv
+      md5: b3639ad307347b5aa21029f1575700b1
+      size: 2066
+    - path: runs/0.13/metrics.csv
+      md5: 0fc1e25d7507b8c39deff268fb285cfd
+      size: 2583
+    - path: runs/0.9/metrics.csv
+      md5: 6918e26d29093528007de6f3728375c1
+      size: 2572
+    - path: runs/main/metrics.csv
+      md5: dbde6a780b3c260bee07178419fbfa08
+      size: 2515
+    outs:
+    - path: AlgoMetrics.ipynb
+      md5: 7fd34157ecb30de97e0a052463ece6dd
+      size: 171408
+  render:
+    cmd: jupyter nbconvert --to html AlgoMetrics.ipynb
+    deps:
+    - path: AlgoMetrics.ipynb
+      md5: 7fd34157ecb30de97e0a052463ece6dd
+      size: 171408
+    outs:
+    - path: AlgoMetrics.html
+      md5: ffda1a3a60c15316fd750ca6dc0963ed
+      size: 766894
