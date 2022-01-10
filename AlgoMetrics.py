@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.12.0
+#       jupytext_version: 1.13.3
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -20,7 +20,7 @@
 
 # %%
 import re
-import subprocess
+from pathlib import Path
 from packaging.version import parse as parse_version
 import json
 
@@ -34,46 +34,41 @@ import seaborn as sns
 # Let's load all the DVC metrics:
 
 # %%
-proc = subprocess.run(['dvc', 'metrics', 'show', '-a', '--show-json'], stdout=subprocess.PIPE, text=True)
-metrics = json.loads(proc.stdout)
+run_dir = Path('runs')
+
+# %%
+metrics = {}
+for file in run_dir.glob('*/metrics.csv'):
+    ver = file.parent.name
+    metrics[ver] = pd.read_csv(file)
 list(metrics.keys())
 
 # %%
-versions = [v.replace(r'versions/', '') for v in metrics.keys() if v != 'main']
+versions = [k for k in metrics.keys() if k != 'main']
 versions.sort(key=parse_version)
 versions.append('main')
 versions
 
 # %% [markdown]
-# Now let's define a function that can traverses the metric structure and yields individual rows for a table:
+# Now let's collect all these metrics into a frame:
 
 # %%
-_mfn_re = re.compile(r'^runs/(\w+)-(.*)\.json$')
-def metric_rows(metrics):
-    for v, data in metrics.items():
-        v = v.replace('versions/', '')
-        for fn, vals in data['data'].items():
-            fn = fn.replace('\\', '/')
-            m = _mfn_re.match(fn)
-            if m:
-                data = m.group(1)
-                algo = m.group(2)
-                row = {
-                    'version': v,
-                    'algo': algo,
-                    'data': data,
-                }
-                row.update(vals['data'])
-                yield row
-
-
-# %% [markdown]
-# And compute a full data frame:
-
-# %%
-mdf = pd.DataFrame.from_records(metric_rows(metrics))
+mdf = pd.concat(metrics, names=['version'])
+# pull version out of index
+mdf.reset_index('version', inplace=True)
+# drop remaining index
+mdf.reset_index(drop=True, inplace=True)
+# set up category and ordering
 mdf = mdf.astype({'version': 'category'})
 mdf['version'] = mdf['version'].cat.reorder_categories(versions)
+mdf
+
+# %% [markdown]
+# And get data sets & algorithms from run keys:
+
+# %%
+mdf['data'] = mdf['run'].str.replace(r'^(\w+)-.*', r'\1', regex=True)
+mdf['algo'] = mdf['run'].str.replace(r'^\w+-(.*)', r'\1', regex=True)
 mdf
 
 # %% [markdown]
@@ -126,9 +121,9 @@ sns.lineplot(x='version', y='nDCG', hue='data', data=als)
 # %% [markdown]
 # ## Combined Algorithm Results
 #
-# Let's look at all the algorithms together as a bar plot:
+# Let's look at all the algorithms together as a point plot:
 
 # %%
-sns.catplot(x='version', y='nDCG', hue='data', col='algo', data=mdf, kind='bar')
+sns.catplot(x='version', y='nDCG', hue='data', col='algo', data=mdf, kind='point')
 
 # %%
