@@ -80,6 +80,7 @@ foreach v $versions {
     puts $fp "    cmd: python collect-metrics.py -o runs/$v/metrics.csv runs/$v"
     puts $fp "    wdir: ../.."
     puts $fp "    deps:"
+    puts $fp "    - collect-metrics.py"
     foreach dep $outs {
         puts $fp "    - runs/$v/$dep.json"
     }

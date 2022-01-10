@@ -123,6 +123,7 @@ stages:
     cmd: python collect-metrics.py -o runs/0.10/metrics.csv runs/0.10
     wdir: ../..
     deps:
+    - collect-metrics.py
     - runs/0.10/ml100k-II.json
     - runs/0.10/ml1m-II.json
     - runs/0.10/ml10m-II.json
