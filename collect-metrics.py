@@ -6,12 +6,15 @@ Usage:
 """
 
 from os import fspath
+import re
 from pathlib import Path
 from docopt import docopt
 import json
 import pandas as pd
 
 from lkdemo import log
+
+_run_re = re.compile(r'^(\w+)-(.*)$')
 
 
 def main(args):
@@ -21,8 +24,10 @@ def main(args):
     metrics = []
     for jsf in dir.glob('*.json'):
         _log.info("reading %s", jsf)
+
         with jsf.open('r') as f:
             obj = json.load(f)
+            obj['run'] = jsf.stem
             metrics.append(obj)
 
     df = pd.DataFrame.from_records(metrics)
