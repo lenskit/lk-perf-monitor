@@ -10,7 +10,8 @@ stages:
     - runs/0.13/metrics.csv
     - runs/main/metrics.csv
     outs:
-    - AlgoMetrics.ipynb
+    - AlgoMetrics.ipynb:
+        cache: false
 
   render:
     cmd: jupyter nbconvert --to html AlgoMetrics.ipynb
