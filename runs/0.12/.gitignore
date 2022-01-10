@@ -1,5 +1,7 @@
-ml100k-ALS/
-ml20m-II/
+/ml100k-ALS
+/ml100k-ALS.json
+/ml20m-II
+/ml20m-II.json
 /ml1m-ALS
 /ml1m-ALS.json
 /ml10m-ALS
