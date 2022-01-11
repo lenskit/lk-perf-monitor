@@ -2,6 +2,12 @@
 #
 # There is a lot of repetition in the DVC pipelines, some of which is beyond the
 # ability of 'foreach' to help with, so we generate the pipelines.
+#
+# Run this with the following command from the project root directory:
+#
+#     tclsh runs/pipeline.tcl
+
+source runs/dvcgen.tcl
 
 set excludes [list]
 
@@ -56,36 +62,28 @@ exclude -v 0.12 UU
 exclude -d ml20m UU
 
 foreach v $versions {
-    set fp [open "runs/$v/dvc.yaml" w]
-    set outs [list]
-    puts $fp "stages:"
-    foreach a $algorithms {
-        foreach d $datasets {
-            if {[allowed $v $d $a]} {
-                puts "writing $v: $d-$a"
-                lappend outs "$d-$a"
-                puts $fp "  $d-$a:"
-                puts $fp "    cmd: python envtool.py --run $v run-algo.py --splits data-split/$d -o runs/$v/$d-$a -M runs/$v/$d-$a.json $a"
-                puts $fp "    wdir: ../.."
-                puts $fp "    deps:"
-                puts $fp "    - data-split/$d"
-                puts $fp "    outs:"
-                puts $fp "    - runs/$v/$d-$a"
-                puts $fp "    - runs/$v/$d-$a.json"
+    pipeline "runs/$v/dvc.yaml" {
+        set collect_deps [list]
+        
+        foreach a $algorithms {
+            foreach d $datasets {
+                if {[allowed $v $d $a]} {
+                    stage "$d-$a" {
+                        cmd "python envtool.py --run $v run-algo.py --splits data-split/$d -o runs/$v/$d-$a -M runs/$v/$d-$a.json $a"
+                        wdir "../.."
+                        deps "data-split/$d"
+                        outs "runs/$v/$d-$a" "runs/$v/$d-$a.json"
+                    }
+                    lappend collect_deps "runs/$v/$d-$a.json"
+                }
             }
         }
-    }
 
-    puts $fp "  collect:"
-    puts $fp "    cmd: python collect-metrics.py -o runs/$v/metrics.csv runs/$v"
-    puts $fp "    wdir: ../.."
-    puts $fp "    deps:"
-    puts $fp "    - collect-metrics.py"
-    foreach dep $outs {
-        puts $fp "    - runs/$v/$dep.json"
+        stage collect {
+            cmd "python collect-metrics.py -o runs/$v/metrics.csv runs/$v"
+            wdir "../.."
+            deps "collect-metrics.py" -l $collect_deps
+            outs "runs/$v/metrics.csv"
+        }
     }
-    puts $fp "    outs:"
-    puts $fp "    - runs/$v/metrics.csv"
-
-    close $fp
 }

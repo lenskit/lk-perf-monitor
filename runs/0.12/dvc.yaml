@@ -1,116 +1,118 @@
+---
 stages:
   ml100k-II:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml100k -o runs/0.12/ml100k-II -M runs/0.12/ml100k-II.json II
     wdir: ../..
     deps:
-    - data-split/ml100k
+      - data-split/ml100k
     outs:
-    - runs/0.12/ml100k-II
-    - runs/0.12/ml100k-II.json
+      - runs/0.12/ml100k-II
+      - runs/0.12/ml100k-II.json
   ml1m-II:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml1m -o runs/0.12/ml1m-II -M runs/0.12/ml1m-II.json II
     wdir: ../..
     deps:
-    - data-split/ml1m
+      - data-split/ml1m
     outs:
-    - runs/0.12/ml1m-II
-    - runs/0.12/ml1m-II.json
+      - runs/0.12/ml1m-II
+      - runs/0.12/ml1m-II.json
   ml10m-II:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml10m -o runs/0.12/ml10m-II -M runs/0.12/ml10m-II.json II
     wdir: ../..
     deps:
-    - data-split/ml10m
+      - data-split/ml10m
     outs:
-    - runs/0.12/ml10m-II
-    - runs/0.12/ml10m-II.json
+      - runs/0.12/ml10m-II
+      - runs/0.12/ml10m-II.json
   ml20m-II:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml20m -o runs/0.12/ml20m-II -M runs/0.12/ml20m-II.json II
     wdir: ../..
     deps:
-    - data-split/ml20m
+      - data-split/ml20m
     outs:
-    - runs/0.12/ml20m-II
-    - runs/0.12/ml20m-II.json
+      - runs/0.12/ml20m-II
+      - runs/0.12/ml20m-II.json
   ml100k-ALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml100k -o runs/0.12/ml100k-ALS -M runs/0.12/ml100k-ALS.json ALS
     wdir: ../..
     deps:
-    - data-split/ml100k
+      - data-split/ml100k
     outs:
-    - runs/0.12/ml100k-ALS
-    - runs/0.12/ml100k-ALS.json
+      - runs/0.12/ml100k-ALS
+      - runs/0.12/ml100k-ALS.json
   ml1m-ALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml1m -o runs/0.12/ml1m-ALS -M runs/0.12/ml1m-ALS.json ALS
     wdir: ../..
     deps:
-    - data-split/ml1m
+      - data-split/ml1m
     outs:
-    - runs/0.12/ml1m-ALS
-    - runs/0.12/ml1m-ALS.json
+      - runs/0.12/ml1m-ALS
+      - runs/0.12/ml1m-ALS.json
   ml10m-ALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml10m -o runs/0.12/ml10m-ALS -M runs/0.12/ml10m-ALS.json ALS
     wdir: ../..
     deps:
-    - data-split/ml10m
+      - data-split/ml10m
     outs:
-    - runs/0.12/ml10m-ALS
-    - runs/0.12/ml10m-ALS.json
+      - runs/0.12/ml10m-ALS
+      - runs/0.12/ml10m-ALS.json
   ml20m-ALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml20m -o runs/0.12/ml20m-ALS -M runs/0.12/ml20m-ALS.json ALS
     wdir: ../..
     deps:
-    - data-split/ml20m
+      - data-split/ml20m
     outs:
-    - runs/0.12/ml20m-ALS
-    - runs/0.12/ml20m-ALS.json
+      - runs/0.12/ml20m-ALS
+      - runs/0.12/ml20m-ALS.json
   ml100k-IALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml100k -o runs/0.12/ml100k-IALS -M runs/0.12/ml100k-IALS.json IALS
     wdir: ../..
     deps:
-    - data-split/ml100k
+      - data-split/ml100k
     outs:
-    - runs/0.12/ml100k-IALS
-    - runs/0.12/ml100k-IALS.json
+      - runs/0.12/ml100k-IALS
+      - runs/0.12/ml100k-IALS.json
   ml1m-IALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml1m -o runs/0.12/ml1m-IALS -M runs/0.12/ml1m-IALS.json IALS
     wdir: ../..
     deps:
-    - data-split/ml1m
+      - data-split/ml1m
     outs:
-    - runs/0.12/ml1m-IALS
-    - runs/0.12/ml1m-IALS.json
+      - runs/0.12/ml1m-IALS
+      - runs/0.12/ml1m-IALS.json
   ml10m-IALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml10m -o runs/0.12/ml10m-IALS -M runs/0.12/ml10m-IALS.json IALS
     wdir: ../..
     deps:
-    - data-split/ml10m
+      - data-split/ml10m
     outs:
-    - runs/0.12/ml10m-IALS
-    - runs/0.12/ml10m-IALS.json
+      - runs/0.12/ml10m-IALS
+      - runs/0.12/ml10m-IALS.json
   ml20m-IALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml20m -o runs/0.12/ml20m-IALS -M runs/0.12/ml20m-IALS.json IALS
     wdir: ../..
     deps:
-    - data-split/ml20m
+      - data-split/ml20m
     outs:
-    - runs/0.12/ml20m-IALS
-    - runs/0.12/ml20m-IALS.json
+      - runs/0.12/ml20m-IALS
+      - runs/0.12/ml20m-IALS.json
   collect:
     cmd: python collect-metrics.py -o runs/0.12/metrics.csv runs/0.12
     wdir: ../..
     deps:
-    - collect-metrics.py
-    - runs/0.12/ml100k-II.json
-    - runs/0.12/ml1m-II.json
-    - runs/0.12/ml10m-II.json
-    - runs/0.12/ml20m-II.json
-    - runs/0.12/ml100k-ALS.json
-    - runs/0.12/ml1m-ALS.json
-    - runs/0.12/ml10m-ALS.json
-    - runs/0.12/ml20m-ALS.json
-    - runs/0.12/ml100k-IALS.json
-    - runs/0.12/ml1m-IALS.json
-    - runs/0.12/ml10m-IALS.json
-    - runs/0.12/ml20m-IALS.json
+      - collect-metrics.py
+      - runs/0.12/ml100k-II.json
+      - runs/0.12/ml1m-II.json
+      - runs/0.12/ml10m-II.json
+      - runs/0.12/ml20m-II.json
+      - runs/0.12/ml100k-ALS.json
+      - runs/0.12/ml1m-ALS.json
+      - runs/0.12/ml10m-ALS.json
+      - runs/0.12/ml20m-ALS.json
+      - runs/0.12/ml100k-IALS.json
+      - runs/0.12/ml1m-IALS.json
+      - runs/0.12/ml10m-IALS.json
+      - runs/0.12/ml20m-IALS.json
     outs:
-    - runs/0.12/metrics.csv
+      - runs/0.12/metrics.csv
+
