@@ -16,6 +16,7 @@ dependencies:
 - docopt
 - dvc>=2.6
 - dvc-s3>=2.6
+- tcllib
 - python-gist
 - seedbank>=0.1.2
 - lenskit>=0.13
