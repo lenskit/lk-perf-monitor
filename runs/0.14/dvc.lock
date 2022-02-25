@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  ml100k-IALS:
+    cmd: python envtool.py --run 0.14 run-algo.py --splits data-split/ml100k -o runs/0.14/ml100k-IALS
+      -M runs/0.14/ml100k-IALS.json IALS
+    deps:
+    - path: data-split/ml100k
+      md5: 42424a2a8d9ae27cdcccb48e6dc2ace2.dir
+      size: 53351
+      nfiles: 5
+    outs:
+    - path: runs/0.14/ml100k-IALS
+      md5: 9d741b3591a75d03d139dfd9f554b83d.dir
+      size: 1340219
+      nfiles: 10
+    - path: runs/0.14/ml100k-IALS.json
+      md5: 28c12177f64f00cd45466a1610c7dab6
+      size: 205
