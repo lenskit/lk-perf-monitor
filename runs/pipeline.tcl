@@ -30,6 +30,9 @@ exclude -v 0.12 UU
 exclude -d ml20m UU
 
 foreach v $versions {
+    if {![file exists "runs/$v"]} {
+        file mkdir "runs/$v"
+    }
     pipeline "runs/$v/dvc.yaml" {
         set collect_deps [list]
         
