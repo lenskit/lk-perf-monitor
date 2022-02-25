@@ -34,7 +34,7 @@ stages:
       size: 16100896
       nfiles: 23
   ml-latest-small:
-    cmd: python ../unpack-data.py ml-latest-small.zip
+    cmd: python -m zipfile -e ml-latest-small.zip .
     deps:
     - path: ml-latest-small.zip
       md5: 31a303aabbc519bd33d025e44d6c2570
@@ -56,7 +56,7 @@ stages:
       size: 875588784
       nfiles: 7
   ml-25m:
-    cmd: python ../unpack-data.py ml-25m.zip
+    cmd: python -m zipfile -e ml-25m.zip .
     deps:
     - path: ml-25m.zip
       md5: 6b51fb2759a8657d3bfcbfc42b592ada
