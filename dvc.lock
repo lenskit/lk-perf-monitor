@@ -4,7 +4,7 @@ stages:
     cmd: jupytext --sync --exec AlgoMetrics.py
     deps:
     - path: AlgoMetrics.py
-      md5: d63823d5488a4407a2e747bf459af42e
+      md5: 5685f36206faa36317a3ecdfc987c256
       size: 2741
     - path: runs/0.10/metrics.csv
       md5: 747580273b8ba6fd2c829bca07b692fb
@@ -18,6 +18,9 @@ stages:
     - path: runs/0.13/metrics.csv
       md5: 0fc1e25d7507b8c39deff268fb285cfd
       size: 2583
+    - path: runs/0.14/metrics.csv
+      md5: 80222fd5f0dd2b939bc3d91a1f2880f0
+      size: 2562
     - path: runs/0.9/metrics.csv
       md5: 6918e26d29093528007de6f3728375c1
       size: 2572
@@ -26,15 +29,15 @@ stages:
       size: 2515
     outs:
     - path: AlgoMetrics.ipynb
-      md5: 7fd34157ecb30de97e0a052463ece6dd
-      size: 171408
+      md5: ad1c4a2a9ab4c36f0bc2b377bfaa2369
+      size: 192350
   render:
     cmd: jupyter nbconvert --to html AlgoMetrics.ipynb
     deps:
     - path: AlgoMetrics.ipynb
-      md5: 7fd34157ecb30de97e0a052463ece6dd
-      size: 171408
+      md5: ad1c4a2a9ab4c36f0bc2b377bfaa2369
+      size: 192350
     outs:
     - path: AlgoMetrics.html
-      md5: ffda1a3a60c15316fd750ca6dc0963ed
-      size: 766894
+      md5: 584b9ffdaf3a93d790ed80576d28c914
+      size: 778558
