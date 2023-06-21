@@ -67,16 +67,13 @@ stages:
       size: 1156670716
       nfiles: 7
   bx:
-    cmd: python unpack-data.py data/BX-CSV-Dump.zip data/bx
+    cmd: python -m zipfile -e BX-CSV-Dump.zip bx
     deps:
-    - path: data/BX-CSV-Dump.zip
+    - path: BX-CSV-Dump.zip
       md5: 37d647ee9e18ba134ea6d78ee4fe5292
       size: 26085508
-    - path: unpack-data.py
-      md5: c9f8423d36c0be1c42fed36a1ed101b6
-      size: 632
     outs:
-    - path: data/bx
+    - path: bx
       md5: 98ee04d046acb394d3b4916908bca3d0.dir
       size: 120753872
       nfiles: 3
