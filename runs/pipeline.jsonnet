@@ -10,10 +10,12 @@ local algorithms = [
     "UU",
     "ALS",
     "IALS",
+    "implicit",
 ];
 
 local default_excludes = [
     {a: "UU", d: "ml20m"},
+    {a: "UU", v: "0.12"},
     {a: "implicit"}
 ];
 
