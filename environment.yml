@@ -3,9 +3,9 @@ name: lkpm
 channels:
 - conda-forge
 dependencies:
-- python=3.9
+- python=3.10
 - pip
-- pandas
+- pandas=1
 - flake8
 - scipy
 - numba
@@ -14,9 +14,11 @@ dependencies:
 - jupytext
 - ipython
 - docopt
-- dvc>=2.6
-- dvc-s3>=2.6
+- dvc>=3
+- dvc-s3>=3
 - tcllib
-- python-gist
-- seedbank>=0.1.2
-- lenskit>=0.13
+- lenskit>=0.14
+platforms:
+- osx-64
+- osx-arm64
+- linux-64
