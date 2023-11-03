@@ -22,7 +22,7 @@ def update_env(ver):
 
     _log.info('creating LensKit environment for %s', ver)
     _log.info('environment file: %s', env_file)
-    sp.check_call(['conda', 'env', 'update', '-p', fspath(env_dir), '-f', fspath(env_file)])
+    sp.check_call(['mamba', 'env', 'update', '-p', fspath(env_dir), '-f', fspath(env_file)])
 
 
 def cmd_create(args):
