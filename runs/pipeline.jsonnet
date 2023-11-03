@@ -13,6 +13,11 @@ local algorithms = [
     "impBPR",
 ];
 
+local implicit = {
+    IALS: true,
+    impBPR: true,
+};
+
 local forbidden = [
     {a: "UU", d: "ml20m"},
 ];
@@ -44,10 +49,11 @@ local excluded(excludes, v, d, a) =
 function(version, excludes=null) {
     stages: {
         [key(d, a)]: {
-            cmd: "python envtool.py --run %(v)s run-algo.py --splits data-split/%(d)s -o runs/%(v)s/%(d)s-%(a)s -M runs/%(v)s/%(d)s-%(a)s.json %(a)s" % {
+            cmd: "python envtool.py --run %(v)s run-algo.py --splits data-split/%(d)s%(opts)s -o runs/%(v)s/%(d)s-%(a)s -M runs/%(v)s/%(d)s-%(a)s.json %(a)s" % {
                 v: version,
                 a: a,
                 d: d,
+                opts: if std.get(implicit, a, false) then " --no-predict" else ""
             },
             wdir: "../..",
             deps: [
