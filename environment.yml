@@ -15,7 +15,6 @@ dependencies:
 - ipython
 - docopt
 - dvc>=3
-- dvc-s3>=3
 - tcllib
 - lenskit>=0.14
 platforms:
