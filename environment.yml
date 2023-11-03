@@ -5,6 +5,8 @@ channels:
 dependencies:
 - python=3.10
 - pip
+- invoke
+- jsonnet
 - pandas=1
 - flake8
 - scipy
@@ -15,7 +17,6 @@ dependencies:
 - ipython
 - docopt
 - dvc>=3
-- tcllib
 - lenskit>=0.14
 platforms:
 - osx-64
