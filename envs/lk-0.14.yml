@@ -8,7 +8,7 @@ dependencies:
 - libblas=*=*mkl
 - tbb
 - docopt
-- implicit
+- implicit=0.7
 - lenskit=0.14
 - pip:
   - lenskit-implicit@git+https://github.com/lenskit/lenskit-implicit
