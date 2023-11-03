@@ -57,6 +57,7 @@ def main(args):
     all_times = []
 
     for file in path.glob("test-*"):
+        _log.info('loading %s', file)
         test = pd.read_csv(file, sep=',')
         suffix = file.name[5:]
         train_file = path / f'train-{suffix}'
@@ -81,7 +82,8 @@ def main(args):
 
         _log.info('[%s] Fitting the model', timer)
         tr_time = util.Stopwatch()
-        model = algo.fit(train)
+        fittable = util.clone(algo)
+        model = fittable.fit(train)
         all_times.append(tr_time.elapsed())
         try:
             users = test['user'].unique()
