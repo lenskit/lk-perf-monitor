@@ -295,3 +295,22 @@ stages:
     - path: runs/0.14/metrics.csv
       md5: 80222fd5f0dd2b939bc3d91a1f2880f0
       size: 2562
+  ml100k-impBPR:
+    cmd: python envtool.py --run 0.14 run-algo.py --splits data-split/ml100k -o runs/0.14/ml100k-impBPR
+      -M runs/0.14/ml100k-impBPR.json impBPR
+    deps:
+    - path: data-split/ml100k
+      hash: md5
+      md5: 42424a2a8d9ae27cdcccb48e6dc2ace2.dir
+      size: 53351
+      nfiles: 5
+    outs:
+    - path: runs/0.14/ml100k-impBPR
+      hash: md5
+      md5: 30b3afd1a29e6965d0afb1c70b014b50.dir
+      size: 890966
+      nfiles: 10
+    - path: runs/0.14/ml100k-impBPR.json
+      hash: md5
+      md5: 3db9ac15d24dae04e558d863006fc0cb
+      size: 207
