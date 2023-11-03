@@ -15,5 +15,7 @@ dependencies:
 - docopt
 - binpickle
 - seedbank>=0.1.2
+- implicit
 - pip:
   - lenskit@git+https://github.com/lenskit/lkpy
+  - lenskit-implicit@git+https://github.com/lenskit/lenskit-implicit
