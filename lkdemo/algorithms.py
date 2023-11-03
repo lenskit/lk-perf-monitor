@@ -12,3 +12,9 @@ II = item_knn.ItemItem(20, save_nbrs=2500)
 UU = user_knn.UserUser(30)
 ALS = als.BiasedMF(50)
 IALS = als.ImplicitMF(50)
+
+try:
+    from lenskit.algorithms import implicit
+    impBPR = implicit.BPR(50)
+except ImportError:
+    pass

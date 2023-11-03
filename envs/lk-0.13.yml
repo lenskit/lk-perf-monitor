@@ -9,5 +9,8 @@ dependencies:
 - tbb=2020
 - mkl=2020
 - docopt
-- implicit
 - lenskit=0.13
+- cxx-compiler
+- cython
+- pip:
+  - implicit==0.4.*

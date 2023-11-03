@@ -18,5 +18,5 @@ if hasattr(ds, 'BookCrossing'):
 def ds_diff(full, subset):
     "Return the difference of two data sets."
     mask = pd.Series(True, index=full.index)
-    mask[subset.index] = False
+    mask.loc[subset.index] = False
     return full[mask]

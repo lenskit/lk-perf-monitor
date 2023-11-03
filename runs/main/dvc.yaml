@@ -7,21 +7,21 @@ stages:
     - runs/main/ml100k-UU.json
     - runs/main/ml100k-ALS.json
     - runs/main/ml100k-IALS.json
-    - runs/main/ml100k-implicit.json
+    - runs/main/ml100k-impBPR.json
     - runs/main/ml1m-II.json
     - runs/main/ml1m-UU.json
     - runs/main/ml1m-ALS.json
     - runs/main/ml1m-IALS.json
-    - runs/main/ml1m-implicit.json
+    - runs/main/ml1m-impBPR.json
     - runs/main/ml10m-II.json
     - runs/main/ml10m-UU.json
     - runs/main/ml10m-ALS.json
     - runs/main/ml10m-IALS.json
-    - runs/main/ml10m-implicit.json
+    - runs/main/ml10m-impBPR.json
     - runs/main/ml20m-II.json
     - runs/main/ml20m-ALS.json
     - runs/main/ml20m-IALS.json
-    - runs/main/ml20m-implicit.json
+    - runs/main/ml20m-impBPR.json
     outs:
     - runs/main/metrics.csv
     wdir: ../..
@@ -61,14 +61,14 @@ stages:
     - runs/main/ml100k-UU
     - runs/main/ml100k-UU.json
     wdir: ../..
-  ml100k-implicit:
-    cmd: python envtool.py --run main run-algo.py --splits data-split/ml100k -o runs/main/ml100k-implicit
-      -M runs/main/ml100k-implicit.json implicit
+  ml100k-impBPR:
+    cmd: python envtool.py --run main run-algo.py --splits data-split/ml100k -o runs/main/ml100k-impBPR
+      -M runs/main/ml100k-impBPR.json impBPR
     deps:
     - data-split/ml100k
     outs:
-    - runs/main/ml100k-implicit
-    - runs/main/ml100k-implicit.json
+    - runs/main/ml100k-impBPR
+    - runs/main/ml100k-impBPR.json
     wdir: ../..
   ml10m-ALS:
     cmd: python envtool.py --run main run-algo.py --splits data-split/ml10m -o runs/main/ml10m-ALS
@@ -106,14 +106,14 @@ stages:
     - runs/main/ml10m-UU
     - runs/main/ml10m-UU.json
     wdir: ../..
-  ml10m-implicit:
-    cmd: python envtool.py --run main run-algo.py --splits data-split/ml10m -o runs/main/ml10m-implicit
-      -M runs/main/ml10m-implicit.json implicit
+  ml10m-impBPR:
+    cmd: python envtool.py --run main run-algo.py --splits data-split/ml10m -o runs/main/ml10m-impBPR
+      -M runs/main/ml10m-impBPR.json impBPR
     deps:
     - data-split/ml10m
     outs:
-    - runs/main/ml10m-implicit
-    - runs/main/ml10m-implicit.json
+    - runs/main/ml10m-impBPR
+    - runs/main/ml10m-impBPR.json
     wdir: ../..
   ml1m-ALS:
     cmd: python envtool.py --run main run-algo.py --splits data-split/ml1m -o runs/main/ml1m-ALS
@@ -151,14 +151,14 @@ stages:
     - runs/main/ml1m-UU
     - runs/main/ml1m-UU.json
     wdir: ../..
-  ml1m-implicit:
-    cmd: python envtool.py --run main run-algo.py --splits data-split/ml1m -o runs/main/ml1m-implicit
-      -M runs/main/ml1m-implicit.json implicit
+  ml1m-impBPR:
+    cmd: python envtool.py --run main run-algo.py --splits data-split/ml1m -o runs/main/ml1m-impBPR
+      -M runs/main/ml1m-impBPR.json impBPR
     deps:
     - data-split/ml1m
     outs:
-    - runs/main/ml1m-implicit
-    - runs/main/ml1m-implicit.json
+    - runs/main/ml1m-impBPR
+    - runs/main/ml1m-impBPR.json
     wdir: ../..
   ml20m-ALS:
     cmd: python envtool.py --run main run-algo.py --splits data-split/ml20m -o runs/main/ml20m-ALS
@@ -187,12 +187,12 @@ stages:
     - runs/main/ml20m-II
     - runs/main/ml20m-II.json
     wdir: ../..
-  ml20m-implicit:
-    cmd: python envtool.py --run main run-algo.py --splits data-split/ml20m -o runs/main/ml20m-implicit
-      -M runs/main/ml20m-implicit.json implicit
+  ml20m-impBPR:
+    cmd: python envtool.py --run main run-algo.py --splits data-split/ml20m -o runs/main/ml20m-impBPR
+      -M runs/main/ml20m-impBPR.json impBPR
     deps:
     - data-split/ml20m
     outs:
-    - runs/main/ml20m-implicit
-    - runs/main/ml20m-implicit.json
+    - runs/main/ml20m-impBPR
+    - runs/main/ml20m-impBPR.json
     wdir: ../..

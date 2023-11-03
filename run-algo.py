@@ -84,8 +84,8 @@ def main(args):
         model = algo.fit(train)
         all_times.append(tr_time.elapsed())
         try:
-            _log.info('[%s] generating recommendations for unique users', timer)
-            users = test.user.unique()
+            users = test['user'].unique()
+            _log.info('[%s] generating recommendations for %d unique users', timer, len(users))
             recs = batch.recommend(model, users, n_recs)
             _log.info('[%s] writing recommendations to %s', timer, dest)
             recs.to_csv(dest / f'recs-{suffix}', index=False)

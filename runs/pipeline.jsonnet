@@ -10,7 +10,7 @@ local algorithms = [
     "UU",
     "ALS",
     "IALS",
-    "implicit",
+    "impBPR",
 ];
 
 local forbidden = [
