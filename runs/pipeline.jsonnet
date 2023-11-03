@@ -13,9 +13,11 @@ local algorithms = [
     "implicit",
 ];
 
-local default_excludes = [
+local forbidden = [
     {a: "UU", d: "ml20m"},
-    {a: "UU", v: "0.12"},
+];
+
+local default_excludes = [
     {a: "implicit"}
 ];
 
@@ -30,16 +32,16 @@ local key(d, a) = "%s-%s" % [d, a];
 
 local excluded(excludes, v, d, a) =
     local rules =
-        if std.length(excludes) > 0 then
+        if excludes != null then
             excludes
         else
             default_excludes;
     std.any([
         rule_matches(rule, {v: v, d: d, a: a})
-        for rule in excludes + default_excludes
+        for rule in rules + forbidden
     ]);
 
-function(version, excludes=[]) {
+function(version, excludes=null) {
     stages: {
         [key(d, a)]: {
             cmd: "python envtool.py --run %(v)s run-algo.py --splits data-split/%(d)s -o runs/%(v)s/%(d)s-%(a)s -M runs/%(v)s/%(d)s-%(a)s.json %(a)s" % {
