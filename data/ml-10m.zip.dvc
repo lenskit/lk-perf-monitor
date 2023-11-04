@@ -1,11 +1,5 @@
-deps:
-- path: http://files.grouplens.org/datasets/movielens/ml-10m.zip
-  size: 65566137
-  checksum: '"3e875b9-598cfd2c58a4b"'
-  hash: md5
-md5: 89772f0e18d4f6eae5dce0c98c112b85
 outs:
 - md5: ce571fd55effeba0271552578f2648bd
-  path: ml-10m.zip
   size: 65566137
-frozen: true
+  hash: md5
+  path: ml-10m.zip

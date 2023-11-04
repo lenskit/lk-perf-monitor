@@ -1,11 +1,5 @@
-deps:
-- path: http://files.grouplens.org/datasets/movielens/ml-latest-small.zip
-  size: 978202
-  checksum: '"eed1a-598cfd387dc5a"'
-  hash: md5
-md5: 46b84b963d246bb8a809dc437d382104
 outs:
 - md5: 31a303aabbc519bd33d025e44d6c2570
-  path: ml-latest-small.zip
   size: 978202
-frozen: true
+  hash: md5
+  path: ml-latest-small.zip
