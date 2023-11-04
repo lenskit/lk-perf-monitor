@@ -8,3 +8,4 @@ outs:
 - md5: ce571fd55effeba0271552578f2648bd
   path: ml-10m.zip
   size: 65566137
+frozen: true
