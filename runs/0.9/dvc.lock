@@ -1,8 +1,8 @@
 schema: '2.0'
 stages:
   ml10m-IALS:
-    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml10m -o runs/0.9/ml10m-IALS
-      -M runs/0.9/ml10m-IALS.json IALS
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml10m --no-predict
+      -o runs/0.9/ml10m-IALS -M runs/0.9/ml10m-IALS.json IALS
     deps:
     - path: data-split/ml10m
       md5: 758eb106e9d2b2ebbceefe702f058bff.dir
@@ -10,12 +10,14 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.9/ml10m-IALS
-      md5: f42c772d95ca7ea6eb395b66c76205a5.dir
-      size: 100627591
-      nfiles: 10
+      hash: md5
+      md5: 9c525828320c03f41aeb8a77acf6745e.dir
+      size: 94474551
+      nfiles: 5
     - path: runs/0.9/ml10m-IALS.json
-      md5: 97d042996beddbd65ab226776d9032fa
-      size: 200
+      hash: md5
+      md5: 8ec7b266cac7f72460b20eba7c888f57
+      size: 177
   ml10m-ALS:
     cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml10m -o runs/0.9/ml10m-ALS
       -M runs/0.9/ml10m-ALS.json ALS
@@ -227,8 +229,8 @@ stages:
       md5: 7fcfba5b5e55543a04d9b46731166d3f
       size: 207
   ml1m-IALS:
-    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml1m -o runs/0.9/ml1m-IALS
-      -M runs/0.9/ml1m-IALS.json IALS
+    cmd: python envtool.py --run 0.9 run-algo.py --splits data-split/ml1m --no-predict
+      -o runs/0.9/ml1m-IALS -M runs/0.9/ml1m-IALS.json IALS
     deps:
     - path: data-split/ml1m
       md5: c738f2f559e657427fb304b1a3a2e007.dir
@@ -236,12 +238,14 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.9/ml1m-IALS
-      md5: 0f44613e5fe05f975ba08dedcc19c9e6.dir
-      size: 8595757
-      nfiles: 10
+      hash: md5
+      md5: d8bffe59aa146c18c22853a3069cb1a7.dir
+      size: 8067806
+      nfiles: 5
     - path: runs/0.9/ml1m-IALS.json
-      md5: 8defca467137336b9d4798c1208c77ec
-      size: 204
+      hash: md5
+      md5: 49ea468b2b865320e32ed8ffbd7896ae
+      size: 174
   collect:
     cmd: python collect-metrics.py -o runs/0.9/metrics.csv runs/0.9
     deps:
