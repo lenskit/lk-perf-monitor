@@ -165,8 +165,8 @@ stages:
       md5: b1f9a59b392c2468f7686f39c02a545f
       size: 173
   ml10m-IALS:
-    cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml10m -o runs/0.12/ml10m-IALS
-      -M runs/0.12/ml10m-IALS.json IALS
+    cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml10m --no-predict
+      -o runs/0.12/ml10m-IALS -M runs/0.12/ml10m-IALS.json IALS
     deps:
     - path: data-split/ml10m
       md5: 758eb106e9d2b2ebbceefe702f058bff.dir
@@ -174,12 +174,14 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.12/ml10m-IALS
-      md5: cdab69b908f3bea22a3b9b64be6e3d3f.dir
-      size: 100623751
-      nfiles: 10
+      hash: md5
+      md5: 6746d8a0ad3143ed3b662d0154546ee5.dir
+      size: 94465660
+      nfiles: 5
     - path: runs/0.12/ml10m-IALS.json
-      md5: fe1a1672065daaf9f18bf8f95ef2c9fc
-      size: 202
+      hash: md5
+      md5: fe63a25236f37081be9a9b41f1053d82
+      size: 177
   ml20m-IALS:
     cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml20m -o runs/0.12/ml20m-IALS
       -M runs/0.12/ml20m-IALS.json IALS
