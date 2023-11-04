@@ -112,13 +112,14 @@ def main(args):
     if metric_file:
         _log.info('computing metrics')
         topn_m = pd.concat(all_topnm, ignore_index=True)
-        preds = pd.concat(all_preds, ignore_index=True)
         metrics = {
             'nDCG': topn_m['ndcg'].mean(),
-            'GRMSE': rmse(preds['prediction'], preds['rating']),
             'TrainTime': np.median(all_times),
             'train_times': all_times,
         }
+        if all_preds:
+            preds = pd.concat(all_preds, ignore_index=True)
+            metrics['GRMSE'] = rmse(preds['prediction'], preds['rating'])
         _log.info('nDCG: %.3f', metrics['nDCG'])
         _log.info('Global RMSE: %.3f', metrics['GRMSE'])
         Path(metric_file).write_text(json.dumps(metrics))
