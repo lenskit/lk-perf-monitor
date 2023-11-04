@@ -314,3 +314,22 @@ stages:
       hash: md5
       md5: 92c6a395287ea7ffceeb025994afac3e
       size: 179
+  ml1m-impBPR:
+    cmd: python envtool.py --run 0.14 run-algo.py --splits data-split/ml1m --no-predict
+      -o runs/0.14/ml1m-impBPR -M runs/0.14/ml1m-impBPR.json impBPR
+    deps:
+    - path: data-split/ml1m
+      hash: md5
+      md5: c738f2f559e657427fb304b1a3a2e007.dir
+      size: 333412
+      nfiles: 5
+    outs:
+    - path: runs/0.14/ml1m-impBPR
+      hash: md5
+      md5: 69a96f858ada43d6812ba753848df62e.dir
+      size: 5506890
+      nfiles: 5
+    - path: runs/0.14/ml1m-impBPR.json
+      hash: md5
+      md5: 72686a64263c8563521a3803c7ba343b
+      size: 179

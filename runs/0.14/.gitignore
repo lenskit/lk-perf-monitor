@@ -31,3 +31,5 @@
 /metrics.csv
 /ml100k-impBPR
 /ml100k-impBPR.json
+/ml1m-impBPR
+/ml1m-impBPR.json
