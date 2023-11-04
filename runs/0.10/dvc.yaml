@@ -7,21 +7,17 @@ stages:
     - runs/0.10/ml100k-UU.json
     - runs/0.10/ml100k-ALS.json
     - runs/0.10/ml100k-IALS.json
-    - runs/0.10/ml100k-impBPR.json
     - runs/0.10/ml1m-II.json
     - runs/0.10/ml1m-UU.json
     - runs/0.10/ml1m-ALS.json
     - runs/0.10/ml1m-IALS.json
-    - runs/0.10/ml1m-impBPR.json
     - runs/0.10/ml10m-II.json
     - runs/0.10/ml10m-UU.json
     - runs/0.10/ml10m-ALS.json
     - runs/0.10/ml10m-IALS.json
-    - runs/0.10/ml10m-impBPR.json
     - runs/0.10/ml20m-II.json
     - runs/0.10/ml20m-ALS.json
     - runs/0.10/ml20m-IALS.json
-    - runs/0.10/ml20m-impBPR.json
     outs:
     - runs/0.10/metrics.csv
     wdir: ../..
@@ -61,15 +57,6 @@ stages:
     - runs/0.10/ml100k-UU
     - runs/0.10/ml100k-UU.json
     wdir: ../..
-  ml100k-impBPR:
-    cmd: python envtool.py --run 0.10 run-algo.py --splits data-split/ml100k --no-predict
-      -o runs/0.10/ml100k-impBPR -M runs/0.10/ml100k-impBPR.json impBPR
-    deps:
-    - data-split/ml100k
-    outs:
-    - runs/0.10/ml100k-impBPR
-    - runs/0.10/ml100k-impBPR.json
-    wdir: ../..
   ml10m-ALS:
     cmd: python envtool.py --run 0.10 run-algo.py --splits data-split/ml10m -o runs/0.10/ml10m-ALS
       -M runs/0.10/ml10m-ALS.json ALS
@@ -105,15 +92,6 @@ stages:
     outs:
     - runs/0.10/ml10m-UU
     - runs/0.10/ml10m-UU.json
-    wdir: ../..
-  ml10m-impBPR:
-    cmd: python envtool.py --run 0.10 run-algo.py --splits data-split/ml10m --no-predict
-      -o runs/0.10/ml10m-impBPR -M runs/0.10/ml10m-impBPR.json impBPR
-    deps:
-    - data-split/ml10m
-    outs:
-    - runs/0.10/ml10m-impBPR
-    - runs/0.10/ml10m-impBPR.json
     wdir: ../..
   ml1m-ALS:
     cmd: python envtool.py --run 0.10 run-algo.py --splits data-split/ml1m -o runs/0.10/ml1m-ALS
@@ -151,15 +129,6 @@ stages:
     - runs/0.10/ml1m-UU
     - runs/0.10/ml1m-UU.json
     wdir: ../..
-  ml1m-impBPR:
-    cmd: python envtool.py --run 0.10 run-algo.py --splits data-split/ml1m --no-predict
-      -o runs/0.10/ml1m-impBPR -M runs/0.10/ml1m-impBPR.json impBPR
-    deps:
-    - data-split/ml1m
-    outs:
-    - runs/0.10/ml1m-impBPR
-    - runs/0.10/ml1m-impBPR.json
-    wdir: ../..
   ml20m-ALS:
     cmd: python envtool.py --run 0.10 run-algo.py --splits data-split/ml20m -o runs/0.10/ml20m-ALS
       -M runs/0.10/ml20m-ALS.json ALS
@@ -186,13 +155,4 @@ stages:
     outs:
     - runs/0.10/ml20m-II
     - runs/0.10/ml20m-II.json
-    wdir: ../..
-  ml20m-impBPR:
-    cmd: python envtool.py --run 0.10 run-algo.py --splits data-split/ml20m --no-predict
-      -o runs/0.10/ml20m-impBPR -M runs/0.10/ml20m-impBPR.json impBPR
-    deps:
-    - data-split/ml20m
-    outs:
-    - runs/0.10/ml20m-impBPR
-    - runs/0.10/ml20m-impBPR.json
     wdir: ../..

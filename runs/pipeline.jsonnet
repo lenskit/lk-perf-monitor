@@ -23,7 +23,7 @@ local forbidden = [
 ];
 
 local default_excludes = [
-    {a: "implicit"}
+    {a: "impBPR"}
 ];
 
 local rule_matches(rule, obj) =
