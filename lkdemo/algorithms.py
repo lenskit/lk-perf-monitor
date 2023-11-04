@@ -15,6 +15,6 @@ IALS = als.ImplicitMF(50)
 
 try:
     from lenskit.algorithms import implicit
-    impBPR = implicit.BPR(50, num_threads=1)
+    impBPR = implicit.BPR(50)
 except ImportError:
     pass
