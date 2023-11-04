@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.7
+#       jupytext_version: 1.15.2
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -116,6 +116,15 @@ sns.lineplot(x='version', y='nDCG', hue='data', data=uu_exp)
 
 # %%
 als = mdf[mdf['algo'] == 'IALS']
+sns.lineplot(x='version', y='nDCG', hue='data', data=als)
+
+# %% [markdown]
+# ## Implicit BPR Results
+#
+# We also test BPR implementation from Implicit.
+
+# %%
+als = mdf[mdf['algo'] == 'impBPR']
 sns.lineplot(x='version', y='nDCG', hue='data', data=als)
 
 # %% [markdown]
