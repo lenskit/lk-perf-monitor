@@ -35,7 +35,7 @@ def update_pipeline(c):
             yaml.dump(config, f)
 
 
-@task(positional=['version'])
+@task
 def create_env(c, version=None, replace=False):
     """
     Create the environment for a LensKit version.
@@ -45,7 +45,7 @@ def create_env(c, version=None, replace=False):
         versions = [version]
     else:
         versions = [ef.stem[3:] for ef in ENV_BASE.glob('lk-*.yml')]
-    
+
     for ver in versions:
         env_file = ENV_BASE / f'lk-{ver}.yml'
         env_dir = ENV_BASE / f'lk-{ver}-env'
