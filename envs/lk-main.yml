@@ -9,12 +9,9 @@ dependencies:
 - scipy
 - cffi>=1.12
 - pyarrow=4
-- libblas=*=*mkl
-- tbb=2021
-- mkl=2021
+- tbb
 - docopt
 - binpickle
 - seedbank>=0.1.2
-- implicit
 - pip:
   - lenskit@git+https://github.com/lenskit/lkpy
