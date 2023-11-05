@@ -10,7 +10,8 @@ dependencies:
 - mkl=2020
 - docopt
 - lenskit=0.13
-- cxx-compiler
-- cython
-- pip:
-  - implicit==0.4.*
+- implicit=0.4
+# - cxx-compiler
+# - cython
+# - pip:
+#   - implicit==0.4.*

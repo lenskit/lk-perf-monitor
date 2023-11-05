@@ -5,6 +5,8 @@ dependencies:
 - python=3.9
 - pip
 - pyarrow
+- numpy=1.23
+- numba=0.56
 - libblas=*=*mkl
 - tbb
 - docopt
