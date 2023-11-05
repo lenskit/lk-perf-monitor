@@ -183,8 +183,8 @@ stages:
       md5: fe63a25236f37081be9a9b41f1053d82
       size: 177
   ml20m-IALS:
-    cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml20m -o runs/0.12/ml20m-IALS
-      -M runs/0.12/ml20m-IALS.json IALS
+    cmd: python envtool.py --run 0.12 run-algo.py --splits data-split/ml20m --no-predict
+      -o runs/0.12/ml20m-IALS -M runs/0.12/ml20m-IALS.json IALS
     deps:
     - path: data-split/ml20m
       md5: a48b901f072fa0b345277bf0b5a9f124.dir
@@ -192,24 +192,27 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.12/ml20m-IALS
-      md5: d0cd61edbd2a2be963e23113ba5b19c9.dir
-      size: 201332599
-      nfiles: 10
+      hash: md5
+      md5: 3654ae069872c68fec58c55e7b49ad8f.dir
+      size: 188888017
+      nfiles: 5
     - path: runs/0.12/ml20m-IALS.json
-      md5: b5374de08bbfbb108ecaf10e52d044fe
-      size: 200
+      hash: md5
+      md5: c9e453eb31df332de5e46e74a913ccc3
+      size: 173
   collect:
     cmd: python collect-metrics.py -o runs/0.12/metrics.csv runs/0.12
     deps:
     - path: collect-metrics.py
       md5: b7476e3b6ba1288e55d898ce3e76123f
-      size: 836
+      size: 795
     - path: runs/0.12/ml100k-ALS.json
       md5: f734f3e83bd05587459931579e35ec93
       size: 203
     - path: runs/0.12/ml100k-IALS.json
-      md5: 35c1275fb486f5caf3a6250bbec0d1b9
-      size: 207
+      hash: md5
+      md5: ad903f020498f74ac470918eba0eae50
+      size: 174
     - path: runs/0.12/ml100k-II.json
       md5: e2b8a1be576b491702f61c621fdd7e2d
       size: 210
@@ -217,8 +220,9 @@ stages:
       md5: 53a24ee4d05c7d11992ace099d37ab79
       size: 205
     - path: runs/0.12/ml10m-IALS.json
-      md5: fe1a1672065daaf9f18bf8f95ef2c9fc
-      size: 202
+      hash: md5
+      md5: fe63a25236f37081be9a9b41f1053d82
+      size: 177
     - path: runs/0.12/ml10m-II.json
       md5: 55f31f89e06905b12bdab9f93527e2bd
       size: 205
@@ -226,8 +230,9 @@ stages:
       md5: 450833a72c17a47f108b4d10c0223b1c
       size: 203
     - path: runs/0.12/ml1m-IALS.json
-      md5: 6b7e0f2aad0334bdbff11412993a3daa
-      size: 204
+      hash: md5
+      md5: b1f9a59b392c2468f7686f39c02a545f
+      size: 173
     - path: runs/0.12/ml1m-II.json
       md5: d8b73ee9fc77ab925f3a2e9aab8b481f
       size: 204
@@ -235,12 +240,14 @@ stages:
       md5: b470e5f1c41f18d8d4762d6c6c7552e4
       size: 209
     - path: runs/0.12/ml20m-IALS.json
-      md5: b5374de08bbfbb108ecaf10e52d044fe
-      size: 200
+      hash: md5
+      md5: c9e453eb31df332de5e46e74a913ccc3
+      size: 173
     - path: runs/0.12/ml20m-II.json
       md5: 6453e4dea1928cfc521bf029efe65c08
       size: 208
     outs:
     - path: runs/0.12/metrics.csv
-      md5: b3639ad307347b5aa21029f1575700b1
-      size: 2066
+      hash: md5
+      md5: 03bb5f1239b691c12538dfb091e76399
+      size: 1981
