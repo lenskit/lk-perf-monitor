@@ -4,40 +4,51 @@ stages:
     cmd: jupytext --sync --exec AlgoMetrics.py
     deps:
     - path: AlgoMetrics.py
-      md5: 5685f36206faa36317a3ecdfc987c256
-      size: 2741
+      hash: md5
+      md5: 786e554fdb44048192e46805906256c2
+      size: 2934
     - path: runs/0.10/metrics.csv
-      md5: 747580273b8ba6fd2c829bca07b692fb
-      size: 2581
+      hash: md5
+      md5: f15dfed6ab9de5ea9c7ab848b828abb0
+      size: 2497
     - path: runs/0.11/metrics.csv
-      md5: 52d8383001a5bba9c8d858bb30bc1b4e
-      size: 2580
+      hash: md5
+      md5: ea55df403efa307c234192e326029c31
+      size: 2498
     - path: runs/0.12/metrics.csv
-      md5: b3639ad307347b5aa21029f1575700b1
-      size: 2066
+      hash: md5
+      md5: 03bb5f1239b691c12538dfb091e76399
+      size: 1981
     - path: runs/0.13/metrics.csv
-      md5: 0fc1e25d7507b8c39deff268fb285cfd
-      size: 2583
+      hash: md5
+      md5: c7752649323d9787e15a514c1f2a12da
+      size: 3118
     - path: runs/0.14/metrics.csv
-      md5: 80222fd5f0dd2b939bc3d91a1f2880f0
-      size: 2562
+      hash: md5
+      md5: af49a917ac312fd59ebb8296806e031b
+      size: 3111
     - path: runs/0.9/metrics.csv
-      md5: 6918e26d29093528007de6f3728375c1
-      size: 2572
+      hash: md5
+      md5: 6ed7380a3b8cb27520eed6e62adf5aaf
+      size: 2490
     - path: runs/main/metrics.csv
-      md5: dbde6a780b3c260bee07178419fbfa08
-      size: 2515
+      hash: md5
+      md5: 8d1582e5135098adfb09fbc4a90e1975
+      size: 2450
     outs:
     - path: AlgoMetrics.ipynb
-      md5: ad1c4a2a9ab4c36f0bc2b377bfaa2369
-      size: 192350
+      hash: md5
+      md5: 8964e9cac827d19d9281e5848d7fbefa
+      size: 346253
   render:
     cmd: jupyter nbconvert --to html AlgoMetrics.ipynb
     deps:
     - path: AlgoMetrics.ipynb
-      md5: ad1c4a2a9ab4c36f0bc2b377bfaa2369
-      size: 192350
+      hash: md5
+      md5: 8964e9cac827d19d9281e5848d7fbefa
+      size: 346253
     outs:
     - path: AlgoMetrics.html
-      md5: 584b9ffdaf3a93d790ed80576d28c914
-      size: 778558
+      hash: md5
+      md5: a3258ec18a0a4b969516170b8418cf10
+      size: 626596
