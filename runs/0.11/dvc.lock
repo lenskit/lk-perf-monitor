@@ -10,8 +10,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml100k-UU
-      md5: 8d5f1119e9e9f09dc4529c56e67b3e27.dir
-      size: 1236943
+      hash: md5
+      md5: d4e69e5992aac6c376f2e38799c5db34.dir
+      size: 1061166
       nfiles: 10
     - path: runs/0.11/ml100k-UU.json
       md5: 949bd52f34e84873eb5f0ced05ba491d
@@ -26,8 +27,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml1m-II
-      md5: e11004df6f668671abb5f02ba3c6d40b.dir
-      size: 8321624
+      hash: md5
+      md5: 8cfcc99fa66ad7ffe243a1176e99557e.dir
+      size: 7064411
       nfiles: 10
     - path: runs/0.11/ml1m-II.json
       md5: c944889b602d06f9013e068620bc6234
@@ -43,8 +45,8 @@ stages:
     outs:
     - path: runs/0.11/ml10m-IALS
       hash: md5
-      md5: 54a3a508ab0265f54c684378a70eed83.dir
-      size: 94467758
+      md5: 78a0c2ce94b4afe25faa04065dc83cae.dir
+      size: 65636993
       nfiles: 5
     - path: runs/0.11/ml10m-IALS.json
       hash: md5
@@ -60,8 +62,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml100k-ALS
-      md5: e430a3185e0e2c425bfde51d65810012.dir
-      size: 1290940
+      hash: md5
+      md5: 43d84ae1a53908f7eba28ad914137990.dir
+      size: 1107175
       nfiles: 10
     - path: runs/0.11/ml100k-ALS.json
       md5: 4bf42ca2c528239af6d6fd2a0312eb21
@@ -76,8 +79,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml100k-II
-      md5: 72c569b8d1067647513d0ebbf24931d4.dir
-      size: 1283896
+      hash: md5
+      md5: d4a278e92487dfc007cecf92b5302579.dir
+      size: 1105887
       nfiles: 10
     - path: runs/0.11/ml100k-II.json
       md5: af1e2ecfa72b649f131fcf91f77791d4
@@ -92,8 +96,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml10m-II
-      md5: 4107a4c4549181f24554c51163e9bc6c.dir
-      size: 99765461
+      hash: md5
+      md5: 2e576bddd02a2e57180b5aacb67adaaf.dir
+      size: 67563455
       nfiles: 10
     - path: runs/0.11/ml10m-II.json
       md5: 90b89f922f4ac9bf9fb5057919c1470c
@@ -108,8 +113,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml20m-II
-      md5: e3b141318075430de5dc862a0dfc931b.dir
-      size: 196469836
+      hash: md5
+      md5: 6115ee6488cde029d9d89cbde647ad81.dir
+      size: 138002104
       nfiles: 10
     - path: runs/0.11/ml20m-II.json
       md5: 0d6ec15fd06cb7ced1594c39a7293c3d
@@ -124,8 +130,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml1m-UU
-      md5: 0eb0897cd1dd14f65d175426069d068b.dir
-      size: 8237201
+      hash: md5
+      md5: 286278804ed734bd232d64726f2a944c.dir
+      size: 7010087
       nfiles: 10
     - path: runs/0.11/ml1m-UU.json
       md5: 09b1e0156edb9bb0d31fde5fc18081a3
@@ -140,8 +147,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml10m-UU
-      md5: 1d3b18a554aad01b679e3e9ca5734180.dir
-      size: 95324466
+      hash: md5
+      md5: 70a8e238bc239955dad5b28f2b3c239e.dir
+      size: 68486952
       nfiles: 10
     - path: runs/0.11/ml10m-UU.json
       md5: 55a1414d18a980ca83f5b8e1530fe58f
@@ -156,8 +164,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml1m-ALS
-      md5: 16407c998b228e29359babd4f3a84a2e.dir
-      size: 8341330
+      hash: md5
+      md5: 55a4a6bfa9b215558557fe452444d193.dir
+      size: 7048989
       nfiles: 10
     - path: runs/0.11/ml1m-ALS.json
       md5: a280a3859122fe6507fa5faebc16aab0
@@ -172,8 +181,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml10m-ALS
-      md5: e82af79ae110617235d23aa471703dd9.dir
-      size: 98579201
+      hash: md5
+      md5: 4a1bad3b006d0baf486a87fe4d656f47.dir
+      size: 70143606
       nfiles: 10
     - path: runs/0.11/ml10m-ALS.json
       md5: c8b039e0558ef5514bb32e6093c41cd3
@@ -188,8 +198,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.11/ml20m-ALS
-      md5: 5ed26aa85bb6f879d1c4507187d5ea47.dir
-      size: 198817404
+      hash: md5
+      md5: 778e34b2dc62c94ae66a9d1403301caa.dir
+      size: 138130533
       nfiles: 10
     - path: runs/0.11/ml20m-ALS.json
       md5: 5af2740b31926f47104b9a5161ff7c3f
@@ -205,8 +216,8 @@ stages:
     outs:
     - path: runs/0.11/ml100k-IALS
       hash: md5
-      md5: e82c695e354a71224753e5cd1f50eb36.dir
-      size: 1236006
+      md5: 970c6e58754402da7c8e62d2c8bb5036.dir
+      size: 1033170
       nfiles: 5
     - path: runs/0.11/ml100k-IALS.json
       hash: md5
@@ -223,8 +234,8 @@ stages:
     outs:
     - path: runs/0.11/ml1m-IALS
       hash: md5
-      md5: bc66f38f1634ec3bc25346673e27b9ed.dir
-      size: 8068916
+      md5: a8d86c898815ca11a1fa09bd39fcc01f.dir
+      size: 6648228
       nfiles: 5
     - path: runs/0.11/ml1m-IALS.json
       hash: md5
@@ -241,8 +252,8 @@ stages:
     outs:
     - path: runs/0.11/ml20m-IALS
       hash: md5
-      md5: 44bcd17d29eb3d4e398d2f0df3da82c7.dir
-      size: 188891633
+      md5: 8a39e0a7b9bf68c9885d26ae54d1831c.dir
+      size: 129010177
       nfiles: 5
     - path: runs/0.11/ml20m-IALS.json
       hash: md5

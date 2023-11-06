@@ -9,6 +9,7 @@ dependencies:
 - jsonnet
 - mamba
 - pandas=1
+- pyarrow
 - flake8
 - scipy
 - numba

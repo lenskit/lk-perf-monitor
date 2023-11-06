@@ -11,8 +11,8 @@ stages:
     outs:
     - path: runs/0.14/ml100k-IALS
       hash: md5
-      md5: 4b5f7391a33b0d73f117c8018d9203a1.dir
-      size: 1244152
+      md5: a74629a64730235e330591196805ae41.dir
+      size: 1036681
       nfiles: 5
     - path: runs/0.14/ml100k-IALS.json
       hash: md5
@@ -28,8 +28,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml100k-II
-      md5: 5c3b35f530d7caf58e24be205156a26d.dir
-      size: 1283896
+      hash: md5
+      md5: d4a278e92487dfc007cecf92b5302579.dir
+      size: 1105887
       nfiles: 10
     - path: runs/0.14/ml100k-II.json
       md5: e8d19d8a59b21ce9d5905e6da4f3da75
@@ -44,8 +45,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml1m-II
-      md5: 58d59e22cbe3ffa80bf5fa99ed6211eb.dir
-      size: 8321624
+      hash: md5
+      md5: 8cfcc99fa66ad7ffe243a1176e99557e.dir
+      size: 7064411
       nfiles: 10
     - path: runs/0.14/ml1m-II.json
       md5: 6f60c6ea29421872df67f7dcfca87579
@@ -60,8 +62,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml10m-II
-      md5: d7672fff21d1eef5c1f2329f6541d980.dir
-      size: 99765461
+      hash: md5
+      md5: 2e576bddd02a2e57180b5aacb67adaaf.dir
+      size: 67563455
       nfiles: 10
     - path: runs/0.14/ml10m-II.json
       md5: ed44d564d5a49d17ec951666054e4cbd
@@ -76,8 +79,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml20m-II
-      md5: 37d21a3758bf59f11bc384d8b568015e.dir
-      size: 196469836
+      hash: md5
+      md5: 6115ee6488cde029d9d89cbde647ad81.dir
+      size: 138002104
       nfiles: 10
     - path: runs/0.14/ml20m-II.json
       md5: 7f5d42a0a4567c18366eaa4d34f21507
@@ -92,8 +96,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml100k-UU
-      md5: 163922df4338f51e11ca78a8161ac72e.dir
-      size: 1236937
+      hash: md5
+      md5: 42aabc0427145106af3ae71e5659b624.dir
+      size: 1061185
       nfiles: 10
     - path: runs/0.14/ml100k-UU.json
       md5: 12f8204f425cb16decbe71d80e0f126e
@@ -108,8 +113,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml1m-UU
-      md5: 670ddb61aa1325a2bed0dfc9a5918822.dir
-      size: 8237479
+      hash: md5
+      md5: ad10a1905b991e9c831df16cd5e39fa6.dir
+      size: 7010049
       nfiles: 10
     - path: runs/0.14/ml1m-UU.json
       md5: e8c0d6bd64e83cd82736964ab267a8de
@@ -124,8 +130,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml10m-UU
-      md5: f108af72b1967b7ae5bdca8e2da6434e.dir
-      size: 95329036
+      hash: md5
+      md5: 7cbd196176a9da3d88173bc546e64bfa.dir
+      size: 68474117
       nfiles: 10
     - path: runs/0.14/ml10m-UU.json
       md5: 028d60e097659c9cf6ea77eaf4a4bd11
@@ -140,8 +147,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml100k-ALS
-      md5: 0ef749424dc0361d91936fb894a84cd5.dir
-      size: 1282789
+      hash: md5
+      md5: 012092ad94158260d81345415193bb51.dir
+      size: 1102572
       nfiles: 10
     - path: runs/0.14/ml100k-ALS.json
       md5: 6febea096bbb57e1d5131c812627b2d6
@@ -156,8 +164,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml1m-ALS
-      md5: b06e567b74f02c1eb3c69ea094e27a12.dir
-      size: 8260632
+      hash: md5
+      md5: 1bd00b294c8994303775accec590580b.dir
+      size: 7013856
       nfiles: 10
     - path: runs/0.14/ml1m-ALS.json
       md5: ef751b3eea0bd7410522d85f519556fc
@@ -172,8 +181,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml10m-ALS
-      md5: 69d32d0db40fabe5b565915848d4e5ba.dir
-      size: 97299969
+      hash: md5
+      md5: 79cbe58e9b432396b789b313338f5e14.dir
+      size: 69914355
       nfiles: 10
     - path: runs/0.14/ml10m-ALS.json
       md5: 269f90cd026ce358b371086c55dba5a4
@@ -188,8 +198,9 @@ stages:
       nfiles: 5
     outs:
     - path: runs/0.14/ml20m-ALS
-      md5: 94a0d98ad91b25fd5c6b72100ae1b75e.dir
-      size: 197612681
+      hash: md5
+      md5: c544a739ab65f1f3bbe472b9b7dcbf5d.dir
+      size: 137211024
       nfiles: 10
     - path: runs/0.14/ml20m-ALS.json
       md5: fec5ba1c133e01e000f0f10ebee05277
@@ -205,8 +216,8 @@ stages:
     outs:
     - path: runs/0.14/ml1m-IALS
       hash: md5
-      md5: 731e348cb76b06debb8ac6a86fa46194.dir
-      size: 8124439
+      md5: 3b332ff5f302ff5d4c1d7e8f9489b244.dir
+      size: 6679975
       nfiles: 5
     - path: runs/0.14/ml1m-IALS.json
       hash: md5
@@ -223,8 +234,8 @@ stages:
     outs:
     - path: runs/0.14/ml10m-IALS
       hash: md5
-      md5: c3cb20be876baad4539de993cb86c7a0.dir
-      size: 95016712
+      md5: 7196037733af3e85b31702d462970952.dir
+      size: 65920406
       nfiles: 5
     - path: runs/0.14/ml10m-IALS.json
       hash: md5
@@ -241,8 +252,8 @@ stages:
     outs:
     - path: runs/0.14/ml20m-IALS
       hash: md5
-      md5: 51e7cb977bbc136f0b8c29cb3468d63a.dir
-      size: 189761298
+      md5: c420d91ec66965ba79428f3ab2678826.dir
+      size: 129529984
       nfiles: 5
     - path: runs/0.14/ml20m-IALS.json
       hash: md5
@@ -336,8 +347,8 @@ stages:
     outs:
     - path: runs/0.14/ml100k-impBPR
       hash: md5
-      md5: cf294aca590958ada4c70ae3f0ab338f.dir
-      size: 829341
+      md5: 0a844b4e19fe991815940e717438902f.dir
+      size: 1054973
       nfiles: 5
     - path: runs/0.14/ml100k-impBPR.json
       hash: md5
@@ -355,8 +366,8 @@ stages:
     outs:
     - path: runs/0.14/ml1m-impBPR
       hash: md5
-      md5: 69a96f858ada43d6812ba753848df62e.dir
-      size: 5506890
+      md5: 33647566ed24102b91567735ee75fe7a.dir
+      size: 6800761
       nfiles: 5
     - path: runs/0.14/ml1m-impBPR.json
       hash: md5
@@ -374,8 +385,8 @@ stages:
     outs:
     - path: runs/0.14/ml10m-impBPR
       hash: md5
-      md5: b31e2157d2770ceb016624a1c6fcac5a.dir
-      size: 64766368
+      md5: 73f9e5c2d5d56d5dbb1ea5de9e168c4c.dir
+      size: 67749812
       nfiles: 5
     - path: runs/0.14/ml10m-impBPR.json
       hash: md5
@@ -393,8 +404,8 @@ stages:
     outs:
     - path: runs/0.14/ml20m-impBPR
       hash: md5
-      md5: 896f47c0e975f2b064633729264fb70b.dir
-      size: 130417856
+      md5: b589da174dad3a87558f37d75ebd4551.dir
+      size: 133094333
       nfiles: 5
     - path: runs/0.14/ml20m-impBPR.json
       hash: md5
