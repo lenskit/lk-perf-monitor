@@ -27,13 +27,13 @@ stages:
     outs:
     - path: runs/main/ml100k-IALS
       hash: md5
-      md5: f5a1f6b639b4334c464e143b37e3317d.dir
-      size: 1243655
+      md5: 7b79cadeca86f9c58aea6d3675ea9d62.dir
+      size: 1036166
       nfiles: 5
     - path: runs/main/ml100k-IALS.json
       hash: md5
-      md5: 2217294dd85efcd394adbe788e53c02b
-      size: 182
+      md5: 638039d65bad10d495574c89745c0b70
+      size: 181
   ml20m-IALS:
     cmd: python envtool.py --run main run-algo.py --splits data-split/ml20m --no-predict
       -o runs/main/ml20m-IALS -M runs/main/ml20m-IALS.json IALS

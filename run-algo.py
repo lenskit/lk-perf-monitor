@@ -3,9 +3,9 @@
 Run an algorithm to produce predictions and recommendations.
 
 Usage:
-    run-algo.py [options] ALGO 
+    run-algo.py [options] ALGO
 
-Options:  
+Options:
     --splits input  directory for split train-test pairs [default: data-split]
     -o output       destination directory [default: output]
     -n N            number of recommendations for a unique user [default: 100]
@@ -13,10 +13,11 @@ Options:
     -M FILE         write metrics to FILE
     --no-predict    turn off rating prediction
     --log-file FILE write logs to FILE
-    ALGO            name of algorithm to load 
+    ALGO            name of algorithm to load
 """
 
 import os
+import re
 import multiprocessing
 from docopt import docopt
 from pathlib import Path
@@ -30,6 +31,8 @@ import json
 import importlib
 import pandas as pd
 import numpy as np
+
+_fn_suffix = re.compile(r'\..*$')
 
 def main(args):
     mod_name = args.get('-m')
@@ -60,9 +63,10 @@ def main(args):
         _log.info('loading %s', file)
         test = pd.read_csv(file, sep=',')
         suffix = file.name[5:]
+        out_sfx = _fn_suffix.sub('.parquet', suffix)
         train_file = path / f'train-{suffix}'
         timer = util.Stopwatch()
-        
+
         if 'index' in test.columns:
             _log.info('setting test index')
             test = test.set_index('index')
@@ -89,19 +93,22 @@ def main(args):
             users = test['user'].unique()
             _log.info('[%s] generating recommendations for %d unique users', timer, len(users))
             recs = batch.recommend(model, users, n_recs)
-            _log.info('[%s] writing recommendations to %s', timer, dest)
-            recs.to_csv(dest / f'recs-{suffix}', index=False)
+            recf = dest / f'recs-{out_sfx}'
+            _log.info('[%s] writing recommendations to %s', timer, recf)
+            recs.to_parquet(recf, index=False, compression='zstd')
 
             if metric_file:
                 rla = RecListAnalysis()
                 rla.add_metric(ndcg)
                 um = rla.compute(recs, test, include_missing=True)
                 all_topnm.append(um)
-            
+
             if isinstance(algo, Predictor) and not args['--no-predict']:
                 _log.info('[%s] generating predictions for user-item', timer)
                 preds = batch.predict(model, test)
-                preds.to_csv(dest / f'pred-{suffix}', index=False)
+                predf = dest / f'pred-{out_sfx}'
+                _log.info('[%s] saving predictions to %s', timer, predf)
+                preds.to_parquet(predf, index=False, compression='zstd')
 
                 if metric_file:
                     all_preds.append(preds)
