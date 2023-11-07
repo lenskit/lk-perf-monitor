@@ -19,6 +19,8 @@ dependencies:
 - ipython
 - docopt
 - dvc>=3
+- dvc-ssh
+- dvc-http
 - lenskit>=0.14
 platforms:
 - osx-64
