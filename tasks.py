@@ -53,6 +53,6 @@ def create_env(c, version=None, replace=False):
         _msg('creating LensKit environment for {}', ver)
         _msg('environment file: {}', env_file)
         if replace:
-            c.run(f'mamba env create --force -p {fspath(env_dir)} -f {fspath(env_file)}', echo=True)
+            c.run(f'conda env create --force -p {fspath(env_dir)} -f {fspath(env_file)}', echo=True)
         else:
-            c.run(f'mamba env update -p {fspath(env_dir)} -f {fspath(env_file)}', echo=True)
+            c.run(f'conda env update -p {fspath(env_dir)} -f {fspath(env_file)}', echo=True)

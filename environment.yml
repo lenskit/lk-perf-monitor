@@ -7,7 +7,6 @@ dependencies:
 - pip
 - invoke
 - jsonnet
-- mamba
 - pandas=1
 - pyarrow
 - flake8
@@ -21,6 +20,7 @@ dependencies:
 - dvc>=3
 - dvc-ssh
 - dvc-http
+- dvc-webdav
 - lenskit>=0.14
 platforms:
 - osx-64
