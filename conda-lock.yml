@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: d50df619d451f6029095bdc6d4609f71b5978166b1e39cb0f9a26e38084dd4ea
-    linux-64: c6fff7318f666bb422bcfa19741667dd8b8ffc59bfd5528e2417e239147b08b0
+    osx-arm64: ab98cf8c7a6e7cc7ae6a787e6415be60b7e57662588b8ea730b8a440f946eb07
+    linux-64: 2d7e44d64b313173c169fdf64e1cb1db93fe92141996e408fa634d1a94007bb3
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -10720,5 +10720,141 @@ package:
   hash:
     md5: d96942c06c3e84bfcc5efb038724a7fd
     sha256: 2d4fd1ff7ee79cd954ca8e81abf11d9d49954dd1fef80f27289e2402ae9c2e09
+  category: main
+  optional: false
+- name: blessed
+  version: 1.20.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    wcwidth: '>=0.1.4'
+    six: '>=1.9.0'
+  url: https://files.pythonhosted.org/packages/76/98/584f211c3a4bb38f2871fa937ee0cc83c130de50c955d6c7e2334dbf4acb/blessed-1.20.0-py2.py3-none-any.whl
+  hash:
+    sha256: 0c542922586a265e699188e52d5f5ac5ec0dd517e5a1041d90d2bbf23f906058
+  category: main
+  optional: false
+- name: blessed
+  version: 1.20.0
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    wcwidth: '>=0.1.4'
+    six: '>=1.9.0'
+  url: https://files.pythonhosted.org/packages/76/98/584f211c3a4bb38f2871fa937ee0cc83c130de50c955d6c7e2334dbf4acb/blessed-1.20.0-py2.py3-none-any.whl
+  hash:
+    sha256: 0c542922586a265e699188e52d5f5ac5ec0dd517e5a1041d90d2bbf23f906058
+  category: main
+  optional: false
+- name: colorlog
+  version: 6.8.2
+  manager: pip
+  platform: linux-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/f3/18/3e867ab37a24fdf073c1617b9c7830e06ec270b1ea4694a624038fc40a03/colorlog-6.8.2-py3-none-any.whl
+  hash:
+    sha256: 4dcbb62368e2800cb3c5abd348da7e53f6c362dda502ec27c560b2e58a66bd33
+  category: main
+  optional: false
+- name: colorlog
+  version: 6.8.2
+  manager: pip
+  platform: osx-arm64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/f3/18/3e867ab37a24fdf073c1617b9c7830e06ec270b1ea4694a624038fc40a03/colorlog-6.8.2-py3-none-any.whl
+  hash:
+    sha256: 4dcbb62368e2800cb3c5abd348da7e53f6c362dda502ec27c560b2e58a66bd33
+  category: main
+  optional: false
+- name: enlighten
+  version: 1.12.4
+  manager: pip
+  platform: linux-64
+  dependencies:
+    blessed: '>=1.17.7'
+    prefixed: '>=0.3.2'
+  url: https://files.pythonhosted.org/packages/a3/4b/5941c7e1d74aa16f32df3b2119c9c523e56b269fe7ae6af30d61f450c566/enlighten-1.12.4-py2.py3-none-any.whl
+  hash:
+    sha256: 5c53c57441bc5986c1d02f2f539aead9d59a206783641953a49b8d995db6b584
+  category: main
+  optional: false
+- name: enlighten
+  version: 1.12.4
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    blessed: '>=1.17.7'
+    prefixed: '>=0.3.2'
+  url: https://files.pythonhosted.org/packages/a3/4b/5941c7e1d74aa16f32df3b2119c9c523e56b269fe7ae6af30d61f450c566/enlighten-1.12.4-py2.py3-none-any.whl
+  hash:
+    sha256: 5c53c57441bc5986c1d02f2f539aead9d59a206783641953a49b8d995db6b584
+  category: main
+  optional: false
+- name: prefixed
+  version: 0.7.1
+  manager: pip
+  platform: linux-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/3d/af/3b26529cd43f45f222e58191899bc7cabeb1f6673ea4810223a5ab7fb302/prefixed-0.7.1-py2.py3-none-any.whl
+  hash:
+    sha256: 530cb380c9d90f3436e68bddcde1aca6ea5babc6a4445ce692d7a605fa88efaf
+  category: main
+  optional: false
+- name: prefixed
+  version: 0.7.1
+  manager: pip
+  platform: osx-arm64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/3d/af/3b26529cd43f45f222e58191899bc7cabeb1f6673ea4810223a5ab7fb302/prefixed-0.7.1-py2.py3-none-any.whl
+  hash:
+    sha256: 530cb380c9d90f3436e68bddcde1aca6ea5babc6a4445ce692d7a605fa88efaf
+  category: main
+  optional: false
+- name: progress-api
+  version: 0.1.0a9
+  manager: pip
+  platform: linux-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/b4/e3/3f0fcbe30ccbd25d31e64afa3162b9f8e43d8d9333cc640c13b35deb7e08/progress_api-0.1.0a9-py3-none-any.whl
+  hash:
+    sha256: 3bdcf4e4bf176b6c02ed6ba4179edc341ae6172a48061c743e858ae52d873968
+  category: main
+  optional: false
+- name: progress-api
+  version: 0.1.0a9
+  manager: pip
+  platform: osx-arm64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/b4/e3/3f0fcbe30ccbd25d31e64afa3162b9f8e43d8d9333cc640c13b35deb7e08/progress_api-0.1.0a9-py3-none-any.whl
+  hash:
+    sha256: 3bdcf4e4bf176b6c02ed6ba4179edc341ae6172a48061c743e858ae52d873968
+  category: main
+  optional: false
+- name: sandal
+  version: 0.1.0a5
+  manager: pip
+  platform: linux-64
+  dependencies:
+    enlighten: '>=1.12,<2.0'
+    colorlog: '>=6.0.0,<7.0.0'
+    progress-api: '>=0.1.0a9'
+    tomli: '>=2.0,<3.0'
+  url: https://files.pythonhosted.org/packages/a2/1c/47165da39ac4181fd93b6e89fc660a2bcbe57266f066e6f20116de010e7b/sandal-0.1.0a5-py3-none-any.whl
+  hash:
+    sha256: d1735af2acf76c9a1bbb034e5ac0c60c0f5736deaa2cceb4482c51295c67c1be
+  category: main
+  optional: false
+- name: sandal
+  version: 0.1.0a5
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    enlighten: '>=1.12,<2.0'
+    colorlog: '>=6.0.0,<7.0.0'
+    progress-api: '>=0.1.0a9'
+    tomli: '>=2.0,<3.0'
+  url: https://files.pythonhosted.org/packages/a2/1c/47165da39ac4181fd93b6e89fc660a2bcbe57266f066e6f20116de010e7b/sandal-0.1.0a5-py3-none-any.whl
+  hash:
+    sha256: d1735af2acf76c9a1bbb034e5ac0c60c0f5736deaa2cceb4482c51295c67c1be
   category: main
   optional: false
