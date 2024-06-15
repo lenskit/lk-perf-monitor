@@ -12,7 +12,7 @@ dependencies:
   - pyarrow>=16
   - docopt
   - pyzmq
-  - python-msgpack
+  - msgpack-python
   - threadpoolctl
   - numba>=0.58
   - pip:
