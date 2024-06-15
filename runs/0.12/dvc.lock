@@ -213,8 +213,8 @@ stages:
     deps:
     - path: collect-metrics.py
       hash: md5
-      md5: 8ea4e245949361517313accd986c0dd3
-      size: 774
+      md5: 7e439d6d97efc0f6d828e6d04e77b075
+      size: 772
     - path: runs/0.12/ml100k-ALS.json
       md5: f734f3e83bd05587459931579e35ec93
       size: 203
