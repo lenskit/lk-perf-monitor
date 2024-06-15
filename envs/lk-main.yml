@@ -11,7 +11,6 @@ dependencies:
   - pytorch>=2.2,<3
   - pyarrow>=16
   - docopt
-  - seedbank>=0.1.2
   - numba>=0.58
   - pip:
       - lenskit@git+https://github.com/lenskit/lkpy#subdirectory=lenskit
