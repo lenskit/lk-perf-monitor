@@ -8,8 +8,9 @@ stages:
       size: 269225571
       nfiles: 6
     - path: split-data.py
-      md5: 8a4649ac00c7ae732df01403dde4de23
-      size: 1372
+      hash: md5
+      md5: a1932613af1538320c718da0569eff40
+      size: 1327
     params:
       params.yaml:
         random.seed: 20211209
@@ -26,8 +27,9 @@ stages:
       size: 24905384
       nfiles: 4
     - path: split-data.py
-      md5: 8a4649ac00c7ae732df01403dde4de23
-      size: 1372
+      hash: md5
+      md5: a1932613af1538320c718da0569eff40
+      size: 1327
     params:
       params.yaml:
         random.seed: 20211209
@@ -44,8 +46,9 @@ stages:
       size: 875588784
       nfiles: 7
     - path: split-data.py
-      md5: 8a4649ac00c7ae732df01403dde4de23
-      size: 1372
+      hash: md5
+      md5: a1932613af1538320c718da0569eff40
+      size: 1327
     params:
       params.yaml:
         random.seed: 20211209
@@ -62,8 +65,9 @@ stages:
       size: 16100896
       nfiles: 23
     - path: split-data.py
-      md5: 8a4649ac00c7ae732df01403dde4de23
-      size: 1372
+      hash: md5
+      md5: a1932613af1538320c718da0569eff40
+      size: 1327
     params:
       params.yaml:
         random.seed: 20211209
