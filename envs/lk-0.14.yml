@@ -1,16 +1,17 @@
 name: lkpm-0.14
 channels:
-- conda-forge
+  - conda-forge
 dependencies:
-- python=3.9
-- pip
-- pyarrow
-- numpy=1.23
-- numba=0.56
-- libblas=*=*mkl
-- tbb
-- docopt
-- implicit=0.7
-- lenskit=0.14
-- pip:
-  - lenskit-implicit@git+https://github.com/lenskit/lenskit-implicit
+  - python=3.10
+  - pip
+  - pyarrow
+  - numpy=1.23
+  - numba=0.56
+  - libblas=*=*mkl
+  - tbb
+  - docopt
+  - implicit=0.7
+  - lenskit=0.14
+  - pip:
+      - sandal>=0.1.0a5
+      - lenskit-implicit@git+https://github.com/lenskit/lenskit-implicit

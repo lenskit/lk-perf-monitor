@@ -24,6 +24,8 @@ dependencies:
   - micromamba
   - ruff
   - lenskit>=0.14,<2024
+  - pip:
+      - sandal>=0.1.0a5
 platforms:
   - osx-arm64
   - linux-64

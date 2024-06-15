@@ -16,5 +16,6 @@ dependencies:
   - threadpoolctl
   - numba>=0.58
   - pip:
+      - sandal>=0.1.0a5
       - lenskit@git+https://github.com/lenskit/lkpy#subdirectory=lenskit
       - lenskit-funksvd@git+https://github.com/lenskit/lkpy#subdirectory=lenskit-funksvd
