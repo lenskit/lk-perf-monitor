@@ -1,28 +1,28 @@
 # Define root environment for managing LensKit
 name: lkpm
 channels:
-- conda-forge
+  - conda-forge
+  - nodefaults
 dependencies:
-- python=3.10
-- pip
-- invoke
-- jsonnet
-- pandas=1
-- pyarrow
-- flake8
-- scipy
-- numba
-- seaborn
-- notebook
-- jupytext
-- ipython
-- docopt
-- dvc>=3
-- dvc-ssh
-- dvc-http
-- dvc-webdav
-- lenskit>=0.14
+  - python=3.12
+  - pip
+  - invoke
+  - jsonnet
+  - pandas=2
+  - pyarrow
+  - scipy
+  - numba
+  - seaborn
+  - notebook
+  - jupytext
+  - ipython
+  - docopt
+  - dvc>=3.50,<4
+  - dvc-http
+  - dvc-s3
+  - dvc-webdav
+  - ruff
+  - lenskit>=0.14,<2024
 platforms:
-- osx-64
-- osx-arm64
-- linux-64
+  - osx-arm64
+  - linux-64
