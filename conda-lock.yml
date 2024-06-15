@@ -13,14 +13,14 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 73ebb8712a61bccba4bb658d4107c8a0f449feafa340191228a9797600235b96
-    linux-64: a2c12c3575293519ae67aa3489b4ebe63019a7bcd547cbf0044742e14ae735cb
+    osx-arm64: d50df619d451f6029095bdc6d4609f71b5978166b1e39cb0f9a26e38084dd4ea
+    linux-64: c6fff7318f666bb422bcfa19741667dd8b8ffc59bfd5528e2417e239147b08b0
   channels:
   - url: conda-forge
     used_env_vars: []
   platforms:
-  - osx-arm64
   - linux-64
+  - osx-arm64
   sources:
   - environment.yml
 package:
@@ -6716,6 +6716,31 @@ package:
   hash:
     md5: 776a8dd9e824f77abac30e6ef43a8f7a
     sha256: 64073dfb6bb429d52fff30891877b48c7ec0f89625b1bf844905b66a81cce6e1
+  category: main
+  optional: false
+- name: micromamba
+  version: 1.5.8
+  manager: conda
+  platform: linux-64
+  dependencies:
+    libzlib: '>=1.2.13,<2.0.0a0'
+  url: https://conda.anaconda.org/conda-forge/linux-64/micromamba-1.5.8-0.tar.bz2
+  hash:
+    md5: 031359f10aad8f2ec96477cc1edc3a5f
+    sha256: 3376ccb2ace4bb1549659067f9f1e332fdd34e92e3be85d5968c8f45cff2b467
+  category: main
+  optional: false
+- name: micromamba
+  version: 1.5.8
+  manager: conda
+  platform: osx-arm64
+  dependencies:
+    libcxx: '>=16'
+    libzlib: '>=1.2.13,<2.0.0a0'
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/micromamba-1.5.8-0.tar.bz2
+  hash:
+    md5: fb44acb40eef2e9b03db85617bd3ff85
+    sha256: d62bdc8179a485b931007d623f299ef307cdfba45438fc1f4a8d055ddc232ee1
   category: main
   optional: false
 - name: mistune
