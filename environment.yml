@@ -4,10 +4,11 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python=3.12
+  - python=3.11
   - pip
   - invoke
   - jsonnet
+  - ruamel.yaml
   - pandas=2
   - pyarrow
   - scipy
