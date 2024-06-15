@@ -1,14 +1,13 @@
+import json
 import sys
 from os import fspath
 from pathlib import Path
-import json
-
-from ruamel.yaml import YAML
 
 from _jsonnet import evaluate_file
 from invoke import task
+from ruamel.yaml import YAML
 
-ENV_BASE = Path('envs')
+ENV_BASE = Path("envs")
 
 
 def _msg(fmt, *args):
@@ -24,14 +23,14 @@ def update_pipeline(c):
     repetitive code.  This task re-renders them.
     """
     yaml = YAML()
-    runs = Path('runs')
-    pipes = runs.glob('*/dvc.jsonnet')
+    runs = Path("runs")
+    pipes = runs.glob("*/dvc.jsonnet")
     for file in pipes:
-        print('processing', file, file=sys.stderr)
+        print("processing", file, file=sys.stderr)
         config = evaluate_file(fspath(file))
         config = json.loads(config)
-        yf = file.with_suffix('.yaml')
-        with yf.open('w', encoding='utf8') as f:
+        yf = file.with_suffix(".yaml")
+        with yf.open("w", encoding="utf8") as f:
             yaml.dump(config, f)
 
 
@@ -44,17 +43,17 @@ def create_env(c, version=None, replace=False):
     if version is not None:
         versions = [version]
     else:
-        versions = [ef.stem[3:] for ef in ENV_BASE.glob('lk-*.yml')]
+        versions = [ef.stem[3:] for ef in ENV_BASE.glob("lk-*.yml")]
 
     for ver in versions:
-        env_file = ENV_BASE / f'lk-{ver}.yml'
-        env_dir = ENV_BASE / f'lk-{ver}-env'
+        env_file = ENV_BASE / f"lk-{ver}.yml"
+        env_dir = ENV_BASE / f"lk-{ver}-env"
 
-        _msg('creating LensKit environment for {}', ver)
-        _msg('environment file: {}', env_file)
+        _msg("creating LensKit environment for {}", ver)
+        _msg("environment file: {}", env_file)
         if replace:
             if env_dir.exists():
-                c.run(f'conda env remove -y -p {fspath(env_dir)}')
-            c.run(f'conda env create -p {fspath(env_dir)} -f {fspath(env_file)}', echo=True)
+                c.run(f"conda env remove -y -p {fspath(env_dir)}")
+            c.run(f"conda env create -p {fspath(env_dir)} -f {fspath(env_file)}", echo=True)
         else:
-            c.run(f'conda env update -p {fspath(env_dir)} -f {fspath(env_file)}', echo=True)
+            c.run(f"conda env update -p {fspath(env_dir)} -f {fspath(env_file)}", echo=True)

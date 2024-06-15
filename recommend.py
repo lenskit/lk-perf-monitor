@@ -11,38 +11,39 @@ Options:
   USER      the user IDs to recommend for
 """
 
-from docopt import docopt
 import gzip
 import pickle
 
-from lkdemo import datasets, log
+from docopt import docopt
+
 from lenskit.util import Stopwatch
+from lkdemo import datasets, log
 
 _log = log.script(__file__)
 
 args = docopt(__doc__)
-n = int(args['-n'])
+n = int(args["-n"])
 
-if args['-d']:
-    _log.info('using data %s', args['-d'])
-    data = getattr(datasets, args['-d'])
+if args["-d"]:
+    _log.info("using data %s", args["-d"])
+    data = getattr(datasets, args["-d"])
     items = data.movies
 else:
     data = None
     items = None
 
-_log.info('reading from %s', args['MODEL'])
-with gzip.open(args['MODEL'], 'rb') as f:
+_log.info("reading from %s", args["MODEL"])
+with gzip.open(args["MODEL"], "rb") as f:
     algo = pickle.load(f)
 
 
-for u in args['USER']:
+for u in args["USER"]:
     u = int(u)
     timer = Stopwatch()
-    _log.info('getting %d recs for user %d', n, u)
+    _log.info("getting %d recs for user %d", n, u)
     recs = algo.recommend(u, n)
     if items is not None:
-        recs = recs.join(items, how='left', on='item')
-    print('recommendations for', u)
+        recs = recs.join(items, how="left", on="item")
+    print("recommendations for", u)
     print(recs)
-    _log.info('completed recommendations in %s', timer)
+    _log.info("completed recommendations in %s", timer)

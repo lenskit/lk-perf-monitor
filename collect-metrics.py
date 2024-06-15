@@ -5,37 +5,37 @@ Usage:
     collect-metrics.py -o OUT DIR
 """
 
-from os import fspath
+import json
 import re
 from pathlib import Path
-from docopt import docopt
-import json
+
 import pandas as pd
+from docopt import docopt
 
 from lkdemo import log
 
-_run_re = re.compile(r'^(\w+)-(.*)$')
+_run_re = re.compile(r"^(\w+)-(.*)$")
 
 
 def main(args):
-    out_file = Path(args['OUT'])
-    dir = Path(args['DIR'])
+    out_file = Path(args["OUT"])
+    dir = Path(args["DIR"])
 
     metrics = []
-    for jsf in dir.glob('*.json'):
+    for jsf in dir.glob("*.json"):
         _log.info("reading %s", jsf)
 
-        with jsf.open('r') as f:
+        with jsf.open("r") as f:
             obj = json.load(f)
-            obj['run'] = jsf.stem
+            obj["run"] = jsf.stem
             metrics.append(obj)
 
     df = pd.DataFrame.from_records(metrics)
-    _log.info('writing to %s', out_file)
+    _log.info("writing to %s", out_file)
     df.to_csv(out_file, index=False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     args = docopt(__doc__)
     _log = log.script(__file__)
     main(args)
