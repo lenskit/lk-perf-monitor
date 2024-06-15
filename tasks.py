@@ -53,7 +53,7 @@ def create_env(c, version=None, replace=False):
         _msg("environment file: {}", env_file)
         if replace:
             if env_dir.exists():
-                c.run(f"conda env remove -y -p {fspath(env_dir)}")
-            c.run(f"conda env create -p {fspath(env_dir)} -f {fspath(env_file)}", echo=True)
+                c.run(f"rm -rf {fspath(env_dir)}")
+            c.run(f"micromamba create -p {fspath(env_dir)} -f {fspath(env_file)}", echo=True)
         else:
-            c.run(f"conda env update -p {fspath(env_dir)} -f {fspath(env_file)}", echo=True)
+            c.run(f"micromamba update -p {fspath(env_dir)} -f {fspath(env_file)}", echo=True)

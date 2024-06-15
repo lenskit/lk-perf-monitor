@@ -23,10 +23,7 @@ def cmd_run(args):
     ver = args["VER"]
     env_dir = ENV_BASE / f"lk-{ver}-env"
 
-    sp.check_call(
-        ["conda", "run", "-p", fspath(env_dir), "--no-capture-output", "python", script]
-        + script_args
-    )
+    sp.check_call(["micromamba", "run", "-p", fspath(env_dir), "python", script] + script_args)
 
 
 def main(args):
