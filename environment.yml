@@ -21,6 +21,7 @@ dependencies:
   - dvc-http
   - dvc-s3
   - dvc-webdav
+  - micromamba
   - ruff
   - lenskit>=0.14,<2024
 platforms:
