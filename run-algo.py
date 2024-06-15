@@ -9,7 +9,7 @@ Options:
     --splits input  directory for split train-test pairs [default: data-split]
     -o output       destination directory [default: output]
     -n N            number of recommendations for a unique user [default: 100]
-    -m MODULE       import algorithms from MODULE [default: lkdemo.algorithms]
+    -m MODULE       import algorithms from MODULE [default: lkpm.algorithms]
     -M FILE         write metrics to FILE
     --no-predict    turn off rating prediction
     --log-file FILE write logs to FILE
