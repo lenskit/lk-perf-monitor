@@ -22,7 +22,7 @@ stages:
     - runs/0.11/metrics.csv
     wdir: ../..
   ml100k-ALS:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-ALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-ALS
       -M runs/0.11/ml100k-ALS.json ALS
     deps:
     - data-split/ml100k
@@ -31,7 +31,7 @@ stages:
     - runs/0.11/ml100k-ALS.json
     wdir: ../..
   ml100k-IALS:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml100k --no-predict
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml100k --no-predict
       -o runs/0.11/ml100k-IALS -M runs/0.11/ml100k-IALS.json IALS
     deps:
     - data-split/ml100k
@@ -40,7 +40,7 @@ stages:
     - runs/0.11/ml100k-IALS.json
     wdir: ../..
   ml100k-II:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-II
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-II
       -M runs/0.11/ml100k-II.json II
     deps:
     - data-split/ml100k
@@ -49,7 +49,7 @@ stages:
     - runs/0.11/ml100k-II.json
     wdir: ../..
   ml100k-UU:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-UU
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-UU
       -M runs/0.11/ml100k-UU.json UU
     deps:
     - data-split/ml100k
@@ -58,7 +58,7 @@ stages:
     - runs/0.11/ml100k-UU.json
     wdir: ../..
   ml10m-ALS:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-ALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-ALS
       -M runs/0.11/ml10m-ALS.json ALS
     deps:
     - data-split/ml10m
@@ -67,8 +67,8 @@ stages:
     - runs/0.11/ml10m-ALS.json
     wdir: ../..
   ml10m-IALS:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml10m --no-predict
-      -o runs/0.11/ml10m-IALS -M runs/0.11/ml10m-IALS.json IALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml10m --no-predict -o
+      runs/0.11/ml10m-IALS -M runs/0.11/ml10m-IALS.json IALS
     deps:
     - data-split/ml10m
     outs:
@@ -76,7 +76,7 @@ stages:
     - runs/0.11/ml10m-IALS.json
     wdir: ../..
   ml10m-II:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-II
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-II
       -M runs/0.11/ml10m-II.json II
     deps:
     - data-split/ml10m
@@ -85,7 +85,7 @@ stages:
     - runs/0.11/ml10m-II.json
     wdir: ../..
   ml10m-UU:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-UU
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-UU
       -M runs/0.11/ml10m-UU.json UU
     deps:
     - data-split/ml10m
@@ -94,7 +94,7 @@ stages:
     - runs/0.11/ml10m-UU.json
     wdir: ../..
   ml1m-ALS:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-ALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-ALS
       -M runs/0.11/ml1m-ALS.json ALS
     deps:
     - data-split/ml1m
@@ -103,8 +103,8 @@ stages:
     - runs/0.11/ml1m-ALS.json
     wdir: ../..
   ml1m-IALS:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml1m --no-predict
-      -o runs/0.11/ml1m-IALS -M runs/0.11/ml1m-IALS.json IALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml1m --no-predict -o
+      runs/0.11/ml1m-IALS -M runs/0.11/ml1m-IALS.json IALS
     deps:
     - data-split/ml1m
     outs:
@@ -112,7 +112,7 @@ stages:
     - runs/0.11/ml1m-IALS.json
     wdir: ../..
   ml1m-II:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-II
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-II
       -M runs/0.11/ml1m-II.json II
     deps:
     - data-split/ml1m
@@ -121,7 +121,7 @@ stages:
     - runs/0.11/ml1m-II.json
     wdir: ../..
   ml1m-UU:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-UU
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-UU
       -M runs/0.11/ml1m-UU.json UU
     deps:
     - data-split/ml1m
@@ -130,7 +130,7 @@ stages:
     - runs/0.11/ml1m-UU.json
     wdir: ../..
   ml20m-ALS:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml20m -o runs/0.11/ml20m-ALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml20m -o runs/0.11/ml20m-ALS
       -M runs/0.11/ml20m-ALS.json ALS
     deps:
     - data-split/ml20m
@@ -139,8 +139,8 @@ stages:
     - runs/0.11/ml20m-ALS.json
     wdir: ../..
   ml20m-IALS:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml20m --no-predict
-      -o runs/0.11/ml20m-IALS -M runs/0.11/ml20m-IALS.json IALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml20m --no-predict -o
+      runs/0.11/ml20m-IALS -M runs/0.11/ml20m-IALS.json IALS
     deps:
     - data-split/ml20m
     outs:
@@ -148,7 +148,7 @@ stages:
     - runs/0.11/ml20m-IALS.json
     wdir: ../..
   ml20m-II:
-    cmd: ./env-python.sh --run 0.11 run-algo.py --splits data-split/ml20m -o runs/0.11/ml20m-II
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml20m -o runs/0.11/ml20m-II
       -M runs/0.11/ml20m-II.json II
     deps:
     - data-split/ml20m

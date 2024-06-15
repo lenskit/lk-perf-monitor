@@ -49,7 +49,7 @@ local excluded(excludes, v, d, a) =
 function(version, excludes=null) {
   stages: {
     [key(d, a)]: {
-      cmd: './env-python.sh --run %(v)s run-algo.py --splits data-split/%(d)s%(opts)s -o runs/%(v)s/%(d)s-%(a)s -M runs/%(v)s/%(d)s-%(a)s.json %(a)s' % {
+      cmd: './env-python.sh %(v)s run-algo.py --splits data-split/%(d)s%(opts)s -o runs/%(v)s/%(d)s-%(a)s -M runs/%(v)s/%(d)s-%(a)s.json %(a)s' % {
         v: version,
         a: a,
         d: d,
