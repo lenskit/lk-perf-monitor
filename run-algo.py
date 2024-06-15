@@ -29,7 +29,7 @@ from lenskit import batch, util
 from lenskit.algorithms import Predictor, Recommender
 from lenskit.metrics.predict import rmse
 from lenskit.topn import RecListAnalysis, ndcg
-from lkdemo import datasets, log
+from lkpm import datasets, log
 
 _fn_suffix = re.compile(r"\..*$")
 

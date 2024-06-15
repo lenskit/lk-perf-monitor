@@ -25,7 +25,7 @@ except ImportError:
 
 from lenskit.algorithms import Recommender
 from lenskit.util import Stopwatch
-from lkdemo import datasets, log
+from lkpm import datasets, log
 
 
 def main(args):

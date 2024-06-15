@@ -12,7 +12,7 @@ from pathlib import Path
 import pandas as pd
 from docopt import docopt
 
-from lkdemo import log
+from lkpm import log
 
 _run_re = re.compile(r"^(\w+)-(.*)$")
 

@@ -16,7 +16,7 @@ from docopt import docopt
 from seedbank import init_file
 
 import lenskit.crossfold as xf
-from lkdemo import datasets, log
+from lkpm import datasets, log
 
 
 def main(args):

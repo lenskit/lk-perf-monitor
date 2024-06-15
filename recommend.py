@@ -17,7 +17,7 @@ import pickle
 from docopt import docopt
 
 from lenskit.util import Stopwatch
-from lkdemo import datasets, log
+from lkpm import datasets, log
 
 _log = log.script(__file__)
 
