@@ -263,8 +263,9 @@ stages:
     cmd: python collect-metrics.py -o runs/main/metrics.csv runs/main
     deps:
     - path: collect-metrics.py
-      md5: b7476e3b6ba1288e55d898ce3e76123f
-      size: 795
+      hash: md5
+      md5: 8ea4e245949361517313accd986c0dd3
+      size: 774
     - path: runs/main/ml100k-ALS.json
       md5: 7cd53821e6947da9f8a85425cbc41c89
       size: 211
@@ -317,5 +318,5 @@ stages:
     outs:
     - path: runs/main/metrics.csv
       hash: md5
-      md5: 11822552678c52de6ae50901506dfd90
+      md5: baf9137cc3d365eb293c79fb6b203592
       size: 2449

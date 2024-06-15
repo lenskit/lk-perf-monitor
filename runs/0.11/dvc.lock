@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   ml100k-UU:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-UU
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-UU
       -M runs/0.11/ml100k-UU.json UU
     deps:
     - path: data-split/ml100k
@@ -18,7 +18,7 @@ stages:
       md5: 949bd52f34e84873eb5f0ced05ba491d
       size: 213
   ml1m-II:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-II
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-II
       -M runs/0.11/ml1m-II.json II
     deps:
     - path: data-split/ml1m
@@ -35,8 +35,8 @@ stages:
       md5: c944889b602d06f9013e068620bc6234
       size: 206
   ml10m-IALS:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml10m --no-predict
-      -o runs/0.11/ml10m-IALS -M runs/0.11/ml10m-IALS.json IALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml10m --no-predict -o
+      runs/0.11/ml10m-IALS -M runs/0.11/ml10m-IALS.json IALS
     deps:
     - path: data-split/ml10m
       md5: 758eb106e9d2b2ebbceefe702f058bff.dir
@@ -53,7 +53,7 @@ stages:
       md5: 42228d98330f771d3f50064226bf19ea
       size: 176
   ml100k-ALS:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-ALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-ALS
       -M runs/0.11/ml100k-ALS.json ALS
     deps:
     - path: data-split/ml100k
@@ -70,7 +70,7 @@ stages:
       md5: 4bf42ca2c528239af6d6fd2a0312eb21
       size: 207
   ml100k-II:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-II
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml100k -o runs/0.11/ml100k-II
       -M runs/0.11/ml100k-II.json II
     deps:
     - path: data-split/ml100k
@@ -87,7 +87,7 @@ stages:
       md5: af1e2ecfa72b649f131fcf91f77791d4
       size: 210
   ml10m-II:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-II
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-II
       -M runs/0.11/ml10m-II.json II
     deps:
     - path: data-split/ml10m
@@ -104,7 +104,7 @@ stages:
       md5: 90b89f922f4ac9bf9fb5057919c1470c
       size: 204
   ml20m-II:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml20m -o runs/0.11/ml20m-II
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml20m -o runs/0.11/ml20m-II
       -M runs/0.11/ml20m-II.json II
     deps:
     - path: data-split/ml20m
@@ -121,7 +121,7 @@ stages:
       md5: 0d6ec15fd06cb7ced1594c39a7293c3d
       size: 210
   ml1m-UU:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-UU
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-UU
       -M runs/0.11/ml1m-UU.json UU
     deps:
     - path: data-split/ml1m
@@ -138,7 +138,7 @@ stages:
       md5: 09b1e0156edb9bb0d31fde5fc18081a3
       size: 211
   ml10m-UU:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-UU
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-UU
       -M runs/0.11/ml10m-UU.json UU
     deps:
     - path: data-split/ml10m
@@ -155,7 +155,7 @@ stages:
       md5: 55a1414d18a980ca83f5b8e1530fe58f
       size: 200
   ml1m-ALS:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-ALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml1m -o runs/0.11/ml1m-ALS
       -M runs/0.11/ml1m-ALS.json ALS
     deps:
     - path: data-split/ml1m
@@ -172,7 +172,7 @@ stages:
       md5: a280a3859122fe6507fa5faebc16aab0
       size: 203
   ml10m-ALS:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-ALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-ALS
       -M runs/0.11/ml10m-ALS.json ALS
     deps:
     - path: data-split/ml10m
@@ -189,7 +189,7 @@ stages:
       md5: c8b039e0558ef5514bb32e6093c41cd3
       size: 205
   ml20m-ALS:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml20m -o runs/0.11/ml20m-ALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml20m -o runs/0.11/ml20m-ALS
       -M runs/0.11/ml20m-ALS.json ALS
     deps:
     - path: data-split/ml20m
@@ -206,7 +206,7 @@ stages:
       md5: 5af2740b31926f47104b9a5161ff7c3f
       size: 204
   ml100k-IALS:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml100k --no-predict
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml100k --no-predict
       -o runs/0.11/ml100k-IALS -M runs/0.11/ml100k-IALS.json IALS
     deps:
     - path: data-split/ml100k
@@ -224,8 +224,8 @@ stages:
       md5: 6713e1b0bd735c00364d37afe1996f16
       size: 178
   ml1m-IALS:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml1m --no-predict
-      -o runs/0.11/ml1m-IALS -M runs/0.11/ml1m-IALS.json IALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml1m --no-predict -o
+      runs/0.11/ml1m-IALS -M runs/0.11/ml1m-IALS.json IALS
     deps:
     - path: data-split/ml1m
       md5: c738f2f559e657427fb304b1a3a2e007.dir
@@ -242,8 +242,8 @@ stages:
       md5: 98cc47eae9da3368f9bd22c15f11d569
       size: 176
   ml20m-IALS:
-    cmd: python envtool.py --run 0.11 run-algo.py --splits data-split/ml20m --no-predict
-      -o runs/0.11/ml20m-IALS -M runs/0.11/ml20m-IALS.json IALS
+    cmd: ./env-python.sh 0.11 run-algo.py --splits data-split/ml20m --no-predict -o
+      runs/0.11/ml20m-IALS -M runs/0.11/ml20m-IALS.json IALS
     deps:
     - path: data-split/ml20m
       md5: a48b901f072fa0b345277bf0b5a9f124.dir
@@ -263,8 +263,9 @@ stages:
     cmd: python collect-metrics.py -o runs/0.11/metrics.csv runs/0.11
     deps:
     - path: collect-metrics.py
-      md5: b7476e3b6ba1288e55d898ce3e76123f
-      size: 795
+      hash: md5
+      md5: 8ea4e245949361517313accd986c0dd3
+      size: 774
     - path: runs/0.11/ml100k-ALS.json
       md5: 4bf42ca2c528239af6d6fd2a0312eb21
       size: 207
