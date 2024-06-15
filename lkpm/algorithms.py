@@ -15,7 +15,10 @@ except ImportError:
 from lenskit.algorithms import als, basic
 
 Bias = basic.Bias(damping=5)
-Pop = basic.Popular()
+if hasattr(basic, "Popular"):
+    Pop = basic.Popular()
+else:
+    Pop = basic.PopScore()
 II = ItemItem(20, save_nbrs=2500)
 UU = UserUser(30)
 ALS = als.BiasedMF(50)
