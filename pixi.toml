@@ -47,5 +47,106 @@ joblib = "0.15"
 [feature.lk09.pypi-dependencies]
 lenskit = "~=0.9.0"
 
+[feature.lk10]
+platforms = ["linux-64"]
+
+[feature.lk10.dependencies]
+python = "3.7"
+pandas = "1.0"
+numpy = "1.17"
+pyarrow = "4"
+scipy = "*"
+numba = "<0.51"
+cffi = "*"
+libblas = { build = "*mkl*" }
+tbb = "2020"
+mkl = "2020"
+docopt = "*"
+binpickle = "*"
+
+[feature.lk10.pypi-dependencies]
+lenskit = "~=0.10.1"
+
+[feature.lk11]
+platforms = ["linux-64"]
+
+[feature.lk11.dependencies]
+python = "3.7"
+pyarrow = "4"
+libblas = { build = "*mkl*" }
+tbb = "2020"
+mkl = "2020"
+docopt = "*"
+lenskit = "~=0.11.0"
+
+[feature.lk12]
+platforms = ["linux-64"]
+
+[feature.lk12.dependencies]
+python = "3.8"
+pyarrow = "4"
+libblas = { build = "*mkl*" }
+tbb = "2020"
+mkl = "2020"
+docopt = "*"
+lenskit = "~=0.12.0"
+
+[feature.lk13]
+platforms = ["linux-64"]
+
+[feature.lk13.dependencies]
+python = "3.8"
+pyarrow = "4"
+libblas = { build = "*mkl*" }
+tbb = "2020"
+mkl = "2020"
+docopt = "*"
+implicit = "~=0.4.0"
+lenskit = "~=0.13.0"
+
+[feature.lk14]
+platforms = ["linux-64"]
+
+[feature.lk14.dependencies]
+python = "3.10"
+pyarrow = "*"
+libblas = { build = "*mkl*" }
+tbb = "*"
+docopt = "*"
+numpy = "~=1.23.0"
+numba = ">=0.56,<0.57"
+implicit = "~=0.7.0"
+lenskit = "~=0.14.0"
+
+[feature.lk14.pypi-dependencies]
+sandal = { git = "https://github.com/mdekstrand/sandal" }
+lenskit-implicit = { git = "https://github.com/lenskit/lenskit-implicit" }
+
+[feature.lk-main]
+platforms = ["linux-64"]
+
+[feature.lk-main.dependencies]
+python = "3.12"
+psutil = "*"
+pyarrow = ">=16"
+docopt = "*"
+pyzmq = "*"
+msgpack-python = "*"
+threadpoolctl = "*"
+numba = ">=0.58"
+implicit = "~=0.7.0"
+
+[feature.lk-main.pypi-dependencies]
+sandal = { git = "https://github.com/mdekstrand/sandal" }
+lenskit = { git = "https://github.com/lenskit/lkpy#subdirectory=lenskit" }
+lenskit-funksvd = { git = "https://github.com/lenskit/lkpy#subdirectory=lenskit-funkvsd" }
+lenskit-implicit = { git = "https://github.com/lenskit/lkpy#subdirectory=lenskit-implicit" }
+
 [environments]
 lk09 = { features = ["lk09"], no-default-feature = true }
+lk10 = { features = ["lk10"], no-default-feature = true }
+lk11 = { features = ["lk11"], no-default-feature = true }
+lk12 = { features = ["lk12"], no-default-feature = true }
+lk13 = { features = ["lk13"], no-default-feature = true }
+lk14 = { features = ["lk14"], no-default-feature = true }
+lk-main = { features = ["lk-main"], no-default-feature = true }
