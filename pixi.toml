@@ -4,7 +4,7 @@ platforms = ['linux-64', 'osx-arm64']
 channels = ['conda-forge']
 
 [dependencies]
-python = "=3.11"
+python = "~=3.11.0"
 invoke = "~=2.0"
 jsonnet = "*"
 "ruamel.yaml" = "*"
@@ -30,10 +30,10 @@ sandal = { git = "https://github.com/mdekstrand/sandal" }
 platforms = ["linux-64"]
 
 [feature.lk09.dependencies]
-python = "3.7"
+python = "~=3.7.0"
 pandas = "0.24"
 numpy = "1.17"
-pyarrow = "4"
+pyarrow = "~=4.0"
 scipy = "*"
 numba = "<0.50"
 cffi = "*"
@@ -41,7 +41,7 @@ libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
 docopt = "*"
-binpickle = "*"
+binpickle = "=0.3.3"
 joblib = "0.15"
 
 [feature.lk09.pypi-dependencies]
@@ -51,10 +51,10 @@ lenskit = "~=0.9.0"
 platforms = ["linux-64"]
 
 [feature.lk10.dependencies]
-python = "3.7"
-pandas = "1.0"
-numpy = "1.17"
-pyarrow = "4"
+python = "~=3.7.0"
+pandas = "~=1.0.0"
+numpy = "~=1.17.0"
+pyarrow = "~=4.0"
 scipy = "*"
 numba = "<0.51"
 cffi = "*"
@@ -62,7 +62,7 @@ libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
 docopt = "*"
-binpickle = "*"
+binpickle = "=0.3.3"
 
 [feature.lk10.pypi-dependencies]
 lenskit = "~=0.10.1"
@@ -71,8 +71,8 @@ lenskit = "~=0.10.1"
 platforms = ["linux-64"]
 
 [feature.lk11.dependencies]
-python = "3.7"
-pyarrow = "4"
+python = "~=3.7.0"
+pyarrow = "~=4.0"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
@@ -83,8 +83,8 @@ lenskit = "~=0.11.0"
 platforms = ["linux-64"]
 
 [feature.lk12.dependencies]
-python = "3.8"
-pyarrow = "4"
+python = "~=3.8.0"
+pyarrow = "~=4.0"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
@@ -95,8 +95,8 @@ lenskit = "~=0.12.0"
 platforms = ["linux-64"]
 
 [feature.lk13.dependencies]
-python = "3.8"
-pyarrow = "4"
+python = "~=3.8.0"
+pyarrow = "~=4.0"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
@@ -108,7 +108,7 @@ lenskit = "~=0.13.0"
 platforms = ["linux-64"]
 
 [feature.lk14.dependencies]
-python = "3.10"
+python = "~=3.10.0"
 pyarrow = "*"
 libblas = { build = "*mkl*" }
 tbb = "*"
@@ -126,7 +126,7 @@ lenskit-implicit = { git = "https://github.com/lenskit/lenskit-implicit" }
 platforms = ["linux-64"]
 
 [feature.lk-main.dependencies]
-python = "3.12"
+python = "~=3.12.0"
 psutil = "*"
 pyarrow = ">=16"
 docopt = "*"
@@ -138,9 +138,9 @@ implicit = "~=0.7.0"
 
 [feature.lk-main.pypi-dependencies]
 sandal = { git = "https://github.com/mdekstrand/sandal" }
-lenskit = { git = "https://github.com/lenskit/lkpy#subdirectory=lenskit" }
-lenskit-funksvd = { git = "https://github.com/lenskit/lkpy#subdirectory=lenskit-funkvsd" }
-lenskit-implicit = { git = "https://github.com/lenskit/lkpy#subdirectory=lenskit-implicit" }
+lenskit = { git = "https://github.com/lenskit/lkpy", subdirectory="lenskit" }
+lenskit-funksvd = { git = "https://github.com/lenskit/lkpy", subdirectory="lenskit-funkvsd" }
+lenskit-implicit = { git = "https://github.com/lenskit/lkpy", subdirectory="lenskit-implicit" }
 
 [environments]
 lk09 = { features = ["lk09"], no-default-feature = true }
