@@ -7,5 +7,9 @@ __pycache__
 *.lprof
 .ipynb_checkpoints/
 *.html
+.pixi/
+venv/
+venvs/
+.venv/
 /scratch/
 /MetricDist.ipynb
