@@ -11,7 +11,7 @@ try:
     from sandal.cli import setup_logging
 except ImportError:
 
-    def setup_logging(verbose: bool, log_file: str | None):
+    def setup_logging(verbose: bool, log_file):
         ch = logging.StreamHandler(sys.stderr)
         ch.setLevel(logging.DEBUG if verbose else logging.INFO)
         ch.setFormatter(_simple_format)
