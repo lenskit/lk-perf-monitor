@@ -9,8 +9,9 @@ stages:
       nfiles: 6
     - path: split-data.py
       hash: md5
-      md5: edf64c0b9b43c1d7614a819c9072de34
-      size: 1325
+      md5: ae1cccf7ecba938cf5200b8c7fcac604
+      size: 1323
+      isexec: true
     params:
       params.yaml:
         random.seed: 20211209
@@ -28,15 +29,17 @@ stages:
       nfiles: 4
     - path: split-data.py
       hash: md5
-      md5: edf64c0b9b43c1d7614a819c9072de34
-      size: 1325
+      md5: ae1cccf7ecba938cf5200b8c7fcac604
+      size: 1323
+      isexec: true
     params:
       params.yaml:
         random.seed: 20211209
     outs:
     - path: data-split/ml1m
-      md5: c738f2f559e657427fb304b1a3a2e007.dir
-      size: 333412
+      hash: md5
+      md5: f7107620aab50c4a42f015d2858334fe.dir
+      size: 329146
       nfiles: 5
   ml20m:
     cmd: python split-data.py ml20m -o data-split/ml20m
@@ -47,8 +50,9 @@ stages:
       nfiles: 7
     - path: split-data.py
       hash: md5
-      md5: edf64c0b9b43c1d7614a819c9072de34
-      size: 1325
+      md5: ae1cccf7ecba938cf5200b8c7fcac604
+      size: 1323
+      isexec: true
     params:
       params.yaml:
         random.seed: 20211209
@@ -66,8 +70,9 @@ stages:
       nfiles: 23
     - path: split-data.py
       hash: md5
-      md5: edf64c0b9b43c1d7614a819c9072de34
-      size: 1325
+      md5: ae1cccf7ecba938cf5200b8c7fcac604
+      size: 1323
+      isexec: true
     params:
       params.yaml:
         random.seed: 20211209
