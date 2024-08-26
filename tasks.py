@@ -32,28 +32,3 @@ def update_pipeline(c):
         yf = file.with_suffix(".yaml")
         with yf.open("w", encoding="utf8") as f:
             yaml.dump(config, f)
-
-
-@task
-def create_env(c, version=None, replace=False):
-    """
-    Create the environment for a LensKit version.
-    """
-
-    if version is not None:
-        versions = [version]
-    else:
-        versions = [ef.stem[3:] for ef in ENV_BASE.glob("lk-*.yml")]
-
-    for ver in versions:
-        env_file = ENV_BASE / f"lk-{ver}.yml"
-        env_dir = ENV_BASE / f"lk-{ver}-env"
-
-        _msg("creating LensKit environment for {}", ver)
-        _msg("environment file: {}", env_file)
-        if replace:
-            if env_dir.exists():
-                c.run(f"rm -rf {fspath(env_dir)}")
-            c.run(f"micromamba create -p {fspath(env_dir)} -f {fspath(env_file)}", echo=True)
-        else:
-            c.run(f"micromamba update -p {fspath(env_dir)} -f {fspath(env_file)}", echo=True)
