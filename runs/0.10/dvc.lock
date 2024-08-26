@@ -1,12 +1,13 @@
 schema: '2.0'
 stages:
   ml1m-IALS:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml1m --no-predict -o
-      runs/0.10/ml1m-IALS -M runs/0.10/ml1m-IALS.json IALS
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml1m --no-predict -o runs/0.10/ml1m-IALS
+      -M runs/0.10/ml1m-IALS.json IALS
     deps:
     - path: data-split/ml1m
-      md5: c738f2f559e657427fb304b1a3a2e007.dir
-      size: 333412
+      hash: md5
+      md5: f7107620aab50c4a42f015d2858334fe.dir
+      size: 329146
       nfiles: 5
     outs:
     - path: runs/0.10/ml1m-IALS
@@ -19,7 +20,7 @@ stages:
       md5: e730290a52e014a7403ee634472d2c50
       size: 178
   ml100k-II:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml100k -o runs/0.10/ml100k-II
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml100k -o runs/0.10/ml100k-II
       -M runs/0.10/ml100k-II.json II
     deps:
     - path: data-split/ml100k
@@ -55,7 +56,7 @@ stages:
       md5: cc4e72be1475eec5197e5a16361fe932
       size: 203
   ml10m-II:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml10m -o runs/0.10/ml10m-II
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml10m -o runs/0.10/ml10m-II
       -M runs/0.10/ml10m-II.json II
     deps:
     - path: data-split/ml10m
@@ -72,7 +73,7 @@ stages:
       md5: fc24dc94e1b597171eca5cd1c319d4fa
       size: 207
   ml20m-II:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml20m -o runs/0.10/ml20m-II
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml20m -o runs/0.10/ml20m-II
       -M runs/0.10/ml20m-II.json II
     deps:
     - path: data-split/ml20m
@@ -89,7 +90,7 @@ stages:
       md5: 3f69a6fa32e2e642343a4829766d05c2
       size: 201
   ml100k-UU:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml100k -o runs/0.10/ml100k-UU
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml100k -o runs/0.10/ml100k-UU
       -M runs/0.10/ml100k-UU.json UU
     deps:
     - path: data-split/ml100k
@@ -106,12 +107,13 @@ stages:
       md5: 5c370965d2eb04fbdcb65e6bddbde84f
       size: 214
   ml1m-UU:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml1m -o runs/0.10/ml1m-UU
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml1m -o runs/0.10/ml1m-UU
       -M runs/0.10/ml1m-UU.json UU
     deps:
     - path: data-split/ml1m
-      md5: c738f2f559e657427fb304b1a3a2e007.dir
-      size: 333412
+      hash: md5
+      md5: f7107620aab50c4a42f015d2858334fe.dir
+      size: 329146
       nfiles: 5
     outs:
     - path: runs/0.10/ml1m-UU
@@ -123,7 +125,7 @@ stages:
       md5: 5bb0f4f0e4a9720bf9958da2d7bcdfaa
       size: 207
   ml10m-UU:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml10m -o runs/0.10/ml10m-UU
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml10m -o runs/0.10/ml10m-UU
       -M runs/0.10/ml10m-UU.json UU
     deps:
     - path: data-split/ml10m
@@ -140,7 +142,7 @@ stages:
       md5: ecb5445a4eb5409624722f068bdd8bbe
       size: 206
   ml100k-ALS:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml100k -o runs/0.10/ml100k-ALS
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml100k -o runs/0.10/ml100k-ALS
       -M runs/0.10/ml100k-ALS.json ALS
     deps:
     - path: data-split/ml100k
@@ -157,12 +159,13 @@ stages:
       md5: baa7ccfa28e2d901dac4a27fe607e02b
       size: 205
   ml1m-ALS:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml1m -o runs/0.10/ml1m-ALS
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml1m -o runs/0.10/ml1m-ALS
       -M runs/0.10/ml1m-ALS.json ALS
     deps:
     - path: data-split/ml1m
-      md5: c738f2f559e657427fb304b1a3a2e007.dir
-      size: 333412
+      hash: md5
+      md5: f7107620aab50c4a42f015d2858334fe.dir
+      size: 329146
       nfiles: 5
     outs:
     - path: runs/0.10/ml1m-ALS
@@ -174,7 +177,7 @@ stages:
       md5: 65d2db6771146f3979e299a5dab2bb7b
       size: 203
   ml10m-ALS:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml10m -o runs/0.10/ml10m-ALS
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml10m -o runs/0.10/ml10m-ALS
       -M runs/0.10/ml10m-ALS.json ALS
     deps:
     - path: data-split/ml10m
@@ -191,7 +194,7 @@ stages:
       md5: 0e1246ed8bbb0650620cbb8e16b471fe
       size: 206
   ml20m-ALS:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml20m -o runs/0.10/ml20m-ALS
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml20m -o runs/0.10/ml20m-ALS
       -M runs/0.10/ml20m-ALS.json ALS
     deps:
     - path: data-split/ml20m
@@ -208,8 +211,8 @@ stages:
       md5: 59c824af10545254a6067f3f1098cd2c
       size: 207
   ml100k-IALS:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml100k --no-predict
-      -o runs/0.10/ml100k-IALS -M runs/0.10/ml100k-IALS.json IALS
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml100k --no-predict -o runs/0.10/ml100k-IALS
+      -M runs/0.10/ml100k-IALS.json IALS
     deps:
     - path: data-split/ml100k
       md5: 42424a2a8d9ae27cdcccb48e6dc2ace2.dir
@@ -226,8 +229,8 @@ stages:
       md5: c6fc237fc20f8a69bee45fe5a4e0b8a6
       size: 176
   ml10m-IALS:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml10m --no-predict -o
-      runs/0.10/ml10m-IALS -M runs/0.10/ml10m-IALS.json IALS
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml10m --no-predict -o runs/0.10/ml10m-IALS
+      -M runs/0.10/ml10m-IALS.json IALS
     deps:
     - path: data-split/ml10m
       md5: 758eb106e9d2b2ebbceefe702f058bff.dir
@@ -244,8 +247,8 @@ stages:
       md5: e5134dfec1278370052b72f5cbbf8890
       size: 177
   ml20m-IALS:
-    cmd: ./env-python.sh 0.10 run-algo.py --splits data-split/ml20m --no-predict -o
-      runs/0.10/ml20m-IALS -M runs/0.10/ml20m-IALS.json IALS
+    cmd: pixi run -e lk10 run-algo.py --splits data-split/ml20m --no-predict -o runs/0.10/ml20m-IALS
+      -M runs/0.10/ml20m-IALS.json IALS
     deps:
     - path: data-split/ml20m
       md5: a48b901f072fa0b345277bf0b5a9f124.dir
@@ -266,8 +269,9 @@ stages:
     deps:
     - path: collect-metrics.py
       hash: md5
-      md5: 7e439d6d97efc0f6d828e6d04e77b075
-      size: 772
+      md5: c1de4b8045e4602a67c2cc63af62f3e3
+      size: 795
+      isexec: true
     - path: runs/0.10/ml100k-ALS.json
       md5: baa7ccfa28e2d901dac4a27fe607e02b
       size: 205
@@ -302,8 +306,9 @@ stages:
       md5: e730290a52e014a7403ee634472d2c50
       size: 178
     - path: runs/0.10/ml1m-II.json
-      md5: af6f3454a2d91e1560411bfae612eb4e
-      size: 204
+      hash: md5
+      md5: cc4e72be1475eec5197e5a16361fe932
+      size: 203
     - path: runs/0.10/ml1m-UU.json
       md5: 5bb0f4f0e4a9720bf9958da2d7bcdfaa
       size: 207
