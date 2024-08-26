@@ -3,7 +3,7 @@
 
 [tool.ruff]
 line-length = 100
-target-version = "py310"
+target-version = "py37"
 exclude = [".git", "__pycache__", "build", "dist"]
 
 [tool.ruff.lint]
