@@ -46,11 +46,12 @@ local excluded(excludes, v, d, a) =
     for rule in rules + forbidden
   ]);
 
-function(version, excludes=null) {
+function(version, vtag, excludes=null) {
   stages: {
     [key(d, a)]: {
-      cmd: './env-python.sh %(v)s run-algo.py --splits data-split/%(d)s%(opts)s -o runs/%(v)s/%(d)s-%(a)s -M runs/%(v)s/%(d)s-%(a)s.json %(a)s' % {
+      cmd: 'pixi run -e %(vt)s run-algo.py --splits data-split/%(d)s%(opts)s -o runs/%(v)s/%(d)s-%(a)s -M runs/%(v)s/%(d)s-%(a)s.json %(a)s' % {
         v: version,
+        vt: vtag,
         a: a,
         d: d,
         opts: if std.get(implicit, a, false) then ' --no-predict' else '',

@@ -1,3 +1,3 @@
 local pipeline = import '../pipeline.jsonnet';
 
-pipeline("0.11")
+pipeline("0.11", "lk11")
