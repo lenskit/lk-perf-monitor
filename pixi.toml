@@ -26,6 +26,11 @@ lenskit = ">=0.14,<2024"
 [pypi-dependencies]
 sandal = { git = "https://github.com/mdekstrand/sandal" }
 
+# common dependencies for running algorithms
+[feature.run.dependencies]
+docopt = "*"
+importlib_metadata = "*"
+
 [feature.lk09]
 platforms = ["linux-64"]
 
@@ -40,7 +45,6 @@ cffi = "*"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
-docopt = "*"
 binpickle = "=0.3.3"
 joblib = "0.15"
 
@@ -61,7 +65,6 @@ cffi = "*"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
-docopt = "*"
 binpickle = "=0.3.3"
 
 [feature.lk10.pypi-dependencies]
@@ -76,7 +79,6 @@ pyarrow = "~=4.0"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
-docopt = "*"
 lenskit = "~=0.11.0"
 
 [feature.lk12]
@@ -88,7 +90,6 @@ pyarrow = "~=4.0"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
-docopt = "*"
 lenskit = "~=0.12.0"
 
 [feature.lk13]
@@ -100,7 +101,6 @@ pyarrow = "~=4.0"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
-docopt = "*"
 implicit = "~=0.4.0"
 lenskit = "~=0.13.0"
 
@@ -112,7 +112,6 @@ python = "~=3.10.0"
 pyarrow = "*"
 libblas = { build = "*mkl*" }
 tbb = "*"
-docopt = "*"
 numpy = "~=1.23.0"
 numba = ">=0.56,<0.57"
 implicit = "~=0.7.0"
@@ -129,7 +128,6 @@ platforms = ["linux-64"]
 python = "~=3.12.0"
 psutil = "*"
 pyarrow = ">=16"
-docopt = "*"
 pyzmq = "*"
 msgpack-python = "*"
 threadpoolctl = "*"
@@ -144,10 +142,10 @@ lenskit = { git = "https://github.com/lenskit/lkpy", subdirectory = "lenskit" }
 lenskit-implicit = { git = "https://github.com/lenskit/lkpy", subdirectory = "lenskit-implicit" }
 
 [environments]
-lk09 = { features = ["lk09"], no-default-feature = true }
-lk10 = { features = ["lk10"], no-default-feature = true }
-lk11 = { features = ["lk11"], no-default-feature = true }
-lk12 = { features = ["lk12"], no-default-feature = true }
-lk13 = { features = ["lk13"], no-default-feature = true }
-lk14 = { features = ["lk14"], no-default-feature = true }
-lk-main = { features = ["lk-main"], no-default-feature = true }
+lk09 = { features = ["run", "lk09"], no-default-feature = true }
+lk10 = { features = ["run", "lk10"], no-default-feature = true }
+lk11 = { features = ["run", "lk11"], no-default-feature = true }
+lk12 = { features = ["run", "lk12"], no-default-feature = true }
+lk13 = { features = ["run", "lk13"], no-default-feature = true }
+lk14 = { features = ["run", "lk14"], no-default-feature = true }
+lk-main = { features = ["run", "lk-main"], no-default-feature = true }
