@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-
+#!/usr/bin/env python3
 """
 Usage:
     split-data.py [-p partitions] [-o output] DATASET

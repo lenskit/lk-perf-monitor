@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Collect metrics from a LensKit project.
 
