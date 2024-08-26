@@ -6,12 +6,6 @@ import logging
 import os
 import pathlib
 import sys
-from importlib.metadata import version
-
-try:
-    import lenskit
-except ImportError:
-    pass
 
 try:
     from sandal.cli import setup_logging
@@ -61,6 +55,12 @@ def script(file, **kwargs):
         logger.info("starting script")
 
     logger.info("Python version: %s", sys.version)
-    logger.info("LensKit version: %s", version("lenskit"))
+
+    try:
+        import lenskit
+
+        logger.info("LensKit version: %s", lenskit.__version__)
+    except ImportError:
+        logger.warn("LensKit not found")
 
     return logger
