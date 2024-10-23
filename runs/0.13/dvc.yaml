@@ -26,7 +26,7 @@ stages:
     - runs/0.13/metrics.csv
     wdir: ../..
   ml100k-ALS:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml100k -o runs/0.13/ml100k-ALS
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml100k -o runs/0.13/ml100k-ALS
       -M runs/0.13/ml100k-ALS.json ALS
     deps:
     - data-split/ml100k
@@ -35,8 +35,8 @@ stages:
     - runs/0.13/ml100k-ALS.json
     wdir: ../..
   ml100k-IALS:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml100k --no-predict -o runs/0.13/ml100k-IALS
-      -M runs/0.13/ml100k-IALS.json IALS
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml100k --no-predict
+      -o runs/0.13/ml100k-IALS -M runs/0.13/ml100k-IALS.json IALS
     deps:
     - data-split/ml100k
     outs:
@@ -44,7 +44,7 @@ stages:
     - runs/0.13/ml100k-IALS.json
     wdir: ../..
   ml100k-II:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml100k -o runs/0.13/ml100k-II
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml100k -o runs/0.13/ml100k-II
       -M runs/0.13/ml100k-II.json II
     deps:
     - data-split/ml100k
@@ -53,7 +53,7 @@ stages:
     - runs/0.13/ml100k-II.json
     wdir: ../..
   ml100k-UU:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml100k -o runs/0.13/ml100k-UU
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml100k -o runs/0.13/ml100k-UU
       -M runs/0.13/ml100k-UU.json UU
     deps:
     - data-split/ml100k
@@ -62,8 +62,8 @@ stages:
     - runs/0.13/ml100k-UU.json
     wdir: ../..
   ml100k-impBPR:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml100k --no-predict -o runs/0.13/ml100k-impBPR
-      -M runs/0.13/ml100k-impBPR.json impBPR
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml100k --no-predict
+      -o runs/0.13/ml100k-impBPR -M runs/0.13/ml100k-impBPR.json impBPR
     deps:
     - data-split/ml100k
     outs:
@@ -71,7 +71,7 @@ stages:
     - runs/0.13/ml100k-impBPR.json
     wdir: ../..
   ml10m-ALS:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml10m -o runs/0.13/ml10m-ALS
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml10m -o runs/0.13/ml10m-ALS
       -M runs/0.13/ml10m-ALS.json ALS
     deps:
     - data-split/ml10m
@@ -80,8 +80,8 @@ stages:
     - runs/0.13/ml10m-ALS.json
     wdir: ../..
   ml10m-IALS:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml10m --no-predict -o runs/0.13/ml10m-IALS
-      -M runs/0.13/ml10m-IALS.json IALS
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml10m --no-predict
+      -o runs/0.13/ml10m-IALS -M runs/0.13/ml10m-IALS.json IALS
     deps:
     - data-split/ml10m
     outs:
@@ -89,7 +89,7 @@ stages:
     - runs/0.13/ml10m-IALS.json
     wdir: ../..
   ml10m-II:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml10m -o runs/0.13/ml10m-II
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml10m -o runs/0.13/ml10m-II
       -M runs/0.13/ml10m-II.json II
     deps:
     - data-split/ml10m
@@ -98,7 +98,7 @@ stages:
     - runs/0.13/ml10m-II.json
     wdir: ../..
   ml10m-UU:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml10m -o runs/0.13/ml10m-UU
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml10m -o runs/0.13/ml10m-UU
       -M runs/0.13/ml10m-UU.json UU
     deps:
     - data-split/ml10m
@@ -107,8 +107,8 @@ stages:
     - runs/0.13/ml10m-UU.json
     wdir: ../..
   ml10m-impBPR:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml10m --no-predict -o runs/0.13/ml10m-impBPR
-      -M runs/0.13/ml10m-impBPR.json impBPR
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml10m --no-predict
+      -o runs/0.13/ml10m-impBPR -M runs/0.13/ml10m-impBPR.json impBPR
     deps:
     - data-split/ml10m
     outs:
@@ -116,7 +116,7 @@ stages:
     - runs/0.13/ml10m-impBPR.json
     wdir: ../..
   ml1m-ALS:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml1m -o runs/0.13/ml1m-ALS
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml1m -o runs/0.13/ml1m-ALS
       -M runs/0.13/ml1m-ALS.json ALS
     deps:
     - data-split/ml1m
@@ -125,8 +125,8 @@ stages:
     - runs/0.13/ml1m-ALS.json
     wdir: ../..
   ml1m-IALS:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml1m --no-predict -o runs/0.13/ml1m-IALS
-      -M runs/0.13/ml1m-IALS.json IALS
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml1m --no-predict
+      -o runs/0.13/ml1m-IALS -M runs/0.13/ml1m-IALS.json IALS
     deps:
     - data-split/ml1m
     outs:
@@ -134,7 +134,7 @@ stages:
     - runs/0.13/ml1m-IALS.json
     wdir: ../..
   ml1m-II:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml1m -o runs/0.13/ml1m-II
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml1m -o runs/0.13/ml1m-II
       -M runs/0.13/ml1m-II.json II
     deps:
     - data-split/ml1m
@@ -143,7 +143,7 @@ stages:
     - runs/0.13/ml1m-II.json
     wdir: ../..
   ml1m-UU:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml1m -o runs/0.13/ml1m-UU
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml1m -o runs/0.13/ml1m-UU
       -M runs/0.13/ml1m-UU.json UU
     deps:
     - data-split/ml1m
@@ -152,8 +152,8 @@ stages:
     - runs/0.13/ml1m-UU.json
     wdir: ../..
   ml1m-impBPR:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml1m --no-predict -o runs/0.13/ml1m-impBPR
-      -M runs/0.13/ml1m-impBPR.json impBPR
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml1m --no-predict
+      -o runs/0.13/ml1m-impBPR -M runs/0.13/ml1m-impBPR.json impBPR
     deps:
     - data-split/ml1m
     outs:
@@ -161,7 +161,7 @@ stages:
     - runs/0.13/ml1m-impBPR.json
     wdir: ../..
   ml20m-ALS:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml20m -o runs/0.13/ml20m-ALS
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml20m -o runs/0.13/ml20m-ALS
       -M runs/0.13/ml20m-ALS.json ALS
     deps:
     - data-split/ml20m
@@ -170,8 +170,8 @@ stages:
     - runs/0.13/ml20m-ALS.json
     wdir: ../..
   ml20m-IALS:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml20m --no-predict -o runs/0.13/ml20m-IALS
-      -M runs/0.13/ml20m-IALS.json IALS
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml20m --no-predict
+      -o runs/0.13/ml20m-IALS -M runs/0.13/ml20m-IALS.json IALS
     deps:
     - data-split/ml20m
     outs:
@@ -179,7 +179,7 @@ stages:
     - runs/0.13/ml20m-IALS.json
     wdir: ../..
   ml20m-II:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml20m -o runs/0.13/ml20m-II
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml20m -o runs/0.13/ml20m-II
       -M runs/0.13/ml20m-II.json II
     deps:
     - data-split/ml20m
@@ -188,8 +188,8 @@ stages:
     - runs/0.13/ml20m-II.json
     wdir: ../..
   ml20m-impBPR:
-    cmd: pixi run -e lk13 run-algo.py --splits data-split/ml20m --no-predict -o runs/0.13/ml20m-impBPR
-      -M runs/0.13/ml20m-impBPR.json impBPR
+    cmd: pixi run --locked -e lk13 run-algo.py --splits data-split/ml20m --no-predict
+      -o runs/0.13/ml20m-impBPR -M runs/0.13/ml20m-impBPR.json impBPR
     deps:
     - data-split/ml20m
     outs:
