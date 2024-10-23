@@ -3,5 +3,5 @@
 [cache]
     type = "reflink,hardlink"
 ['remote "vault"']
-    url = webdavs://inertial.cci.drexel.edu/vault/lenskit-perf-monitor
+    url = webdavs://inertial.cci.drexel.edu/vault/dvc/lenskit-perf-monitor
     ssl_verify = false
