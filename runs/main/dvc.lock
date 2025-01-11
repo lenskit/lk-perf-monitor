@@ -199,7 +199,7 @@ stages:
       md5: ea91c61aed3e566f6e0e558311be4084
       size: 206
   ml100k-ALS:
-    cmd: ./env-python.sh main run-algo.py --splits data-split/ml100k -o runs/main/ml100k-ALS
+    cmd: pixi run --locked -e lk-main run-algo.py --splits data-split/ml100k -o runs/main/ml100k-ALS
       -M runs/main/ml100k-ALS.json ALS
     deps:
     - path: data-split/ml100k
@@ -209,13 +209,13 @@ stages:
     outs:
     - path: runs/main/ml100k-ALS
       hash: md5
-      md5: d251b67d9b8fa7ee271435b28374f4a2.dir
-      size: 1106789
+      md5: da9fdbd6f81ee5c34b75947ae850f8e4.dir
+      size: 691137
       nfiles: 10
     - path: runs/main/ml100k-ALS.json
       hash: md5
-      md5: 847a1db0dd43318d91185fec1af05f1f
-      size: 204
+      md5: b0670c525241b2f96190b2f7882888a5
+      size: 208
   ml1m-ALS:
     cmd: ./env-python.sh main run-algo.py --splits data-split/ml1m -o runs/main/ml1m-ALS
       -M runs/main/ml1m-ALS.json ALS
