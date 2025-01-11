@@ -11,6 +11,7 @@ jsonnet = "*"
 pandas = "~=2.0"
 pyarrow = ">=14"
 scipy = "~=1.0"
+pytorch = "~=2.2"
 seaborn = "*"
 notebook = ">=7"
 jupytext = "~=1.0"
@@ -21,10 +22,9 @@ dvc-http = "*"
 dvc-s3 = "*"
 dvc-webdav = "*"
 ruff = "*"
-lenskit = ">=0.14,<2024"
 
 [pypi-dependencies]
-sandal = { git = "https://github.com/mdekstrand/sandal" }
+lenskit = ">=2025.0.0a4"
 
 # common dependencies for running algorithms
 [feature.run.dependencies]
