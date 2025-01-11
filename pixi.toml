@@ -24,7 +24,7 @@ dvc-webdav = "*"
 ruff = "*"
 
 [pypi-dependencies]
-lenskit = ">=2025.0.0a4"
+lenskit = { git = "https://github.com/lenskit/lkpy.git", subdirectory = "lenskit" }
 
 # common dependencies for running algorithms
 [feature.run.dependencies]
