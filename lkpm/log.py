@@ -16,7 +16,16 @@ except ImportError:
         version = None
 
 try:
-    from sandal.cli import setup_logging
+    from lenskit.logging import LoggingConfig
+
+    def setup_logging(verbose: bool, log_file):
+        lc = LoggingConfig()
+        if verbose:
+            lc.set_verbose(True)
+        if log_file:
+            lc.set_log_file(log_file)
+        lc.apply()
+
 except ImportError:
 
     def setup_logging(verbose: bool, log_file):

@@ -1,22 +1,29 @@
 """
 This module defines the data sets that we are going to work with.
 """
-import pandas as pd
 
-from lenskit import datasets as ds
-
-ml20m = ds.MovieLens('data/ml-20m')
-mlsmall = ds.MovieLens('data/ml-latest-small')
-ml100k = ds.ML100K('data/ml-100k')
-ml1m = ds.ML1M('data/ml-1m')
-ml10m = ds.ML10M('data/ml-10M100K')
-
-if hasattr(ds, 'BookCrossing'):
-    bx = ds.BookCrossing('data/bx')
+from lenskit.data import load_movielens
 
 
-def ds_diff(full, subset):
-    "Return the difference of two data sets."
-    mask = pd.Series(True, index=full.index)
-    mask.loc[subset.index] = False
-    return full[mask]
+def ml20m():
+    return load_movielens("data/ml-20m")
+
+
+def mlsmall():
+    return load_movielens("data/ml-latest-small")
+
+
+def ml100k():
+    return load_movielens("data/ml-100k")
+
+
+def ml1m():
+    return load_movielens("data/ml-1m")
+
+
+def ml10m():
+    return load_movielens("data/ml-10M100K")
+
+
+# if hasattr(ds, 'BookCrossing'):
+#     bx = ds.BookCrossing('data/bx')

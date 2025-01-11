@@ -12,10 +12,11 @@ Options:
 from pathlib import Path
 
 from docopt import docopt
+from lkpm.legacy import datasets
 from seedbank import init_file
 
 import lenskit.crossfold as xf
-from lkpm import datasets, log
+from lkpm import log
 
 
 def main(args):

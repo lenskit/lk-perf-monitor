@@ -19,6 +19,8 @@ import pickle
 
 from docopt import docopt
 
+from lkpm.legacy import datasets
+
 try:
     import resource
 except ImportError:
@@ -26,7 +28,7 @@ except ImportError:
 
 from lenskit.algorithms import Recommender
 from lenskit.util import Stopwatch
-from lkpm import datasets, log
+from lkpm import log
 
 
 def main(args):
