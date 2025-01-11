@@ -131,13 +131,10 @@ pyarrow = ">=16"
 pyzmq = "*"
 msgpack-python = "*"
 threadpoolctl = "*"
-numba = ">=0.58"
+pytorch = "~=2.2"
 implicit = "~=0.7.0"
 
 [feature.lk-main.pypi-dependencies]
-sandal = { git = "https://github.com/mdekstrand/sandal" }
-manylog = { git = "https://github.com/mdekstrand/manylog" }
-seedbank = { git = "https://github.com/lenskit/seedbank" }
 lenskit = { git = "https://github.com/lenskit/lkpy", subdirectory = "lenskit" }
 lenskit-implicit = { git = "https://github.com/lenskit/lkpy", subdirectory = "lenskit-implicit" }
 
