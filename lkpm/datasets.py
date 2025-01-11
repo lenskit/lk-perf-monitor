@@ -22,7 +22,7 @@ def ml1m():
 
 
 def ml10m():
-    return load_movielens("data/ml-10M100K")
+    return load_movielens("data/ml-10m.zip")
 
 
 # if hasattr(ds, 'BookCrossing'):
