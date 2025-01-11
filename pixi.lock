@@ -83,7 +83,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/dictdiffer-0.9.0-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/diskcache-5.6.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/distro-1.9.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/docopt-0.6.2-py_1.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/noarch/docopt-ng-0.9.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dpath-2.2.0-pyha770c72_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/dulwich-0.22.1-py311h5ecf98a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dvc-3.54.1-pyhd8ed1ab_0.conda
@@ -470,7 +470,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/dictdiffer-0.9.0-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/diskcache-5.6.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/distro-1.9.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/docopt-0.6.2-py_1.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/noarch/docopt-ng-0.9.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dpath-2.2.0-pyha770c72_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/dulwich-0.22.1-py311h5d190b6_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dvc-3.54.1-pyhd8ed1ab_0.conda
@@ -3762,6 +3762,17 @@ packages:
   - pkg:pypi/docopt?source=hash-mapping
   size: 14691
   timestamp: 1530916777462
+- conda: https://conda.anaconda.org/conda-forge/noarch/docopt-ng-0.9.0-pyhd8ed1ab_1.conda
+  sha256: fb8c1b918b3c28ff9cdf21279aad9a50a659dd3bcbdb95d687044fb35b58b2df
+  md5: 7635e4907164a088d932f7d8965db7ab
+  depends:
+  - python >=3.9
+  license: MIT
+  license_family: MIT
+  purls:
+  - pkg:pypi/docopt-ng?source=hash-mapping
+  size: 21886
+  timestamp: 1734684011188
 - conda: https://conda.anaconda.org/conda-forge/noarch/dpath-2.2.0-pyha770c72_0.conda
   sha256: ab88f587a9b7dc3cbb636823423c2ecfd868d4719b491af37c09b0384214bacf
   md5: b2681af65644be41a18d4b00b67938f1
@@ -5764,8 +5775,6 @@ packages:
   constrains:
   - tensorflow >=2.1
   - scikit-learn >=0.22
-  arch: x86_64
-  platform: linux
   license: MIT
   license_family: MIT
   size: 145772

@@ -9,8 +9,8 @@ stages:
       nfiles: 6
     - path: split-data.py
       hash: md5
-      md5: ae1cccf7ecba938cf5200b8c7fcac604
-      size: 1323
+      md5: 3670d393461b444188b6408b8a761d2b
+      size: 1346
       isexec: true
     params:
       params.yaml:
@@ -29,8 +29,8 @@ stages:
       nfiles: 4
     - path: split-data.py
       hash: md5
-      md5: ae1cccf7ecba938cf5200b8c7fcac604
-      size: 1323
+      md5: 3670d393461b444188b6408b8a761d2b
+      size: 1346
       isexec: true
     params:
       params.yaml:
@@ -50,8 +50,8 @@ stages:
       nfiles: 7
     - path: split-data.py
       hash: md5
-      md5: ae1cccf7ecba938cf5200b8c7fcac604
-      size: 1323
+      md5: 3670d393461b444188b6408b8a761d2b
+      size: 1346
       isexec: true
     params:
       params.yaml:
@@ -70,8 +70,8 @@ stages:
       nfiles: 23
     - path: split-data.py
       hash: md5
-      md5: ae1cccf7ecba938cf5200b8c7fcac604
-      size: 1323
+      md5: 3670d393461b444188b6408b8a761d2b
+      size: 1346
       isexec: true
     params:
       params.yaml:
