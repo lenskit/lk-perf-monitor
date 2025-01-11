@@ -16,7 +16,7 @@ seaborn = "*"
 notebook = ">=7"
 jupytext = "~=1.0"
 ipython = ">=7"
-docopt-ng = ">=0.6"
+docopt-ng = ">=0.9"
 dvc = ">=3.50,<4"
 dvc-http = "*"
 dvc-s3 = "*"
@@ -125,6 +125,7 @@ lenskit-implicit = { git = "https://github.com/lenskit/lenskit-implicit" }
 platforms = ["linux-64"]
 
 [feature.lk-main.dependencies]
+docopt-ng = ">=0.9"
 python = "~=3.12.0"
 psutil = "*"
 pyarrow = ">=16"
@@ -145,4 +146,4 @@ lk11 = { features = ["run", "lk11"], no-default-feature = true }
 lk12 = { features = ["run", "lk12"], no-default-feature = true }
 lk13 = { features = ["run", "lk13"], no-default-feature = true }
 lk14 = { features = ["run", "lk14"], no-default-feature = true }
-lk-main = { features = ["run", "lk-main"], no-default-feature = true }
+lk-main = { features = ["lk-main"], no-default-feature = true }

@@ -41,11 +41,15 @@ def run_algo(args):
 
     for file in path.glob("test-*"):
         _log.info("loading %s", file)
-        test = pd.read_csv(file, sep=",").rename(
-            {
-                "user": "user_id",
-                "item": "item_id",
-            }
+        test = (
+            pd.read_csv(file, sep=",")
+            .rename(
+                columns={
+                    "user": "user_id",
+                    "item": "item_id",
+                }
+            )
+            .drop(columns=["index"])
         )
         suffix = file.name[5:]
         out_sfx = _fn_suffix.sub(".parquet", suffix)
@@ -64,7 +68,7 @@ def run_algo(args):
 
         users = list(test.keys())
         _log.info("[%s] generating recommendations for %d unique users", timer, len(users))
-        recs = batch.recommend(model, users, n_recs)
+        recs = batch.recommend(fittable, users, n_recs)
         recf = dest / f"recs-{out_sfx}"
         _log.info("[%s] writing recommendations to %s", timer, recf)
         recs.save_parquet(recf)
@@ -73,11 +77,11 @@ def run_algo(args):
             rla = RunAnalysis()
             rla.add_metric(NDCG())
             res = rla.compute(recs, test)
-            all_topnm.append(res.list_metrics()["NDCG"])
+            all_topnm.append(res.list_metrics())
 
         if not args["--no-predict"]:
             _log.info("[%s] generating predictions for user-item", timer)
-            preds = batch.predict(model, test)
+            preds = batch.predict(fittable, test)
             predf = dest / f"pred-{out_sfx}"
             _log.info("[%s] saving predictions to %s", timer, predf)
             preds.save_parquet(predf)
@@ -89,7 +93,7 @@ def run_algo(args):
         _log.info("computing metrics")
         topn_m = pd.concat(all_topnm, ignore_index=True)
         metrics = {
-            "nDCG": topn_m["ndcg"].mean(),
+            "nDCG": topn_m["NDCG"].mean(),
             "TrainTime": np.median(all_times),
             "train_times": all_times,
         }
