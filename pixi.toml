@@ -86,7 +86,7 @@ platforms = ["linux-64"]
 
 [feature.lk12.dependencies]
 python = "~=3.8.0"
-pyarrow = "~=4.0"
+pyarrow = "~=7.0"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
@@ -97,7 +97,7 @@ platforms = ["linux-64"]
 
 [feature.lk13.dependencies]
 python = "~=3.8.0"
-pyarrow = "~=4.0"
+pyarrow = "~=7.0"
 libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
