@@ -1553,15 +1553,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/xz-5.2.6-h166bdaf_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-3.20.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.6-ha6fb4c9_0.conda
-      - pypi: https://files.pythonhosted.org/packages/76/98/584f211c3a4bb38f2871fa937ee0cc83c130de50c955d6c7e2334dbf4acb/blessed-1.20.0-py2.py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/f3/18/3e867ab37a24fdf073c1617b9c7830e06ec270b1ea4694a624038fc40a03/colorlog-6.8.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/a3/4b/5941c7e1d74aa16f32df3b2119c9c523e56b269fe7ae6af30d61f450c566/enlighten-1.12.4-py2.py3-none-any.whl
       - pypi: git+https://github.com/lenskit/lenskit-implicit@5c685652cf916ca5bfc86a609f4f75e5db2c63b0
-      - pypi: https://files.pythonhosted.org/packages/5a/10/65bc09b3012728eac710e6e5676b0b69af7a6fd1404ace03637f7b14e678/prefixed-0.8.0-py2.py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/b4/e3/3f0fcbe30ccbd25d31e64afa3162b9f8e43d8d9333cc640c13b35deb7e08/progress_api-0.1.0a9-py3-none-any.whl
-      - pypi: git+https://github.com/mdekstrand/sandal@b776741bcec1417df438416a1af0cf262554a2a0
-      - pypi: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/fd/84/fd2ba7aafacbad3c4201d395674fc6348826569da3c0937e75505ead3528/wcwidth-0.2.13-py2.py3-none-any.whl
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
   sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
@@ -3188,17 +3180,6 @@ packages:
   - pkg:pypi/html5lib?source=hash-mapping
   size: 131220
   timestamp: 1696630354218
-- pypi: https://files.pythonhosted.org/packages/76/98/584f211c3a4bb38f2871fa937ee0cc83c130de50c955d6c7e2334dbf4acb/blessed-1.20.0-py2.py3-none-any.whl
-  name: blessed
-  version: 1.20.0
-  sha256: 0c542922586a265e699188e52d5f5ac5ec0dd517e5a1041d90d2bbf23f906058
-  requires_dist:
-  - wcwidth>=0.1.4
-  - six>=1.9.0
-  - jinxed>=1.1.0 ; platform_system == 'Windows'
-  - ordereddict==1.1 ; python_full_version < '2.7'
-  - backports-functools-lru-cache>=1.2.1 ; python_full_version < '3.2'
-  requires_python: '>=2.7'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/blosc-1.21.5-h0f2a231_0.conda
   sha256: e2b15b017775d1bda8edbb1bc48e545e45364edefa4d926732fc5488cc600731
   md5: 009521b7ed97cca25f8f997f9e745976
@@ -3666,18 +3647,6 @@ packages:
   - pkg:pypi/colorama?source=hash-mapping
   size: 25170
   timestamp: 1666700778190
-- pypi: https://files.pythonhosted.org/packages/f3/18/3e867ab37a24fdf073c1617b9c7830e06ec270b1ea4694a624038fc40a03/colorlog-6.8.2-py3-none-any.whl
-  name: colorlog
-  version: 6.8.2
-  sha256: 4dcbb62368e2800cb3c5abd348da7e53f6c362dda502ec27c560b2e58a66bd33
-  requires_dist:
-  - colorama ; sys_platform == 'win32'
-  - black ; extra == 'development'
-  - flake8 ; extra == 'development'
-  - mypy ; extra == 'development'
-  - pytest ; extra == 'development'
-  - types-colorama ; extra == 'development'
-  requires_python: '>=3.6'
 - conda: https://conda.anaconda.org/conda-forge/noarch/comm-0.2.2-pyhd8ed1ab_0.conda
   sha256: e923acf02708a8a0b591f3bce4bdc11c8e63b73198b99b35fe6cd96bfb6a0dbe
   md5: 948d84721b578d426294e17a02e24cbb
@@ -4173,14 +4142,6 @@ packages:
   - pkg:pypi/dvc-webdav?source=hash-mapping
   size: 14954
   timestamp: 1702619293507
-- pypi: https://files.pythonhosted.org/packages/a3/4b/5941c7e1d74aa16f32df3b2119c9c523e56b269fe7ae6af30d61f450c566/enlighten-1.12.4-py2.py3-none-any.whl
-  name: enlighten
-  version: 1.12.4
-  sha256: 5c53c57441bc5986c1d02f2f539aead9d59a206783641953a49b8d995db6b584
-  requires_dist:
-  - blessed>=1.17.7
-  - prefixed>=0.3.2
-  - backports-functools-lru-cache ; python_full_version < '3.2'
 - conda: https://conda.anaconda.org/conda-forge/noarch/entrypoints-0.4-pyhd8ed1ab_0.tar.bz2
   sha256: 2ec4a0900a4a9f42615fc04d0fb3286b796abe56590e8e042f6ec25e102dd5af
   md5: 3cf04868fee0a029769bd41f4b2fbf2d
@@ -10026,34 +9987,6 @@ packages:
   license_family: BSD
   size: 54375
   timestamp: 1717777969967
-- pypi: https://files.pythonhosted.org/packages/5a/10/65bc09b3012728eac710e6e5676b0b69af7a6fd1404ace03637f7b14e678/prefixed-0.8.0-py2.py3-none-any.whl
-  name: prefixed
-  version: 0.8.0
-  sha256: d78fe17bbed8b2e8eb07ed9e611961c96338b4135b45fdd2bd6a3113f5a9f9cf
-- pypi: https://files.pythonhosted.org/packages/b4/e3/3f0fcbe30ccbd25d31e64afa3162b9f8e43d8d9333cc640c13b35deb7e08/progress_api-0.1.0a9-py3-none-any.whl
-  name: progress-api
-  version: 0.1.0a9
-  sha256: 3bdcf4e4bf176b6c02ed6ba4179edc341ae6172a48061c743e858ae52d873968
-  requires_dist:
-  - setuptools>=64 ; extra == 'dev'
-  - setuptools-scm>=8 ; extra == 'dev'
-  - build==1.* ; extra == 'dev'
-  - ruff>=0.2 ; extra == 'dev'
-  - pyright ; extra == 'dev'
-  - copier==9.* ; extra == 'dev'
-  - unbeheader~=1.3 ; extra == 'dev'
-  - ipython ; extra == 'dev'
-  - pyproject2conda ; extra == 'dev'
-  - sphinx-autobuild ; extra == 'dev'
-  - enlighten==1.* ; extra == 'dev'
-  - tqdm==4.* ; extra == 'dev'
-  - sphinx>=4.2 ; extra == 'doc'
-  - sphinxext-opengraph>=0.5 ; extra == 'doc'
-  - furo ; extra == 'doc'
-  - enlighten ; extra == 'doc'
-  - tqdm ; extra == 'doc'
-  - pytest>=7 ; extra == 'test'
-  requires_python: '>=3.10'
 - conda: https://conda.anaconda.org/conda-forge/noarch/prometheus_client-0.20.0-pyhd8ed1ab_0.conda
   sha256: 757cd91d01c2e0b64fadf6bc9a11f558cf7638d897dfbaf7415ddf324d5405c9
   md5: 9a19b94034dd3abb2b348c8b93388035
@@ -11567,31 +11500,6 @@ packages:
   - pkg:pypi/s3transfer?source=hash-mapping
   size: 62933
   timestamp: 1719300262364
-- pypi: git+https://github.com/mdekstrand/sandal@b776741bcec1417df438416a1af0cf262554a2a0
-  name: sandal
-  version: 0.1.0
-  requires_dist:
-  - enlighten~=1.12
-  - colorlog==6.*
-  - progress-api>=0.1.0a9
-  - tomli~=2.0 ; python_full_version < '3.12'
-  - setuptools>=64 ; extra == 'dev'
-  - setuptools-scm>=8 ; extra == 'dev'
-  - build==1.* ; extra == 'dev'
-  - ruff>=0.2 ; extra == 'dev'
-  - pyright ; extra == 'dev'
-  - copier==9.* ; extra == 'dev'
-  - unbeheader~=1.3 ; extra == 'dev'
-  - ipython ; extra == 'dev'
-  - pyproject2conda ; extra == 'dev'
-  - sphinx-autobuild ; extra == 'dev'
-  - sphinx>=4.2 ; extra == 'doc'
-  - sphinxext-opengraph>=0.5 ; extra == 'doc'
-  - furo ; extra == 'doc'
-  - pytest>=7 ; extra == 'test'
-  - pytest-cov>=2.12 ; extra == 'test'
-  - coverage>=5 ; extra == 'test'
-  requires_python: '>=3.10'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.10.1-py38h10c12cc_0.conda
   sha256: e3167efa0f9f7f5f2e15bf35d5ec2082b54b952a39439747676671f4ce9336d7
   md5: 1cbc47bb9a600ce4a49d8da797d375bf
@@ -12314,11 +12222,6 @@ packages:
   purls: []
   size: 3145523
   timestamp: 1699202432999
-- pypi: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
-  name: tomli
-  version: 2.0.1
-  sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
-  requires_python: '>=3.7'
 - conda: https://conda.anaconda.org/conda-forge/noarch/tomli-2.0.1-pyhd8ed1ab_0.tar.bz2
   sha256: 4cd48aba7cd026d17e86886af48d0d2ebc67ed36f87f6534f4b67138f5a5a58f
   md5: 5844808ffab9ebdb694585b50ba02a96
@@ -12554,12 +12457,6 @@ packages:
   - pkg:pypi/voluptuous?source=hash-mapping
   size: 33444
   timestamp: 1719965215279
-- pypi: https://files.pythonhosted.org/packages/fd/84/fd2ba7aafacbad3c4201d395674fc6348826569da3c0937e75505ead3528/wcwidth-0.2.13-py2.py3-none-any.whl
-  name: wcwidth
-  version: 0.2.13
-  sha256: 3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859
-  requires_dist:
-  - backports-functools-lru-cache>=1.2.1 ; python_full_version < '3.2'
 - conda: https://conda.anaconda.org/conda-forge/noarch/wcwidth-0.2.13-pyhd8ed1ab_0.conda
   sha256: b6cd2fee7e728e620ec736d8dfee29c6c9e2adbd4e695a31f1d8f834a83e57e3
   md5: 68f0738df502a14213624b288c60c9ad

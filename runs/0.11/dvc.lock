@@ -81,12 +81,13 @@ stages:
     outs:
     - path: runs/0.11/ml100k-II
       hash: md5
-      md5: d4a278e92487dfc007cecf92b5302579.dir
-      size: 1105887
+      md5: bddecb69a3b8117c5a04b8283bd68407.dir
+      size: 1105924
       nfiles: 10
     - path: runs/0.11/ml100k-II.json
-      md5: af1e2ecfa72b649f131fcf91f77791d4
-      size: 210
+      hash: md5
+      md5: 524ee05a00c5ab51ef82cd20310e74e0
+      size: 213
   ml10m-II:
     cmd: pixi run --locked -e lk11 run-algo.py --splits data-split/ml10m -o runs/0.11/ml10m-II
       -M runs/0.11/ml10m-II.json II

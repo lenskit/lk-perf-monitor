@@ -81,6 +81,9 @@ tbb = "~=2020.0"
 mkl = "~=2020.0"
 lenskit = "~=0.11.0"
 
+[feature.lk11.activation.env]
+MKL_THREADING_LAYER = "tbb"
+
 [feature.lk12]
 platforms = ["linux-64"]
 
@@ -91,6 +94,9 @@ libblas = { build = "*mkl*" }
 tbb = "~=2020.0"
 mkl = "~=2020.0"
 lenskit = "~=0.12.0"
+
+[feature.lk12.activation.env]
+MKL_THREADING_LAYER = "tbb"
 
 [feature.lk13]
 platforms = ["linux-64"]
@@ -103,6 +109,9 @@ tbb = "~=2020.0"
 mkl = "~=2020.0"
 implicit = "~=0.4.0"
 lenskit = "~=0.13.0"
+
+[feature.lk13.activation.env]
+MKL_THREADING_LAYER = "tbb"
 
 [feature.lk14]
 platforms = ["linux-64"]
@@ -118,8 +127,10 @@ implicit = "~=0.7.0"
 lenskit = "~=0.14.0"
 
 [feature.lk14.pypi-dependencies]
-sandal = { git = "https://github.com/mdekstrand/sandal" }
 lenskit-implicit = { git = "https://github.com/lenskit/lenskit-implicit" }
+
+[feature.lk14.activation.env]
+MKL_THREADING_LAYER = "tbb"
 
 [feature.lk-main]
 platforms = ["linux-64"]
