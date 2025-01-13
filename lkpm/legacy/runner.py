@@ -8,6 +8,7 @@ import pandas as pd
 
 from lenskit import batch, util
 from lenskit.algorithms import Predictor, Recommender
+from lenskit.algorithms.basic import Bias, Fallback
 from lenskit.metrics.predict import rmse
 from lenskit.topn import RecListAnalysis, ndcg
 from lkpm.legacy import algorithms, datasets
@@ -22,8 +23,7 @@ def run_algo(args):
     n_recs = int(args.get("-n"))
     model = args.get("ALGO")
 
-    algo = getattr(algorithms, model)
-    algo = Recommender.adapt(algo)
+    scorer = getattr(algorithms, model)
 
     path = Path(input)
     dest = Path(output)
@@ -64,35 +64,37 @@ def run_algo(args):
 
         _log.info("[%s] Fitting the model", timer)
         tr_time = util.Stopwatch()
-        fittable = util.clone(algo)
-        model = fittable.fit(train)
+        fittable = util.clone(scorer)
+        recommender = Recommender.adapt(fittable)
+        recommender.fit(train)
+
         all_times.append(tr_time.elapsed())
-        try:
-            users = test["user"].unique()
-            _log.info("[%s] generating recommendations for %d unique users", timer, len(users))
-            recs = batch.recommend(model, users, n_recs)
-            recf = dest / f"recs-{out_sfx}"
-            _log.info("[%s] writing recommendations to %s", timer, recf)
-            recs.to_parquet(recf, index=False, compression="zstd")
+        users = test["user"].unique()
+        _log.info("[%s] generating recommendations for %d unique users", timer, len(users))
+        recs = batch.recommend(recommender, users, n_recs)
+        recf = dest / f"recs-{out_sfx}"
+        _log.info("[%s] writing recommendations to %s", timer, recf)
+        recs.to_parquet(recf, index=False, compression="zstd")
+
+        if metric_file:
+            rla = RecListAnalysis()
+            rla.add_metric(ndcg)
+            um = rla.compute(recs, test, include_missing=True)
+            all_topnm.append(um)
+
+        if isinstance(scorer, Predictor) and not args["--no-predict"]:
+            _log.debug("training fallback")
+            fallback = Bias()
+            fallback.fit(train)
+            predictor = Fallback(fittable, fallback)
+            _log.info("[%s] generating predictions for user-item", timer)
+            preds = batch.predict(predictor, test)
+            predf = dest / f"pred-{out_sfx}"
+            _log.info("[%s] saving predictions to %s", timer, predf)
+            preds.to_parquet(predf, index=False, compression="zstd")
 
             if metric_file:
-                rla = RecListAnalysis()
-                rla.add_metric(ndcg)
-                um = rla.compute(recs, test, include_missing=True)
-                all_topnm.append(um)
-
-            if isinstance(algo, Predictor) and not args["--no-predict"]:
-                _log.info("[%s] generating predictions for user-item", timer)
-                preds = batch.predict(model, test)
-                predf = dest / f"pred-{out_sfx}"
-                _log.info("[%s] saving predictions to %s", timer, predf)
-                preds.to_parquet(predf, index=False, compression="zstd")
-
-                if metric_file:
-                    all_preds.append(preds)
-        finally:
-            if hasattr(model, "close"):
-                model.close()
+                all_preds.append(preds)
 
     if metric_file:
         _log.info("computing metrics")
