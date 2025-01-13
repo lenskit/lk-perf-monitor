@@ -99,12 +99,13 @@ stages:
     outs:
     - path: runs/0.9/ml100k-II
       hash: md5
-      md5: 06addf793bea982d217913c1954894da.dir
-      size: 1105900
+      md5: b648a1f4500ee58de30d28a453ae6932.dir
+      size: 1105941
       nfiles: 10
     - path: runs/0.9/ml100k-II.json
-      md5: 0a44c8c3ef0599402f3a3db4a3b8b5bf
-      size: 205
+      hash: md5
+      md5: 58c8802ab6aab1bf4fb8bc4040caf4df
+      size: 214
   ml20m-IALS:
     cmd: pixi run --locked -e lk09 run-algo.py --splits data-split/ml20m --no-predict
       -o runs/0.9/ml20m-IALS -M runs/0.9/ml20m-IALS.json IALS
@@ -279,8 +280,9 @@ stages:
       md5: fb81c82a2d87a0bf07f921c86bc81f7b
       size: 179
     - path: runs/0.9/ml100k-II.json
-      md5: 0a44c8c3ef0599402f3a3db4a3b8b5bf
-      size: 205
+      hash: md5
+      md5: 58c8802ab6aab1bf4fb8bc4040caf4df
+      size: 214
     - path: runs/0.9/ml100k-UU.json
       md5: ffe5e0208bd90374b70eaa64fc94b2de
       size: 213
@@ -323,5 +325,5 @@ stages:
     outs:
     - path: runs/0.9/metrics.csv
       hash: md5
-      md5: 6ed7380a3b8cb27520eed6e62adf5aaf
-      size: 2490
+      md5: e7729d48c7412d092d9f7e54390a98ec
+      size: 2499

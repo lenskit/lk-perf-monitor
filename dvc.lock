@@ -5,12 +5,12 @@ stages:
     deps:
     - path: AlgoMetrics.py
       hash: md5
-      md5: c6bc47e9119deccb7b5f9a560c472fa4
-      size: 2934
+      md5: a8ee0c126db770bbd399634e894d56fa
+      size: 2928
     - path: runs/0.10/metrics.csv
       hash: md5
-      md5: f15dfed6ab9de5ea9c7ab848b828abb0
-      size: 2497
+      md5: a33282f61fffd3d383773190bce43387
+      size: 2500
     - path: runs/0.11/metrics.csv
       hash: md5
       md5: ea55df403efa307c234192e326029c31
@@ -21,16 +21,16 @@ stages:
       size: 1981
     - path: runs/0.13/metrics.csv
       hash: md5
-      md5: c7752649323d9787e15a514c1f2a12da
-      size: 3118
+      md5: 0ef749bbcf98e9eccdee451069bfa5ed
+      size: 3116
     - path: runs/0.14/metrics.csv
       hash: md5
-      md5: af49a917ac312fd59ebb8296806e031b
-      size: 3111
+      md5: df15e029b5467801055ee63753596caf
+      size: 3115
     - path: runs/0.9/metrics.csv
       hash: md5
-      md5: 6ed7380a3b8cb27520eed6e62adf5aaf
-      size: 2490
+      md5: e7729d48c7412d092d9f7e54390a98ec
+      size: 2499
     - path: runs/main/metrics.csv
       hash: md5
       md5: eda0e269bd3059b8f32aa9d7e07757b1
@@ -38,17 +38,17 @@ stages:
     outs:
     - path: AlgoMetrics.ipynb
       hash: md5
-      md5: 22b0b28f66df6a837c0a1c3495bbab3c
-      size: 361406
+      md5: 8d5764bbe403e48c100c581ee4d23f48
+      size: 362603
   render:
     cmd: jupyter nbconvert --to html AlgoMetrics.ipynb
     deps:
     - path: AlgoMetrics.ipynb
       hash: md5
-      md5: 22b0b28f66df6a837c0a1c3495bbab3c
-      size: 361406
+      md5: 8d5764bbe403e48c100c581ee4d23f48
+      size: 362603
     outs:
     - path: AlgoMetrics.html
       hash: md5
-      md5: 4c3d9396bf081dbc7570c0d6cde4ee6f
-      size: 642798
+      md5: 830bb740e768df95a1ff42ca9c2571bb
+      size: 643598

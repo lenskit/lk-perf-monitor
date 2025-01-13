@@ -134,5 +134,3 @@ sns.lineplot(x='version', y='nDCG', hue='data', data=als)
 
 # %%
 sns.catplot(x='version', y='nDCG', hue='data', col='algo', data=mdf, kind='point')
-
-# %%
