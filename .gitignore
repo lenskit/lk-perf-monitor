@@ -4,6 +4,7 @@ __pycache__
 *.pyc
 *.prof
 *.lprof
+perf.data*
 .ipynb_checkpoints/
 *.html
 .pixi/
