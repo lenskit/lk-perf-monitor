@@ -29,6 +29,11 @@ import pandas as pd
 import seaborn as sns
 
 # %% [markdown]
+# **Note:** LensKit 0.14 and earlier defaulted to using rating values to compute
+# gain for nDCG. This is the primary cause of the overall shifts in NDCG in
+# LensKit 2025.1 and later.
+
+# %% [markdown]
 # ## Load DVC metrics
 #
 # Let's load all the DVC metrics:
